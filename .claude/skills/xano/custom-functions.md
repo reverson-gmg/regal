@@ -6,7 +6,7 @@ This file covers how to define custom functions, APIs, middleware, background ta
 
 ## Custom Functions
 
-Custom functions are reusable logic blocks that can be called from APIs, other functions, or tasks.
+Custom functions are reusable logic blocks callable from APIs, other functions, or tasks via `function.run`.
 
 ### Structure
 
@@ -21,7 +21,6 @@ function <path/name> {
   }
 
   stack {
-    // Logic here — uses the same functions as APIs
     conditional {
       if (`$input.age >= 18`) {
         var $status { value = "adult" }
@@ -44,7 +43,7 @@ function <path/name> {
 
 ### Naming Convention
 
-Use forward slashes for folder organization: `utilities/format_name`, `auth/validate_token`, `maths/calculate_total`.
+Use forward slashes for folder organization: `utilities/format_name`, `auth/validate_token`, `payments/process_charge`.
 
 ### Calling Custom Functions
 
@@ -87,7 +86,6 @@ try_catch {
 | `history` | object | Version inheritance (`{inherit: true}`) |
 | `cache` | object | Response caching (see below) |
 
-**Cache options:**
 ```
 cache = {
   ttl: 300,            // seconds (0 = disabled)
@@ -120,7 +118,7 @@ query <api_name> verb=<VERB> {
 
   stack {
     db.query product {
-      where = $db.product.name|icontains:$input.search
+      where = $db.product.name|INCLUDES:$input.search
       return = {type: "list", paging: {page: $input.page, per_page: 25}}
     } as $products
   }
@@ -141,16 +139,16 @@ Use `verb=GET`, `verb=POST`, `verb=PUT`, `verb=PATCH`, `verb=DELETE`.
 
 Use forward slashes for route grouping: `auth/signup`, `auth/login`, `users/profile`.
 
-### Complete Example: Signup API
+### Complete Example: User Signup API
 
 ```
 query auth/signup verb=POST {
   description = "Register a new user"
 
   input {
-    text name
+    text name filters=trim
     email email filters=trim|lower
-    password password
+    password password filters=min:8|minAlpha:1|minDigit:1
   }
 
   stack {
@@ -190,6 +188,81 @@ query auth/signup verb=POST {
 }
 ```
 
+### Complete Example: Paginated Search with Ownership
+
+```
+query posts/list verb=GET {
+  description = "List authenticated user's posts with search"
+  auth = "user"
+
+  input {
+    text search?
+    int page?
+    int per_page?
+    text sort_by?
+  }
+
+  stack {
+    var $page { value = $input.page|coalesce:1 }
+    var $per_page { value = $input.per_page|coalesce:25 }
+    var $sort_by { value = $input.sort_by|coalesce:"created_at" }
+
+    db.query post {
+      where = $db.post.user_id == $auth.id
+        && $db.post.title|INCLUDES:$input.search
+      sort = {post.$sort_by: "desc"}
+      return = {type: "list", paging: {page: $page, per_page: $per_page, totals: true}}
+    } as $posts
+  }
+
+  response = $posts
+
+  tags = ["posts"]
+  cache = {ttl: 30, input: true, auth: true}
+}
+```
+
+### Complete Example: CRUD Delete with Ownership Check
+
+```
+query posts/delete verb=DELETE {
+  description = "Delete a post owned by the authenticated user"
+  auth = "user"
+
+  input {
+    int post_id
+  }
+
+  stack {
+    db.get post {
+      field_name = "id"
+      field_value = $input.post_id
+    } as $post
+
+    precondition {
+      conditions = `$post|is_not_null`
+      type = "notfound"
+      message = "Post not found"
+    }
+
+    precondition {
+      conditions = `$post.user_id == $auth.id`
+      type = "accessdenied"
+      message = "You do not own this post"
+    }
+
+    db.del post {
+      field_name = "id"
+      field_value = $input.post_id
+    }
+  }
+
+  response = {success: true}
+
+  tags = ["posts"]
+}
+```
+
 ---
 
 ## Middleware
@@ -225,7 +298,6 @@ middleware <name> {
     user: $user
   }
 
-  // Settings
   response_strategy = "merge"      // "merge" (default) or "replace"
   exception_policy = "critical"    // "critical" | "silent" (default) | "rethrow"
   tags = ["security"]
@@ -263,22 +335,17 @@ task <name> {
   description = "Description of what this task does"
 
   stack {
-    // Example: re-engage inactive users
-    db.query user {
-      where = $db.user.last_login|less_than:$db.user.created_at|add_secs_to_timestamp:604800
+    // Example: clean up expired sessions
+    db.query session {
+      where = $db.session.expires_at < "now"|to_timestamp:"UTC"
       return = {type: "list"}
-    } as $inactiveUsers
+    } as $expiredSessions
 
-    foreach ($inactiveUsers) {
-      each as $user {
-        api.request {
-          url = "https://api.sendgrid.com/v3/mail/send"
-          method = "POST"
-          headers = []|push:"Authorization: Bearer $env.SENDGRID_KEY"
-          params = {
-            to: $user.email,
-            subject: "We miss you!"
-          }
+    foreach ($expiredSessions) {
+      each as $session {
+        db.del session {
+          field_name = "id"
+          field_value = $session.id
         }
       }
     }
@@ -287,12 +354,12 @@ task <name> {
   schedule = [
     {
       starts_on: "2025-01-01 00:00:00+00:00",
-      freq: 604800,                               // weekly (in seconds)
-      ends_on: null                                // runs indefinitely
+      freq: 3600,                               // hourly (in seconds)
+      ends_on: null                              // runs indefinitely
     }
   ]
 
-  tags = ["engagement"]
+  tags = ["maintenance"]
   history = {inherit: true}
 }
 ```
@@ -330,13 +397,18 @@ table_trigger <name> {
         api.request {
           url = "https://api.sendgrid.com/v3/mail/send"
           method = "POST"
-          params = {to: $input.new.email, subject: "Welcome!"}
+          headers = "[]"|json_decode|push:"Authorization: Bearer "|concat:$env.SENDGRID_KEY
+          params = {
+            personalizations: [{to: [{email: $input.new.email}]}],
+            from: {email: "noreply@app.com"},
+            subject: "Welcome!",
+            content: [{type: "text/plain", value: "Welcome to our platform!"}]
+          }
         }
       }
     }
   }
 
-  // Settings: which events trigger this
   actions = {insert: true, update: false, delete: false, truncate: false}
   tags = ["notifications"]
 }
@@ -359,7 +431,12 @@ workspace_trigger <name> {
   stack {
     conditional {
       if (`$input.action == "branch_merge"`) {
-        // notify admin
+        // notify admin via webhook
+        api.request {
+          url = $env.SLACK_WEBHOOK_URL
+          method = "POST"
+          params = {text: "Branch merged: "|concat:$input.source_branch.name}
+        }
       }
     }
   }
@@ -422,7 +499,6 @@ mcp_server_trigger <name> {
   }
 
   stack {
-    // Modify available tools based on context
     array.filter ($input.tools) if (`$this.name != "admin_tool"`) as $filteredTools
   }
 
@@ -442,7 +518,7 @@ mcp_server_trigger <name> {
 
 ### Unit Tests
 
-Embedded within the primitive being tested:
+Unit tests are embedded within the primitive being tested. They validate inputs produce expected outputs.
 
 ```
 test "should return user by ID" {
@@ -452,51 +528,110 @@ test "should return user by ID" {
     user_id: 1
   }
 
-  // Expectations on the response
-  expect.to_be_defined { value = $response }
-  expect.to_equal { value = $response.id, expected = 1 }
-  expect.to_contain { value = $response.name, expected = "John" }
+  expect.to_be_defined ($response)
+  expect.to_equal ($response.id, 1)
+  expect.to_contain ($response.name, "John")
+}
+```
+
+### Available Assertions
+
+| Assertion | Syntax | Description |
+|-----------|--------|-------------|
+| `expect.to_be_defined` | `expect.to_be_defined ($value)` | Value exists and is not null |
+| `expect.to_not_be_defined` | `expect.to_not_be_defined ($value)` | Value is null/undefined |
+| `expect.to_equal` | `expect.to_equal ($value, <expected>)` | Value equals expected |
+| `expect.to_not_equal` | `expect.to_not_equal ($value, <expected>)` | Value does not equal expected |
+| `expect.to_contain` | `expect.to_contain ($value, <content>)` | Value contains expected content |
+| `expect.to_be_true` | `expect.to_be_true ($value)` | Value is true |
+| `expect.to_be_false` | `expect.to_be_false ($value)` | Value is false |
+
+### Mock Responses
+
+Mock blocks override the return values of specific function calls during tests. This ensures consistent test results regardless of external state.
+
+To mock a function in a test:
+1. Right-click the function in the stack and choose "Mock Test Response"
+2. Configure mock data for each individual test
+3. The mock response replaces the real function's output during that test
+
+Mocks work on any statement that returns a value (`db.get`, `db.query`, `function.run`, `api.request`, etc.).
+
+### Unit Test with Auth
+
+For authenticated function stacks, provide auth tokens:
+
+```
+test "should return user's own posts" {
+  datasource = "live"
+
+  input = {
+    page: 1,
+    per_page: 10
+  }
+
+  // Auth token and extras configured in test settings
+  // Token expiration can be ignored during testing
+
+  expect.to_be_defined ($response)
+  expect.to_be_true ($response|count|greater_than:0)
 }
 ```
 
 ### Workflow Tests
 
-Standalone tests that can invoke multiple functions/APIs:
+Standalone tests that can invoke multiple functions/APIs in sequence:
 
 ```
 workflow_test "full signup and login flow" {
   stack {
     // Step 1: Sign up
     function.run "auth/signup" {
-      input = {name: "Test User", email: "test@example.com", password: "pass123"}
+      input = {name: "Test User", email: "test@example.com", password: "Pass1234"}
     } as $signup
 
-    expect.to_be_defined { value = $signup.authToken }
+    expect.to_be_defined ($signup.authToken)
 
-    // Step 2: Login
+    // Step 2: Login with same credentials
     function.run "auth/login" {
-      input = {email: "test@example.com", password: "pass123"}
+      input = {email: "test@example.com", password: "Pass1234"}
     } as $login
 
-    expect.to_be_defined { value = $login.authToken }
-    expect.to_not_equal { value = $login.authToken, expected = $signup.authToken }
+    expect.to_be_defined ($login.authToken)
+    expect.to_not_equal ($login.authToken, $signup.authToken)
   }
 
   tags = ["auth", "integration"]
 }
 ```
 
-### Available Expectations
+### Workflow Test with API Calls
 
-| Assertion | Description |
-|-----------|-------------|
-| `expect.to_be_defined` | Value exists and is not null |
-| `expect.to_not_be_defined` | Value is null/undefined |
-| `expect.to_equal` | Value equals expected |
-| `expect.to_not_equal` | Value does not equal expected |
-| `expect.to_contain` | Value contains expected content |
-| `expect.to_true` | Value is true |
-| `expect.to_false` | Value is false |
+```
+workflow_test "create and retrieve a post" {
+  stack {
+    // Create a post via API
+    api.call posts/create verb=POST {
+      api_group = "v1"
+      input = {title: "Test Post", body: "Content here"}
+    } as $created
+
+    expect.to_be_defined ($created.id)
+    expect.to_equal ($created.title, "Test Post")
+
+    // Retrieve it
+    api.call posts/get verb=GET {
+      api_group = "v1"
+      input = {post_id: $created.id}
+    } as $retrieved
+
+    expect.to_equal ($retrieved.id, $created.id)
+    expect.to_equal ($retrieved.title, "Test Post")
+  }
+
+  tags = ["posts", "integration"]
+}
+```
 
 ### Test Configuration
 
@@ -508,3 +643,285 @@ workflow_test "full signup and login flow" {
 | `description` | Test purpose documentation |
 
 Expectations can be placed anywhere in the `stack` for workflow tests. For unit tests, expectations follow the input configuration.
+
+---
+
+## Real-World Function Patterns
+
+### Pattern: Phone Number Formatter
+
+```
+function utilities/format_phone {
+  description = "Normalize phone numbers to E.164 format"
+
+  input {
+    text phone filters=trim
+    text country_code?="1"
+  }
+
+  stack {
+    // Strip all non-numeric characters
+    var $clean {
+      value = $input.phone|regex_replace:"[^0-9]":""
+    }
+
+    // Handle different formats
+    conditional {
+      if (`$clean|strlen == 10`) {
+        // US number without country code
+        var.update $clean { value = $input.country_code|concat:$clean }
+      }
+      elseif (`$clean|starts_with:"1" && $clean|strlen == 11`) {
+        // Already has US country code
+      }
+      else {
+        precondition {
+          conditions = `$clean|strlen >= 10 && $clean|strlen <= 15`
+          type = "badrequest"
+          message = "Invalid phone number length"
+        }
+      }
+    }
+
+    var $formatted {
+      value = "+"|concat:$clean
+    }
+  }
+
+  response = $formatted
+
+  tags = ["utilities"]
+}
+```
+
+### Pattern: Paginated API with External Pagination
+
+```
+function data/paginated_search {
+  description = "Search records with external pagination and sorting"
+
+  input {
+    text table_name
+    text search?
+    int page?
+    int per_page?
+    text sort_field?
+    text sort_dir?
+  }
+
+  stack {
+    var $page { value = $input.page|coalesce:1 }
+    var $per_page { value = $input.per_page|coalesce:25|min:100 }
+    var $sort_field { value = $input.sort_field|coalesce:"created_at" }
+    var $sort_dir { value = $input.sort_dir|coalesce:"desc" }
+
+    db.query $input.table_name {
+      where = $db.$input.table_name.name|INCLUDES:$input.search
+      sort = {$input.table_name.$sort_field: $sort_dir}
+      return = {type: "list", paging: {page: $page, per_page: $per_page, totals: true}}
+    } as $results
+  }
+
+  response = $results
+
+  tags = ["data", "utilities"]
+}
+```
+
+### Pattern: Retry with Exponential Backoff
+
+```
+function utilities/retry_api_call {
+  description = "Call an external API with retry logic"
+
+  input {
+    text url
+    text method?="GET"
+    json params?
+    int max_retries?=3
+  }
+
+  stack {
+    var $retries { value = 0 }
+    var $success { value = false }
+    var $response { value = "{}"|json_decode }
+    var $last_error { value = "" }
+
+    while (`$retries < $input.max_retries && $success == false`) {
+      each {
+        try_catch {
+          try {
+            api.request {
+              url = $input.url
+              method = $input.method
+              params = $input.params
+            } as $api_response
+
+            conditional {
+              if (`$api_response.status >= 200 && $api_response.status < 300`) {
+                var.update $response { value = $api_response }
+                var.update $success { value = true }
+              }
+              else {
+                var.update $last_error { value = "HTTP "|concat:$api_response.status|to_text }
+              }
+            }
+          }
+          catch ($error) {
+            var.update $last_error { value = $error|to_text }
+          }
+        }
+
+        conditional {
+          if (`$success == false`) {
+            math.add $retries { value = 1 }
+            // Exponential backoff: 1s, 2s, 4s
+            var $wait_time { value = 1 }
+            math.mul $wait_time { value = $retries }
+            sleep { seconds = $wait_time }
+          }
+        }
+      }
+    }
+
+    precondition {
+      conditions = `$success == true`
+      type = "badrequest"
+      message = "API call failed after retries: "|concat:$last_error
+    }
+  }
+
+  response = $response
+
+  tags = ["utilities", "api"]
+}
+```
+
+### Pattern: Webhook Signature Verification
+
+```
+function security/verify_webhook {
+  description = "Verify webhook HMAC signature"
+
+  input {
+    text payload
+    text signature
+    text secret_env_key?="WEBHOOK_SECRET"
+  }
+
+  stack {
+    // Compute expected signature
+    var $expected {
+      value = $input.payload|hmac_sha256:$env.$input.secret_env_key:true
+    }
+
+    // Constant-time comparison
+    precondition {
+      conditions = `$expected == $input.signature`
+      type = "unauthorized"
+      message = "Invalid webhook signature"
+    }
+  }
+
+  response = {verified: true}
+
+  tags = ["security", "webhooks"]
+}
+```
+
+---
+
+## Common Mistakes
+
+1. **Forgetting `json_decode` for complex values.** This is the #1 XanoScript mistake.
+   ```
+   // WRONG
+   var items { value = "[1,2,3]" }
+
+   // RIGHT
+   var items { value = "[1,2,3]"|json_decode }
+   ```
+
+2. **Missing `$` when referencing variables.**
+   ```
+   // WRONG
+   var.update myVar { value = 10 }
+
+   // RIGHT
+   var.update $myVar { value = 10 }
+   ```
+
+3. **Omitting backticks in conditions.**
+   ```
+   // WRONG
+   conditional {
+     if ($age >= 18) { ... }
+   }
+
+   // RIGHT
+   conditional {
+     if (`$age >= 18`) { ... }
+   }
+   ```
+
+4. **Forgetting `break` in switch cases.** Without `break`, execution falls through.
+
+5. **Not capturing results with `as`.** Every function that produces output needs `as $variable`.
+
+6. **Using `var` when you mean `var.update`.** `var` creates a new variable. `var.update $existing` modifies an existing one.
+
+7. **Returning sensitive data.** Never include password hashes, internal IDs, or tokens in API responses unless explicitly needed. Use `|unpick:["password"]` to strip sensitive fields.
+
+8. **Not wrapping `function.run` in `try_catch`.** Functions with preconditions or input validation can throw. Handle these gracefully.
+
+9. **Building monolithic stacks.** Extract reusable logic into custom functions. If you're copy-pasting logic between APIs, it belongs in a function.
+
+10. **Skipping `precondition` checks after `db.get`.** If `db.get` returns null, accessing its properties crashes. Always validate existence first.
+
+---
+
+## Debugging
+
+1. **Use `debug.log` liberally** during development:
+   ```
+   debug.log { value = $user }
+   debug.log { value = $items|count }
+   debug.log { value = "checkpoint: past validation" }
+   ```
+
+2. **Use `stop_and_debug`** to halt execution and inspect state:
+   ```
+   stop_and_debug { value = $suspiciousVariable }
+   ```
+
+3. **Use `precondition` to surface specific errors:**
+   ```
+   precondition {
+     conditions = `$response.status|equals:200`
+     type = "badrequest"
+     message = "External API returned non-200"
+     payload = {status: $response.status, body: $response.body}
+   }
+   ```
+
+4. **Wrap risky operations in `try_catch`:**
+   ```
+   try_catch {
+     try {
+       api.request { url = "https://flaky-api.com/data", method = "GET" } as $data
+     }
+     catch ($error) {
+       debug.log { value = $error }
+       var $data { value = '{"fallback": true}'|json_decode }
+     }
+   }
+   ```
+
+5. **Check your datasource.** If data looks wrong, confirm you're querying the right one (`live` vs `draft`). Use `util.set_datasource` to switch.
+
+6. **Inspect variable types:**
+   ```
+   debug.log { value = $value|is_array }
+   debug.log { value = $value|is_object }
+   debug.log { value = $value|is_null }
+   ```
