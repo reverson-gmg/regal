@@ -1,236 +1,239 @@
 {
-    "userId": "taylor_2318844705",
-    "name": "lead.website",
-    "eventSource": "Website",
-    "originalTimestamp": "2026-02-07T19:08:34-05:00",
-    "traits": {
-        "firstName": "Sierra",
-        "lastName": "Taylor",
-        "phones": {
-            "+12318844705": {
-                "label": "Mobile",
-                "isPrimary": true
-            }
-        },
-        "dealer": {
-            "id": 8644,
-            "address": "1605 N Mitchell St",
-            "address_2": "",
-            "city": "Cadillac",
-            "state": "Michigan",
-            "st": "MI",
-            "region_name": "McCrum",
-            "zip_code": "49601",
-            "time_zone": "Eastern",
-            "slug": "cadillac-mi",
-            "crm_email": "rightwayautocadillac@promaxonline.net",
-            "name": "Cadillac, MI",
-            "name_no_st": "Cadillac",
-            "phone": "(231) 253-3901",
-            "internal_name": "Cadillac",
-            "website": "https://www.rightway.com/d/cadillac-mi/",
-            "area_code": "231",
-            "hours": {
-                "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 6pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
-                "monday": {
-                    "display": "9am - 7pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "19:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "7pm"
-                },
-                "tuesday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "wednesday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "thursday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "friday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "saturday": {
-                    "display": "10am - 3pm",
-                    "is_open": true,
-                    "open_time": "10:00",
-                    "close_time": "15:00",
-                    "open_time_display": "10am",
-                    "close_time_display": "3pm"
-                },
-                "sunday": {
-                    "display": "Closed",
-                    "is_open": false,
-                    "open_time": "",
-                    "close_time": "",
-                    "open_time_display": "",
-                    "close_time_display": ""
-                }
-            }
-        },
-        "verification": {
-            "phone": {
-                "line_type": "mobile",
-                "carrier_name": "AT&T Wireless",
-                "valid_number": true,
-                "at": "2026-02-07T19:08:34-05:00"
-            }
-        },
-        "activity": {
-            "at": "2026-02-07T19:08:34-05:00",
-            "leads": {
-                "vehicle_text_us": {
-                    "at": "2026-02-07T19:08:34-05:00",
-                    "dealer_id": "8644",
-                    "dealer": "Cadillac, MI",
-                    "score": 0
-                },
-                "last": {
-                    "at": "2026-02-07T19:08:34-05:00",
-                    "dealer_id": "8644",
-                    "dealer": "Cadillac, MI",
-                    "score": 0,
-                    "type": "vehicle_text_us"
-                }
-            }
-        }
+  "userId": "taylor_2318844705",
+  "name": "lead.website",
+  "eventSource": "Website",
+  "originalTimestamp": "2026-02-07T19:08:34-05:00",
+  "traits": {
+    "firstName": "Sierra",
+    "lastName": "Taylor",
+    "phones": {
+      "+12318844705": {
+        "label": "Mobile",
+        "isPrimary": true
+      }
     },
-    "properties": {
-        "event_type": "vehicle_text_us",
-        "event_type_name": "Vehicle Text Us",
-        "first_name": "Sierra",
-        "last_name": "Taylor",
-        "phone": "(231) 884-4705",
-        "submission": {
-            "at": "2026-02-07T19:08:34-05:00",
-            "at_display": "Sat, Feb 7, 2026 - 7:08 PM",
-            "message": "Hello I was wondering how much this car is"
+    "dealer": {
+      "at": "2026-02-07T19:08:34-05:00",
+      "id": 8644,
+      "address": "1605 N Mitchell St",
+      "address_2": "",
+      "city": "Cadillac",
+      "state": "Michigan",
+      "st": "MI",
+      "region_name": "McCrum",
+      "zip_code": "49601",
+      "time_zone": "Eastern",
+      "slug": "cadillac-mi",
+      "crm_email": "rightwayautocadillac@promaxonline.net",
+      "name": "Cadillac, MI",
+      "name_no_st": "Cadillac",
+      "phone": "(231) 253-3901",
+      "internal_name": "Cadillac",
+      "website": "https://www.rightway.com/d/cadillac-mi/",
+      "display": "\ud83d\udccd 1605 N Mitchell St, Cadillac, MI 49601\n\ud83d\udcde (231) 253-3901\n\ud83c\udf10 https://www.rightway.com/d/cadillac-mi/",
+      "area_code": "231"
+    },
+    "dealer_hours": {
+      "at": "2026-02-07T19:08:34-05:00",
+      "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 6pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
+      "monday": {
+        "display": "9am - 7pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "19:00",
+        "open_time_display": "9am",
+        "close_time_display": "7pm"
+      },
+      "tuesday": {
+        "display": "9am - 6pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "18:00",
+        "open_time_display": "9am",
+        "close_time_display": "6pm"
+      },
+      "wednesday": {
+        "display": "9am - 6pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "18:00",
+        "open_time_display": "9am",
+        "close_time_display": "6pm"
+      },
+      "thursday": {
+        "display": "9am - 6pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "18:00",
+        "open_time_display": "9am",
+        "close_time_display": "6pm"
+      },
+      "friday": {
+        "display": "9am - 6pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "18:00",
+        "open_time_display": "9am",
+        "close_time_display": "6pm"
+      },
+      "saturday": {
+        "display": "10am - 3pm",
+        "is_open": true,
+        "open_time": "10:00",
+        "close_time": "15:00",
+        "open_time_display": "10am",
+        "close_time_display": "3pm"
+      },
+      "sunday": {
+        "display": "Closed",
+        "is_open": false,
+        "open_time": "",
+        "close_time": "",
+        "open_time_display": "",
+        "close_time_display": ""
+      }
+    },
+    "verification": {
+      "phone": {
+        "line_type": "mobile",
+        "carrier_name": "AT&T Wireless",
+        "valid_number": true,
+        "at": "2026-02-07T19:08:34-05:00"
+      }
+    },
+    "activity": {
+      "at": "2026-02-07T19:08:34-05:00",
+      "leads": {
+        "vehicle_text_us": {
+          "at": "2026-02-07T19:08:34-05:00",
+          "dealer_id": "8644",
+          "dealer": "Cadillac, MI",
+          "score": 0
         },
-        "vehicle": {
-            "vin": "KNAE55LC7J6018548",
-            "year": "2018",
-            "make": "Kia",
-            "model": "Stinger",
-            "trim": "GT2",
-            "body_style": "Car",
-            "mileage": "36182",
-            "stock": "XJ6018548",
-            "age": "675",
-            "dealer_id": "8871",
-            "location": "Warsaw, IN",
-            "location_type": "external"
-        },
-        "dealer": {
-            "id": 8644,
-            "address": "1605 N Mitchell St",
-            "address_2": "",
-            "city": "Cadillac",
-            "state": "Michigan",
-            "st": "MI",
-            "region_name": "McCrum",
-            "zip_code": "49601",
-            "time_zone": "Eastern",
-            "slug": "cadillac-mi",
-            "name": "Cadillac, MI",
-            "name_no_st": "Cadillac",
-            "phone": "(231) 253-3901",
-            "internal_name": "Cadillac",
-            "website": "https://www.rightway.com/d/cadillac-mi/",
-            "area_code": "231",
-            "hours": {
-                "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 6pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
-                "monday": {
-                    "display": "9am - 7pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "19:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "7pm"
-                },
-                "tuesday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "wednesday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "thursday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "friday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "saturday": {
-                    "display": "10am - 3pm",
-                    "is_open": true,
-                    "open_time": "10:00",
-                    "close_time": "15:00",
-                    "open_time_display": "10am",
-                    "close_time_display": "3pm"
-                },
-                "sunday": {
-                    "display": "Closed",
-                    "is_open": false,
-                    "open_time": "",
-                    "close_time": "",
-                    "open_time_display": "",
-                    "close_time_display": ""
-                }
-            }
-        },
-        "form_metadata": {
-            "id": "khWUqD",
-            "url": "https://www.rightway.com/d/cadillac-mi/car/used-2018-kia-stinger-for-sale-knae55lc7j6018548/",
-            "name": "message-vehicle",
-            "embed_type": "popup"
-        },
-        "custom_object_lead_id": "03934926-8818-ee7b-9083-13d78632a8a2",
-        "custom_object_lead_name": "Web - Vehicle Text Us (2/7/26)",
-        "custom_object_lead_received_display": "Sat, Feb 7, 2026 - 7:08 PM",
-        "custom_object_lead_dealer": "Cadillac, MI",
-        "custom_object_lead_summary": "Sierra Taylor sent a message about our 2018 Kia Stinger and wants us to text them back.",
-        "custom_object_lead_message": "Hello I was wondering how much this car is",
-        "custom_object_lead_details": "🚗 Vehicle: 2018 Kia Stinger\n🚘 Body Style: Car\n🎨 Color: \n📍 Location: Warsaw, IN\n🆔 Stock #: XJ6018548\n🔑 VIN: KNAE55LC7J6018548\n📅 Age: 675 days\n🔗 URL: https://www.rightway.com/d/cadillac-mi/car/used-2018-kia-stinger-for-sale-knae55lc7j6018548/"
+        "last": {
+          "at": "2026-02-07T19:08:34-05:00",
+          "dealer_id": "8644",
+          "dealer": "Cadillac, MI",
+          "score": 0,
+          "type": "vehicle_text_us"
+        }
+      }
     }
+  },
+  "properties": {
+    "event_type": "vehicle_text_us",
+    "event_type_name": "Vehicle Text Us",
+    "first_name": "Sierra",
+    "last_name": "Taylor",
+    "phone": "(231) 884-4705",
+    "submission": {
+      "at": "2026-02-07T19:08:34-05:00",
+      "at_display": "Sat, Feb 7, 2026 - 7:08 PM",
+      "message": "Hello I was wondering how much this car is"
+    },
+    "vehicle": {
+      "vin": "KNAE55LC7J6018548",
+      "year": "2018",
+      "make": "Kia",
+      "model": "Stinger",
+      "trim": "GT2",
+      "body_style": "Car",
+      "mileage": "36182",
+      "stock": "XJ6018548",
+      "age": "675",
+      "dealer_id": "8871",
+      "location": "Warsaw, IN",
+      "location_type": "external"
+    },
+    "dealer": {
+      "id": 8644,
+      "address": "1605 N Mitchell St",
+      "address_2": "",
+      "city": "Cadillac",
+      "state": "Michigan",
+      "st": "MI",
+      "region_name": "McCrum",
+      "zip_code": "49601",
+      "time_zone": "Eastern",
+      "slug": "cadillac-mi",
+      "name": "Cadillac, MI",
+      "name_no_st": "Cadillac",
+      "phone": "(231) 253-3901",
+      "internal_name": "Cadillac",
+      "website": "https://www.rightway.com/d/cadillac-mi/",
+      "area_code": "231",
+      "hours": {
+        "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 6pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
+        "monday": {
+          "display": "9am - 7pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "19:00",
+          "open_time_display": "9am",
+          "close_time_display": "7pm"
+        },
+        "tuesday": {
+          "display": "9am - 6pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "18:00",
+          "open_time_display": "9am",
+          "close_time_display": "6pm"
+        },
+        "wednesday": {
+          "display": "9am - 6pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "18:00",
+          "open_time_display": "9am",
+          "close_time_display": "6pm"
+        },
+        "thursday": {
+          "display": "9am - 6pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "18:00",
+          "open_time_display": "9am",
+          "close_time_display": "6pm"
+        },
+        "friday": {
+          "display": "9am - 6pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "18:00",
+          "open_time_display": "9am",
+          "close_time_display": "6pm"
+        },
+        "saturday": {
+          "display": "10am - 3pm",
+          "is_open": true,
+          "open_time": "10:00",
+          "close_time": "15:00",
+          "open_time_display": "10am",
+          "close_time_display": "3pm"
+        },
+        "sunday": {
+          "display": "Closed",
+          "is_open": false,
+          "open_time": "",
+          "close_time": "",
+          "open_time_display": "",
+          "close_time_display": ""
+        }
+      }
+    },
+    "form_metadata": {
+      "id": "khWUqD",
+      "url": "https://www.rightway.com/d/cadillac-mi/car/used-2018-kia-stinger-for-sale-knae55lc7j6018548/",
+      "name": "message-vehicle",
+      "embed_type": "popup"
+    },
+    "custom_object_lead_id": "03934926-8818-ee7b-9083-13d78632a8a2",
+    "custom_object_lead_name": "Web - Vehicle Text Us (2/7/26)",
+    "custom_object_lead_received_display": "Sat, Feb 7, 2026 - 7:08 PM",
+    "custom_object_lead_dealer": "Cadillac, MI",
+    "custom_object_lead_summary": "Sierra Taylor sent a message about our 2018 Kia Stinger and wants us to text them back.",
+    "custom_object_lead_message": "Hello I was wondering how much this car is",
+    "custom_object_lead_details": "\ud83d\ude97 Vehicle: 2018 Kia Stinger\n\ud83d\ude98 Body Style: Car\n\ud83c\udfa8 Color: \n\ud83d\udccd Location: Warsaw, IN\n\ud83c\udd94 Stock #: XJ6018548\n\ud83d\udd11 VIN: KNAE55LC7J6018548\n\ud83d\udcc5 Age: 675 days\n\ud83d\udd17 URL: https://www.rightway.com/d/cadillac-mi/car/used-2018-kia-stinger-for-sale-knae55lc7j6018548/"
+  }
 }

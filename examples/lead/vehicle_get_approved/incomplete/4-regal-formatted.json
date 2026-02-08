@@ -1,272 +1,275 @@
 {
-    "userId": "bell_4192314198",
-    "name": "lead.website",
-    "eventSource": "Website",
-    "originalTimestamp": "2026-02-08T15:12:13-05:00",
-    "traits": {
-        "firstName": "Myesha",
-        "lastName": "Bell",
-        "phones": {
-            "+14192314198": {
-                "label": "Mobile",
-                "isPrimary": true
-            }
-        },
-        "emails": {
-            "myeshabell44@gmail.com": {
-                "label": "Personal",
-                "isPrimary": true
-            }
-        },
-        "dealer": {
-            "id": 7627,
-            "address": "9110 Indianapolis Blvd",
-            "address_2": "",
-            "city": "Highland",
-            "state": "Indiana",
-            "st": "IN",
-            "region_name": "Shapiro",
-            "zip_code": "46322",
-            "time_zone": "Eastern",
-            "slug": "highland-in",
-            "crm_email": "rightwayhighland@promaxonline.net",
-            "name": "Highland, IN",
-            "name_no_st": "Highland",
-            "phone": "(219) 237-5955",
-            "internal_name": "Highland",
-            "website": "https://www.rightway.com/d/highland-in/",
-            "area_code": "219",
-            "hours": {
-                "display": "Mon: 9am - 7pm\nTue: 9am - 7pm\nWed: 9am - 7pm\nThu: 9am - 7pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
-                "monday": {
-                    "display": "9am - 7pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "19:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "7pm"
-                },
-                "tuesday": {
-                    "display": "9am - 7pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "19:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "7pm"
-                },
-                "wednesday": {
-                    "display": "9am - 7pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "19:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "7pm"
-                },
-                "thursday": {
-                    "display": "9am - 7pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "19:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "7pm"
-                },
-                "friday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "saturday": {
-                    "display": "10am - 3pm",
-                    "is_open": true,
-                    "open_time": "10:00",
-                    "close_time": "15:00",
-                    "open_time_display": "10am",
-                    "close_time_display": "3pm"
-                },
-                "sunday": {
-                    "display": "Closed",
-                    "is_open": false,
-                    "open_time": "",
-                    "close_time": "",
-                    "open_time_display": "",
-                    "close_time_display": ""
-                }
-            }
-        },
-        "verification": {
-            "phone": {
-                "line_type": "mobile",
-                "carrier_name": "T-Mobile USA",
-                "valid_number": true,
-                "at": "2026-02-08T15:12:12-05:00"
-            },
-            "email": {
-                "free": true,
-                "role": false,
-                "reason": "accepted_email",
-                "result": "deliverable",
-                "score": 0.833,
-                "accept_all": false,
-                "disposable": false,
-                "at": "2026-02-08T15:12:09-05:00"
-            }
-        },
-        "activity": {
-            "at": "2026-02-08T15:12:13-05:00",
-            "leads": {
-                "vehicle_get_approved_incomplete": {
-                    "at": "2026-02-08T15:12:13-05:00",
-                    "dealer_id": "7627",
-                    "dealer": "Highland, IN",
-                    "score": 0
-                },
-                "last": {
-                    "at": "2026-02-08T15:12:13-05:00",
-                    "dealer_id": "7627",
-                    "dealer": "Highland, IN",
-                    "score": 0,
-                    "type": "vehicle_get_approved_incomplete"
-                }
-            }
-        },
-        "preferences": {
-            "trade_in": "No",
-            "body_style": "SUV",
-            "payment_range": "$400 - $499 / month",
-            "shopping_stage": "Ready to buy"
-        },
-        "credit_profile": {
-            "credit_estimate": "I'm not sure"
-        }
+  "userId": "bell_4192314198",
+  "name": "lead.website",
+  "eventSource": "Website",
+  "originalTimestamp": "2026-02-08T15:12:13-05:00",
+  "traits": {
+    "firstName": "Myesha",
+    "lastName": "Bell",
+    "phones": {
+      "+14192314198": {
+        "label": "Mobile",
+        "isPrimary": true
+      }
     },
-    "properties": {
-        "event_type": "vehicle_get_approved_incomplete",
-        "event_type_name": "Vehicle Get Approved: Incomplete",
-        "first_name": "Myesha",
-        "last_name": "Bell",
-        "phone": "(419) 231-4198",
-        "email": "myeshabell44@gmail.com",
-        "summary": "Myesha Bell just started a credit app - they're ready to buy and want to get approved for a 2024 Dodge Durango. Has unknown credit, no trade-in, and wants payments around $400-$499/mo.",
-        "submission": {
-            "at": "2026-02-08T15:12:13-05:00",
-            "at_display": "Sun, Feb 8, 2026 - 3:12 PM",
-            "ip_address": "98.46.109.171",
-            "preferences": {
-                "trade_in": "No",
-                "body_style": "SUV",
-                "payment_range": "$400 - $499 / month",
-                "shopping_stage": "Ready to buy"
-            },
-            "credit_profile": {
-                "credit_estimate": "I'm not sure"
-            }
+    "emails": {
+      "myeshabell44@gmail.com": {
+        "label": "Personal",
+        "isPrimary": true
+      }
+    },
+    "dealer": {
+      "at": "2026-02-08T15:12:13-05:00",
+      "id": 7627,
+      "address": "9110 Indianapolis Blvd",
+      "address_2": "",
+      "city": "Highland",
+      "state": "Indiana",
+      "st": "IN",
+      "region_name": "Shapiro",
+      "zip_code": "46322",
+      "time_zone": "Eastern",
+      "slug": "highland-in",
+      "crm_email": "rightwayhighland@promaxonline.net",
+      "name": "Highland, IN",
+      "name_no_st": "Highland",
+      "phone": "(219) 237-5955",
+      "internal_name": "Highland",
+      "website": "https://www.rightway.com/d/highland-in/",
+      "display": "\ud83d\udccd 9110 Indianapolis Blvd, Highland, IN 46322\n\ud83d\udcde (219) 237-5955\n\ud83c\udf10 https://www.rightway.com/d/highland-in/",
+      "area_code": "219"
+    },
+    "dealer_hours": {
+      "at": "2026-02-08T15:12:13-05:00",
+      "display": "Mon: 9am - 7pm\nTue: 9am - 7pm\nWed: 9am - 7pm\nThu: 9am - 7pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
+      "monday": {
+        "display": "9am - 7pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "19:00",
+        "open_time_display": "9am",
+        "close_time_display": "7pm"
+      },
+      "tuesday": {
+        "display": "9am - 7pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "19:00",
+        "open_time_display": "9am",
+        "close_time_display": "7pm"
+      },
+      "wednesday": {
+        "display": "9am - 7pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "19:00",
+        "open_time_display": "9am",
+        "close_time_display": "7pm"
+      },
+      "thursday": {
+        "display": "9am - 7pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "19:00",
+        "open_time_display": "9am",
+        "close_time_display": "7pm"
+      },
+      "friday": {
+        "display": "9am - 6pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "18:00",
+        "open_time_display": "9am",
+        "close_time_display": "6pm"
+      },
+      "saturday": {
+        "display": "10am - 3pm",
+        "is_open": true,
+        "open_time": "10:00",
+        "close_time": "15:00",
+        "open_time_display": "10am",
+        "close_time_display": "3pm"
+      },
+      "sunday": {
+        "display": "Closed",
+        "is_open": false,
+        "open_time": "",
+        "close_time": "",
+        "open_time_display": "",
+        "close_time_display": ""
+      }
+    },
+    "verification": {
+      "phone": {
+        "line_type": "mobile",
+        "carrier_name": "T-Mobile USA",
+        "valid_number": true,
+        "at": "2026-02-08T15:12:12-05:00"
+      },
+      "email": {
+        "free": true,
+        "role": false,
+        "reason": "accepted_email",
+        "result": "deliverable",
+        "score": 0.833,
+        "accept_all": false,
+        "disposable": false,
+        "at": "2026-02-08T15:12:09-05:00"
+      }
+    },
+    "activity": {
+      "at": "2026-02-08T15:12:13-05:00",
+      "leads": {
+        "vehicle_get_approved_incomplete": {
+          "at": "2026-02-08T15:12:13-05:00",
+          "dealer_id": "7627",
+          "dealer": "Highland, IN",
+          "score": 0
         },
-        "vehicle": {
-            "vin": "1C4RDJAG4RC115063",
-            "year": "2024",
-            "make": "Dodge",
-            "model": "Durango",
-            "trim": "SXT",
-            "body_style": "SUV",
-            "mileage": "45589",
-            "stock": "RC115063",
-            "age": "107",
-            "dealer_id": "8872",
-            "location": "Battle Creek, MI",
-            "location_type": "external"
-        },
-        "dealer": {
-            "id": 7627,
-            "address": "9110 Indianapolis Blvd",
-            "address_2": "",
-            "city": "Highland",
-            "state": "Indiana",
-            "st": "IN",
-            "region_name": "Shapiro",
-            "zip_code": "46322",
-            "time_zone": "Eastern",
-            "slug": "highland-in",
-            "name": "Highland, IN",
-            "name_no_st": "Highland",
-            "phone": "(219) 237-5955",
-            "internal_name": "Highland",
-            "website": "https://www.rightway.com/d/highland-in/",
-            "area_code": "219",
-            "hours": {
-                "display": "Mon: 9am - 7pm\nTue: 9am - 7pm\nWed: 9am - 7pm\nThu: 9am - 7pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
-                "monday": {
-                    "display": "9am - 7pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "19:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "7pm"
-                },
-                "tuesday": {
-                    "display": "9am - 7pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "19:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "7pm"
-                },
-                "wednesday": {
-                    "display": "9am - 7pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "19:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "7pm"
-                },
-                "thursday": {
-                    "display": "9am - 7pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "19:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "7pm"
-                },
-                "friday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "saturday": {
-                    "display": "10am - 3pm",
-                    "is_open": true,
-                    "open_time": "10:00",
-                    "close_time": "15:00",
-                    "open_time_display": "10am",
-                    "close_time_display": "3pm"
-                },
-                "sunday": {
-                    "display": "Closed",
-                    "is_open": false,
-                    "open_time": "",
-                    "close_time": "",
-                    "open_time_display": "",
-                    "close_time_display": ""
-                }
-            }
-        },
-        "form_metadata": {
-            "id": "e6B5fZ",
-            "url": "https://www.rightway.com/d/highland-in/car/used-2024-dodge-durango-for-sale-1c4rdjag4rc115063/",
-            "name": "get-approved-vehicle",
-            "embed_type": "full-screen",
-            "referral_url": "https://www.rightway.com/d/highland-in/used-cars/?body_style=suv&pg=3"
-        },
-        "custom_object_lead_id": "e80b2012-d6df-a794-f5b8-e3561c25accf",
-        "custom_object_lead_name": "Web - Vehicle Get Approved: Incomplete (2/8/26)",
-        "custom_object_lead_received_display": "Sun, Feb 8, 2026 - 3:12 PM",
-        "custom_object_lead_dealer": "Highland, IN",
-        "custom_object_lead_summary": "Myesha Bell just started a credit app - they're ready to buy and want to get approved for a 2024 Dodge Durango. Has unknown credit, no trade-in, and wants payments around $400-$499/mo.",
-        "custom_object_lead_details": "🚗 Vehicle: 2024 Dodge Durango\n🎯 Stage: Ready to buy\n💳 Credit: I'm not sure\n🔄 Trade-In: No\n🆔 Stock #: RC115063\n🔑 VIN: 1C4RDJAG4RC115063\n📍 Location: Battle Creek, MI\n📅 Age: 107 days\n🔗 URL: https://www.rightway.com/d/highland-in/car/used-2024-dodge-durango-for-sale-1c4rdjag4rc115063/"
+        "last": {
+          "at": "2026-02-08T15:12:13-05:00",
+          "dealer_id": "7627",
+          "dealer": "Highland, IN",
+          "score": 0,
+          "type": "vehicle_get_approved_incomplete"
+        }
+      }
+    },
+    "preferences": {
+      "trade_in": "No",
+      "body_style": "SUV",
+      "payment_range": "$400 - $499 / month",
+      "shopping_stage": "Ready to buy"
+    },
+    "credit_profile": {
+      "credit_estimate": "I'm not sure"
     }
+  },
+  "properties": {
+    "event_type": "vehicle_get_approved_incomplete",
+    "event_type_name": "Vehicle Get Approved: Incomplete",
+    "first_name": "Myesha",
+    "last_name": "Bell",
+    "phone": "(419) 231-4198",
+    "email": "myeshabell44@gmail.com",
+    "summary": "Myesha Bell just started a credit app - they're ready to buy and want to get approved for a 2024 Dodge Durango. Has unknown credit, no trade-in, and wants payments around $400-$499/mo.",
+    "submission": {
+      "at": "2026-02-08T15:12:13-05:00",
+      "at_display": "Sun, Feb 8, 2026 - 3:12 PM",
+      "ip_address": "98.46.109.171",
+      "preferences": {
+        "trade_in": "No",
+        "body_style": "SUV",
+        "payment_range": "$400 - $499 / month",
+        "shopping_stage": "Ready to buy"
+      },
+      "credit_profile": {
+        "credit_estimate": "I'm not sure"
+      }
+    },
+    "vehicle": {
+      "vin": "1C4RDJAG4RC115063",
+      "year": "2024",
+      "make": "Dodge",
+      "model": "Durango",
+      "trim": "SXT",
+      "body_style": "SUV",
+      "mileage": "45589",
+      "stock": "RC115063",
+      "age": "107",
+      "dealer_id": "8872",
+      "location": "Battle Creek, MI",
+      "location_type": "external"
+    },
+    "dealer": {
+      "id": 7627,
+      "address": "9110 Indianapolis Blvd",
+      "address_2": "",
+      "city": "Highland",
+      "state": "Indiana",
+      "st": "IN",
+      "region_name": "Shapiro",
+      "zip_code": "46322",
+      "time_zone": "Eastern",
+      "slug": "highland-in",
+      "name": "Highland, IN",
+      "name_no_st": "Highland",
+      "phone": "(219) 237-5955",
+      "internal_name": "Highland",
+      "website": "https://www.rightway.com/d/highland-in/",
+      "area_code": "219",
+      "hours": {
+        "display": "Mon: 9am - 7pm\nTue: 9am - 7pm\nWed: 9am - 7pm\nThu: 9am - 7pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
+        "monday": {
+          "display": "9am - 7pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "19:00",
+          "open_time_display": "9am",
+          "close_time_display": "7pm"
+        },
+        "tuesday": {
+          "display": "9am - 7pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "19:00",
+          "open_time_display": "9am",
+          "close_time_display": "7pm"
+        },
+        "wednesday": {
+          "display": "9am - 7pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "19:00",
+          "open_time_display": "9am",
+          "close_time_display": "7pm"
+        },
+        "thursday": {
+          "display": "9am - 7pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "19:00",
+          "open_time_display": "9am",
+          "close_time_display": "7pm"
+        },
+        "friday": {
+          "display": "9am - 6pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "18:00",
+          "open_time_display": "9am",
+          "close_time_display": "6pm"
+        },
+        "saturday": {
+          "display": "10am - 3pm",
+          "is_open": true,
+          "open_time": "10:00",
+          "close_time": "15:00",
+          "open_time_display": "10am",
+          "close_time_display": "3pm"
+        },
+        "sunday": {
+          "display": "Closed",
+          "is_open": false,
+          "open_time": "",
+          "close_time": "",
+          "open_time_display": "",
+          "close_time_display": ""
+        }
+      }
+    },
+    "form_metadata": {
+      "id": "e6B5fZ",
+      "url": "https://www.rightway.com/d/highland-in/car/used-2024-dodge-durango-for-sale-1c4rdjag4rc115063/",
+      "name": "get-approved-vehicle",
+      "embed_type": "full-screen",
+      "referral_url": "https://www.rightway.com/d/highland-in/used-cars/?body_style=suv&pg=3"
+    },
+    "custom_object_lead_id": "e80b2012-d6df-a794-f5b8-e3561c25accf",
+    "custom_object_lead_name": "Web - Vehicle Get Approved: Incomplete (2/8/26)",
+    "custom_object_lead_received_display": "Sun, Feb 8, 2026 - 3:12 PM",
+    "custom_object_lead_dealer": "Highland, IN",
+    "custom_object_lead_summary": "Myesha Bell just started a credit app - they're ready to buy and want to get approved for a 2024 Dodge Durango. Has unknown credit, no trade-in, and wants payments around $400-$499/mo.",
+    "custom_object_lead_details": "\ud83d\ude97 Vehicle: 2024 Dodge Durango\n\ud83c\udfaf Stage: Ready to buy\n\ud83d\udcb3 Credit: I'm not sure\n\ud83d\udd04 Trade-In: No\n\ud83c\udd94 Stock #: RC115063\n\ud83d\udd11 VIN: 1C4RDJAG4RC115063\n\ud83d\udccd Location: Battle Creek, MI\n\ud83d\udcc5 Age: 107 days\n\ud83d\udd17 URL: https://www.rightway.com/d/highland-in/car/used-2024-dodge-durango-for-sale-1c4rdjag4rc115063/"
+  }
 }

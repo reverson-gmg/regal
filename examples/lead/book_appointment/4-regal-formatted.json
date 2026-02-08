@@ -1,252 +1,255 @@
 {
-    "userId": "hunt_2482843008",
-    "name": "lead.website",
-    "eventSource": "Website",
-    "originalTimestamp": "2026-02-08T13:34:42-05:00",
-    "traits": {
-        "firstName": "Deborah",
-        "lastName": "Hunt ",
-        "phones": {
-            "+12482843008": {
-                "label": "Mobile",
-                "isPrimary": true
-            }
-        },
-        "emails": {
-            "napierdeborah8@gmail.com": {
-                "label": "Personal",
-                "isPrimary": true
-            }
-        },
-        "dealer": {
-            "id": 4297,
-            "address": "34966 Southbound Gratiot Ave",
-            "address_2": "",
-            "city": "Clinton Twp",
-            "state": "Michigan",
-            "st": "MI",
-            "region_name": "Perrin",
-            "zip_code": "48035",
-            "time_zone": "Eastern",
-            "slug": "clinton-twp-mi",
-            "crm_email": "rightwaygratiot@promaxonline.net",
-            "name": "Clinton Twp, MI",
-            "name_no_st": "Clinton Twp",
-            "phone": "(586) 792-0264",
-            "internal_name": "Gratiot",
-            "website": "https://www.rightway.com/d/clinton-twp-mi/",
-            "area_code": "586",
-            "hours": {
-                "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 6pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
-                "monday": {
-                    "display": "9am - 7pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "19:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "7pm"
-                },
-                "tuesday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "wednesday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "thursday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "friday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "saturday": {
-                    "display": "10am - 3pm",
-                    "is_open": true,
-                    "open_time": "10:00",
-                    "close_time": "15:00",
-                    "open_time_display": "10am",
-                    "close_time_display": "3pm"
-                },
-                "sunday": {
-                    "display": "Closed",
-                    "is_open": false,
-                    "open_time": "",
-                    "close_time": "",
-                    "open_time_display": "",
-                    "close_time_display": ""
-                }
-            }
-        },
-        "verification": {
-            "phone": {
-                "line_type": "mobile",
-                "carrier_name": "T-Mobile USA",
-                "valid_number": true
-            },
-            "email": {
-                "free": true,
-                "role": false,
-                "reason": "accepted_email",
-                "result": "deliverable",
-                "score": 0.857,
-                "accept_all": false,
-                "disposable": false
-            }
-        },
-        "activity": {
-            "at": "2026-02-08T13:34:42-05:00",
-            "leads": {
-                "book_appointment": {
-                    "at": "2026-02-08T13:34:42-05:00",
-                    "dealer_id": "4297",
-                    "dealer": "Clinton Twp, MI",
-                    "score": 0,
-                    "appt_date": "2026-02-20",
-                    "appt_time": "Evening"
-                },
-                "last": {
-                    "at": "2026-02-08T13:34:42-05:00",
-                    "dealer_id": "4297",
-                    "dealer": "Clinton Twp, MI",
-                    "score": 0,
-                    "appt_date": "2026-02-20",
-                    "appt_time": "Evening",
-                    "type": "book_appointment"
-                }
-            }
-        },
-        "appointment": {
-            "date": "2026-02-20",
-            "time": "Evening"
-        }
+  "userId": "hunt_2482843008",
+  "name": "lead.website",
+  "eventSource": "Website",
+  "originalTimestamp": "2026-02-08T13:34:42-05:00",
+  "traits": {
+    "firstName": "Deborah",
+    "lastName": "Hunt ",
+    "phones": {
+      "+12482843008": {
+        "label": "Mobile",
+        "isPrimary": true
+      }
     },
-    "properties": {
-        "event_type": "book_appointment",
-        "event_type_name": "Schedule Appointment",
-        "first_name": "Deborah",
-        "last_name": "Hunt ",
-        "phone": "(248) 284-3008",
-        "email": "napierdeborah8@gmail.com",
-        "summary": "Deborah Hunt  is interested wants to book an appointment for 2/20/26 in the Evening.",
-        "submission": {
-            "at": "2026-02-08T13:34:42-05:00",
-            "at_display": "Sun, Feb 8, 2026 - 1:34 PM",
-            "message": "Thank you so much looking forward to met you ",
-            "appointment": {
-                "date": "2026-02-20",
-                "time": "Evening",
-                "date_display": "Fri, Feb 20, 2026"
-            }
+    "emails": {
+      "napierdeborah8@gmail.com": {
+        "label": "Personal",
+        "isPrimary": true
+      }
+    },
+    "dealer": {
+      "at": "2026-02-08T13:34:42-05:00",
+      "id": 4297,
+      "address": "34966 Southbound Gratiot Ave",
+      "address_2": "",
+      "city": "Clinton Twp",
+      "state": "Michigan",
+      "st": "MI",
+      "region_name": "Perrin",
+      "zip_code": "48035",
+      "time_zone": "Eastern",
+      "slug": "clinton-twp-mi",
+      "crm_email": "rightwaygratiot@promaxonline.net",
+      "name": "Clinton Twp, MI",
+      "name_no_st": "Clinton Twp",
+      "phone": "(586) 792-0264",
+      "internal_name": "Gratiot",
+      "website": "https://www.rightway.com/d/clinton-twp-mi/",
+      "display": "\ud83d\udccd 34966 Southbound Gratiot Ave, Clinton Twp, MI 48035\n\ud83d\udcde (586) 792-0264\n\ud83c\udf10 https://www.rightway.com/d/clinton-twp-mi/",
+      "area_code": "586"
+    },
+    "dealer_hours": {
+      "at": "2026-02-08T13:34:42-05:00",
+      "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 6pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
+      "monday": {
+        "display": "9am - 7pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "19:00",
+        "open_time_display": "9am",
+        "close_time_display": "7pm"
+      },
+      "tuesday": {
+        "display": "9am - 6pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "18:00",
+        "open_time_display": "9am",
+        "close_time_display": "6pm"
+      },
+      "wednesday": {
+        "display": "9am - 6pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "18:00",
+        "open_time_display": "9am",
+        "close_time_display": "6pm"
+      },
+      "thursday": {
+        "display": "9am - 6pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "18:00",
+        "open_time_display": "9am",
+        "close_time_display": "6pm"
+      },
+      "friday": {
+        "display": "9am - 6pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "18:00",
+        "open_time_display": "9am",
+        "close_time_display": "6pm"
+      },
+      "saturday": {
+        "display": "10am - 3pm",
+        "is_open": true,
+        "open_time": "10:00",
+        "close_time": "15:00",
+        "open_time_display": "10am",
+        "close_time_display": "3pm"
+      },
+      "sunday": {
+        "display": "Closed",
+        "is_open": false,
+        "open_time": "",
+        "close_time": "",
+        "open_time_display": "",
+        "close_time_display": ""
+      }
+    },
+    "verification": {
+      "phone": {
+        "line_type": "mobile",
+        "carrier_name": "T-Mobile USA",
+        "valid_number": true
+      },
+      "email": {
+        "free": true,
+        "role": false,
+        "reason": "accepted_email",
+        "result": "deliverable",
+        "score": 0.857,
+        "accept_all": false,
+        "disposable": false
+      }
+    },
+    "activity": {
+      "at": "2026-02-08T13:34:42-05:00",
+      "leads": {
+        "book_appointment": {
+          "at": "2026-02-08T13:34:42-05:00",
+          "dealer_id": "4297",
+          "dealer": "Clinton Twp, MI",
+          "score": 0,
+          "appt_date": "2026-02-20",
+          "appt_time": "Evening"
         },
-        "form_metadata": {
-            "id": "Ke2Aag",
-            "url": "https://www.rightway.com/d/clinton-twp-mi/appointment/",
-            "name": "appointment",
-            "embed_type": "landing",
-            "referral_url": "https://www.rightway.com/appointment/"
-        },
-        "custom_object_lead_id": "e0a2fd1b-2ce6-41f8-83a0-0d873fc308b5",
-        "custom_object_lead_name": "Web - Schedule Appointment (2/8/26)",
-        "custom_object_lead_received_display": "Sun, Feb 8, 2026 - 3:06 PM",
-        "custom_object_lead_dealer": "Clinton Twp, MI",
-        "custom_object_lead_summary": "Deborah Hunt  is interested wants to book an appointment for 2/20/26 in the Evening.",
-        "custom_object_lead_message": "Thank you so much looking forward to met you ",
-        "custom_object_lead_details": "📅 Appt: Fri, Feb 20, 2026\n🕒 Time: Evening",
-        "dealer": {
-            "id": 4297,
-            "address": "34966 Southbound Gratiot Ave",
-            "address_2": "",
-            "city": "Clinton Twp",
-            "state": "Michigan",
-            "st": "MI",
-            "region_name": "Perrin",
-            "zip_code": "48035",
-            "time_zone": "Eastern",
-            "slug": "clinton-twp-mi",
-            "name": "Clinton Twp, MI",
-            "name_no_st": "Clinton Twp",
-            "phone": "(586) 792-0264",
-            "internal_name": "Gratiot",
-            "website": "https://www.rightway.com/d/clinton-twp-mi/",
-            "area_code": "586",
-            "hours": {
-                "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 6pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
-                "monday": {
-                    "display": "9am - 7pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "19:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "7pm"
-                },
-                "tuesday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "wednesday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "thursday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "friday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "saturday": {
-                    "display": "10am - 3pm",
-                    "is_open": true,
-                    "open_time": "10:00",
-                    "close_time": "15:00",
-                    "open_time_display": "10am",
-                    "close_time_display": "3pm"
-                },
-                "sunday": {
-                    "display": "Closed",
-                    "is_open": false,
-                    "open_time": "",
-                    "close_time": "",
-                    "open_time_display": "",
-                    "close_time_display": ""
-                }
-            }
+        "last": {
+          "at": "2026-02-08T13:34:42-05:00",
+          "dealer_id": "4297",
+          "dealer": "Clinton Twp, MI",
+          "score": 0,
+          "appt_date": "2026-02-20",
+          "appt_time": "Evening",
+          "type": "book_appointment"
         }
+      }
+    },
+    "appointment": {
+      "date": "2026-02-20",
+      "time": "Evening"
     }
+  },
+  "properties": {
+    "event_type": "book_appointment",
+    "event_type_name": "Schedule Appointment",
+    "first_name": "Deborah",
+    "last_name": "Hunt ",
+    "phone": "(248) 284-3008",
+    "email": "napierdeborah8@gmail.com",
+    "summary": "Deborah Hunt  is interested wants to book an appointment for 2/20/26 in the Evening.",
+    "submission": {
+      "at": "2026-02-08T13:34:42-05:00",
+      "at_display": "Sun, Feb 8, 2026 - 1:34 PM",
+      "message": "Thank you so much looking forward to met you ",
+      "appointment": {
+        "date": "2026-02-20",
+        "time": "Evening",
+        "date_display": "Fri, Feb 20, 2026"
+      }
+    },
+    "form_metadata": {
+      "id": "Ke2Aag",
+      "url": "https://www.rightway.com/d/clinton-twp-mi/appointment/",
+      "name": "appointment",
+      "embed_type": "landing",
+      "referral_url": "https://www.rightway.com/appointment/"
+    },
+    "custom_object_lead_id": "e0a2fd1b-2ce6-41f8-83a0-0d873fc308b5",
+    "custom_object_lead_name": "Web - Schedule Appointment (2/8/26)",
+    "custom_object_lead_received_display": "Sun, Feb 8, 2026 - 3:06 PM",
+    "custom_object_lead_dealer": "Clinton Twp, MI",
+    "custom_object_lead_summary": "Deborah Hunt  is interested wants to book an appointment for 2/20/26 in the Evening.",
+    "custom_object_lead_message": "Thank you so much looking forward to met you ",
+    "custom_object_lead_details": "\ud83d\udcc5 Appt: Fri, Feb 20, 2026\n\ud83d\udd52 Time: Evening",
+    "dealer": {
+      "id": 4297,
+      "address": "34966 Southbound Gratiot Ave",
+      "address_2": "",
+      "city": "Clinton Twp",
+      "state": "Michigan",
+      "st": "MI",
+      "region_name": "Perrin",
+      "zip_code": "48035",
+      "time_zone": "Eastern",
+      "slug": "clinton-twp-mi",
+      "name": "Clinton Twp, MI",
+      "name_no_st": "Clinton Twp",
+      "phone": "(586) 792-0264",
+      "internal_name": "Gratiot",
+      "website": "https://www.rightway.com/d/clinton-twp-mi/",
+      "area_code": "586",
+      "hours": {
+        "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 6pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
+        "monday": {
+          "display": "9am - 7pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "19:00",
+          "open_time_display": "9am",
+          "close_time_display": "7pm"
+        },
+        "tuesday": {
+          "display": "9am - 6pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "18:00",
+          "open_time_display": "9am",
+          "close_time_display": "6pm"
+        },
+        "wednesday": {
+          "display": "9am - 6pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "18:00",
+          "open_time_display": "9am",
+          "close_time_display": "6pm"
+        },
+        "thursday": {
+          "display": "9am - 6pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "18:00",
+          "open_time_display": "9am",
+          "close_time_display": "6pm"
+        },
+        "friday": {
+          "display": "9am - 6pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "18:00",
+          "open_time_display": "9am",
+          "close_time_display": "6pm"
+        },
+        "saturday": {
+          "display": "10am - 3pm",
+          "is_open": true,
+          "open_time": "10:00",
+          "close_time": "15:00",
+          "open_time_display": "10am",
+          "close_time_display": "3pm"
+        },
+        "sunday": {
+          "display": "Closed",
+          "is_open": false,
+          "open_time": "",
+          "close_time": "",
+          "open_time_display": "",
+          "close_time_display": ""
+        }
+      }
+    }
+  }
 }

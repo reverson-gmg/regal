@@ -1,255 +1,258 @@
 {
-    "userId": "johnson_3137845907",
-    "name": "lead.website",
-    "eventSource": "Website",
-    "originalTimestamp": "2026-02-08T15:24:08-05:00",
-    "traits": {
-        "firstName": "Taydra",
-        "lastName": "Johnson",
-        "phones": {
-            "+13137845907": {
-                "label": "Mobile",
-                "isPrimary": true
-            }
-        },
-        "emails": {
-            "johnsontay929@gmail.com": {
-                "label": "Personal",
-                "isPrimary": true
-            }
-        },
-        "dealer": {
-            "id": 4293,
-            "address": "8411 Telegraph Rd",
-            "address_2": "",
-            "city": "Taylor",
-            "state": "Michigan",
-            "st": "MI",
-            "region_name": "Perrin",
-            "zip_code": "48180",
-            "time_zone": "Eastern",
-            "slug": "taylor-mi",
-            "crm_email": "rightwaytaylor@promaxonline.net",
-            "name": "Taylor, MI",
-            "name_no_st": "Taylor",
-            "phone": "(313) 299-0835",
-            "internal_name": "Taylor",
-            "website": "https://www.rightway.com/d/taylor-mi/",
-            "area_code": "313",
-            "hours": {
-                "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 6pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
-                "monday": {
-                    "display": "9am - 7pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "19:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "7pm"
-                },
-                "tuesday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "wednesday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "thursday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "friday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "saturday": {
-                    "display": "10am - 3pm",
-                    "is_open": true,
-                    "open_time": "10:00",
-                    "close_time": "15:00",
-                    "open_time_display": "10am",
-                    "close_time_display": "3pm"
-                },
-                "sunday": {
-                    "display": "Closed",
-                    "is_open": false,
-                    "open_time": "",
-                    "close_time": "",
-                    "open_time_display": "",
-                    "close_time_display": ""
-                }
-            }
-        },
-        "verification": {
-            "phone": {
-                "line_type": "mobile",
-                "carrier_name": "T-Mobile USA",
-                "valid_number": true,
-                "at": "2026-02-08T15:24:07-05:00"
-            },
-            "email": {
-                "free": true,
-                "role": false,
-                "reason": "accepted_email",
-                "result": "deliverable",
-                "score": 1,
-                "accept_all": false,
-                "disposable": false,
-                "at": "2026-02-08T15:24:07-05:00"
-            }
-        },
-        "activity": {
-            "at": "2026-02-08T15:24:08-05:00",
-            "leads": {
-                "vehicle_ask_question": {
-                    "at": "2026-02-08T15:24:08-05:00",
-                    "dealer_id": "4293",
-                    "dealer": "Taylor, MI",
-                    "score": 0
-                },
-                "last": {
-                    "at": "2026-02-08T15:24:08-05:00",
-                    "dealer_id": "4293",
-                    "dealer": "Taylor, MI",
-                    "score": 0,
-                    "type": "vehicle_ask_question"
-                }
-            }
-        }
+  "userId": "johnson_3137845907",
+  "name": "lead.website",
+  "eventSource": "Website",
+  "originalTimestamp": "2026-02-08T15:24:08-05:00",
+  "traits": {
+    "firstName": "Taydra",
+    "lastName": "Johnson",
+    "phones": {
+      "+13137845907": {
+        "label": "Mobile",
+        "isPrimary": true
+      }
     },
-    "properties": {
-        "event_type": "vehicle_ask_question",
-        "event_type_name": "Vehicle Ask Question",
-        "first_name": "Taydra",
-        "last_name": "Johnson",
-        "phone": "(313) 784-5907",
-        "email": "johnsontay929@gmail.com",
-        "summary": "Taydra Johnson has a question about our 2019 Ford Fusion Hybrid.",
-        "submission": {
-            "at": "2026-02-08T15:24:08-05:00",
-            "at_display": "Sun, Feb 8, 2026 - 3:24 PM",
-            "message": "Do people need a co-signers if they don't have their drivers license "
+    "emails": {
+      "johnsontay929@gmail.com": {
+        "label": "Personal",
+        "isPrimary": true
+      }
+    },
+    "dealer": {
+      "at": "2026-02-08T15:24:08-05:00",
+      "id": 4293,
+      "address": "8411 Telegraph Rd",
+      "address_2": "",
+      "city": "Taylor",
+      "state": "Michigan",
+      "st": "MI",
+      "region_name": "Perrin",
+      "zip_code": "48180",
+      "time_zone": "Eastern",
+      "slug": "taylor-mi",
+      "crm_email": "rightwaytaylor@promaxonline.net",
+      "name": "Taylor, MI",
+      "name_no_st": "Taylor",
+      "phone": "(313) 299-0835",
+      "internal_name": "Taylor",
+      "website": "https://www.rightway.com/d/taylor-mi/",
+      "display": "\ud83d\udccd 8411 Telegraph Rd, Taylor, MI 48180\n\ud83d\udcde (313) 299-0835\n\ud83c\udf10 https://www.rightway.com/d/taylor-mi/",
+      "area_code": "313"
+    },
+    "dealer_hours": {
+      "at": "2026-02-08T15:24:08-05:00",
+      "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 6pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
+      "monday": {
+        "display": "9am - 7pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "19:00",
+        "open_time_display": "9am",
+        "close_time_display": "7pm"
+      },
+      "tuesday": {
+        "display": "9am - 6pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "18:00",
+        "open_time_display": "9am",
+        "close_time_display": "6pm"
+      },
+      "wednesday": {
+        "display": "9am - 6pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "18:00",
+        "open_time_display": "9am",
+        "close_time_display": "6pm"
+      },
+      "thursday": {
+        "display": "9am - 6pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "18:00",
+        "open_time_display": "9am",
+        "close_time_display": "6pm"
+      },
+      "friday": {
+        "display": "9am - 6pm",
+        "is_open": true,
+        "open_time": "09:00",
+        "close_time": "18:00",
+        "open_time_display": "9am",
+        "close_time_display": "6pm"
+      },
+      "saturday": {
+        "display": "10am - 3pm",
+        "is_open": true,
+        "open_time": "10:00",
+        "close_time": "15:00",
+        "open_time_display": "10am",
+        "close_time_display": "3pm"
+      },
+      "sunday": {
+        "display": "Closed",
+        "is_open": false,
+        "open_time": "",
+        "close_time": "",
+        "open_time_display": "",
+        "close_time_display": ""
+      }
+    },
+    "verification": {
+      "phone": {
+        "line_type": "mobile",
+        "carrier_name": "T-Mobile USA",
+        "valid_number": true,
+        "at": "2026-02-08T15:24:07-05:00"
+      },
+      "email": {
+        "free": true,
+        "role": false,
+        "reason": "accepted_email",
+        "result": "deliverable",
+        "score": 1,
+        "accept_all": false,
+        "disposable": false,
+        "at": "2026-02-08T15:24:07-05:00"
+      }
+    },
+    "activity": {
+      "at": "2026-02-08T15:24:08-05:00",
+      "leads": {
+        "vehicle_ask_question": {
+          "at": "2026-02-08T15:24:08-05:00",
+          "dealer_id": "4293",
+          "dealer": "Taylor, MI",
+          "score": 0
         },
-        "vehicle": {
-            "vin": "3FA6P0MU3KR139745",
-            "year": "2019",
-            "make": "Ford",
-            "model": "Fusion Hybrid",
-            "trim": "SEL",
-            "body_style": "Car",
-            "mileage": "94646",
-            "stock": "KR139745",
-            "age": "33",
-            "dealer_id": "8338",
-            "location": "Kansas City, MO (Raytown)",
-            "location_type": "external"
-        },
-        "dealer": {
-            "id": 4293,
-            "address": "8411 Telegraph Rd",
-            "address_2": "",
-            "city": "Taylor",
-            "state": "Michigan",
-            "st": "MI",
-            "region_name": "Perrin",
-            "zip_code": "48180",
-            "time_zone": "Eastern",
-            "slug": "taylor-mi",
-            "name": "Taylor, MI",
-            "name_no_st": "Taylor",
-            "phone": "(313) 299-0835",
-            "internal_name": "Taylor",
-            "website": "https://www.rightway.com/d/taylor-mi/",
-            "area_code": "313",
-            "hours": {
-                "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 6pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
-                "monday": {
-                    "display": "9am - 7pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "19:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "7pm"
-                },
-                "tuesday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "wednesday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "thursday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "friday": {
-                    "display": "9am - 6pm",
-                    "is_open": true,
-                    "open_time": "09:00",
-                    "close_time": "18:00",
-                    "open_time_display": "9am",
-                    "close_time_display": "6pm"
-                },
-                "saturday": {
-                    "display": "10am - 3pm",
-                    "is_open": true,
-                    "open_time": "10:00",
-                    "close_time": "15:00",
-                    "open_time_display": "10am",
-                    "close_time_display": "3pm"
-                },
-                "sunday": {
-                    "display": "Closed",
-                    "is_open": false,
-                    "open_time": "",
-                    "close_time": "",
-                    "open_time_display": "",
-                    "close_time_display": ""
-                }
-            }
-        },
-        "form_metadata": {
-            "id": "jMD6Zi",
-            "url": "https://www.rightway.com/d/taylor-mi/car/used-2019-ford-fusion-hybrid-for-sale-3fa6p0mu3kr139745/",
-            "name": "ask-vehicle-question",
-            "embed_type": "popup",
-            "referral_url": "https://www.rightway.com/d/taylor-mi/used-cars/?make=ford&model=fusion+hybrid&yr=2019-2019"
-        },
-        "custom_object_lead_id": "91bcf9a3-3c80-2bb2-1e53-b2f531cfd95d",
-        "custom_object_lead_name": "Web - Vehicle Ask Question (2/8/26)",
-        "custom_object_lead_received_display": "Sun, Feb 8, 2026 - 3:24 PM",
-        "custom_object_lead_dealer": "Taylor, MI",
-        "custom_object_lead_summary": "Taydra Johnson has a question about our 2019 Ford Fusion Hybrid.",
-        "custom_object_lead_message": "Do people need a co-signers if they don't have their drivers license ",
-        "custom_object_lead_details": "🚗 Vehicle: 2019 Ford Fusion Hybrid\n🚘 Body Style: Car\n🎨 Color: \n📍 Location: Kansas City, MO (Raytown)\n🆔 Stock #: KR139745\n🔑 VIN: 3FA6P0MU3KR139745\n📅 Age: 33 days\n🔗 URL: https://www.rightway.com/d/taylor-mi/car/used-2019-ford-fusion-hybrid-for-sale-3fa6p0mu3kr139745/"
+        "last": {
+          "at": "2026-02-08T15:24:08-05:00",
+          "dealer_id": "4293",
+          "dealer": "Taylor, MI",
+          "score": 0,
+          "type": "vehicle_ask_question"
+        }
+      }
     }
+  },
+  "properties": {
+    "event_type": "vehicle_ask_question",
+    "event_type_name": "Vehicle Ask Question",
+    "first_name": "Taydra",
+    "last_name": "Johnson",
+    "phone": "(313) 784-5907",
+    "email": "johnsontay929@gmail.com",
+    "summary": "Taydra Johnson has a question about our 2019 Ford Fusion Hybrid.",
+    "submission": {
+      "at": "2026-02-08T15:24:08-05:00",
+      "at_display": "Sun, Feb 8, 2026 - 3:24 PM",
+      "message": "Do people need a co-signers if they don't have their drivers license "
+    },
+    "vehicle": {
+      "vin": "3FA6P0MU3KR139745",
+      "year": "2019",
+      "make": "Ford",
+      "model": "Fusion Hybrid",
+      "trim": "SEL",
+      "body_style": "Car",
+      "mileage": "94646",
+      "stock": "KR139745",
+      "age": "33",
+      "dealer_id": "8338",
+      "location": "Kansas City, MO (Raytown)",
+      "location_type": "external"
+    },
+    "dealer": {
+      "id": 4293,
+      "address": "8411 Telegraph Rd",
+      "address_2": "",
+      "city": "Taylor",
+      "state": "Michigan",
+      "st": "MI",
+      "region_name": "Perrin",
+      "zip_code": "48180",
+      "time_zone": "Eastern",
+      "slug": "taylor-mi",
+      "name": "Taylor, MI",
+      "name_no_st": "Taylor",
+      "phone": "(313) 299-0835",
+      "internal_name": "Taylor",
+      "website": "https://www.rightway.com/d/taylor-mi/",
+      "area_code": "313",
+      "hours": {
+        "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 6pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
+        "monday": {
+          "display": "9am - 7pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "19:00",
+          "open_time_display": "9am",
+          "close_time_display": "7pm"
+        },
+        "tuesday": {
+          "display": "9am - 6pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "18:00",
+          "open_time_display": "9am",
+          "close_time_display": "6pm"
+        },
+        "wednesday": {
+          "display": "9am - 6pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "18:00",
+          "open_time_display": "9am",
+          "close_time_display": "6pm"
+        },
+        "thursday": {
+          "display": "9am - 6pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "18:00",
+          "open_time_display": "9am",
+          "close_time_display": "6pm"
+        },
+        "friday": {
+          "display": "9am - 6pm",
+          "is_open": true,
+          "open_time": "09:00",
+          "close_time": "18:00",
+          "open_time_display": "9am",
+          "close_time_display": "6pm"
+        },
+        "saturday": {
+          "display": "10am - 3pm",
+          "is_open": true,
+          "open_time": "10:00",
+          "close_time": "15:00",
+          "open_time_display": "10am",
+          "close_time_display": "3pm"
+        },
+        "sunday": {
+          "display": "Closed",
+          "is_open": false,
+          "open_time": "",
+          "close_time": "",
+          "open_time_display": "",
+          "close_time_display": ""
+        }
+      }
+    },
+    "form_metadata": {
+      "id": "jMD6Zi",
+      "url": "https://www.rightway.com/d/taylor-mi/car/used-2019-ford-fusion-hybrid-for-sale-3fa6p0mu3kr139745/",
+      "name": "ask-vehicle-question",
+      "embed_type": "popup",
+      "referral_url": "https://www.rightway.com/d/taylor-mi/used-cars/?make=ford&model=fusion+hybrid&yr=2019-2019"
+    },
+    "custom_object_lead_id": "91bcf9a3-3c80-2bb2-1e53-b2f531cfd95d",
+    "custom_object_lead_name": "Web - Vehicle Ask Question (2/8/26)",
+    "custom_object_lead_received_display": "Sun, Feb 8, 2026 - 3:24 PM",
+    "custom_object_lead_dealer": "Taylor, MI",
+    "custom_object_lead_summary": "Taydra Johnson has a question about our 2019 Ford Fusion Hybrid.",
+    "custom_object_lead_message": "Do people need a co-signers if they don't have their drivers license ",
+    "custom_object_lead_details": "\ud83d\ude97 Vehicle: 2019 Ford Fusion Hybrid\n\ud83d\ude98 Body Style: Car\n\ud83c\udfa8 Color: \n\ud83d\udccd Location: Kansas City, MO (Raytown)\n\ud83c\udd94 Stock #: KR139745\n\ud83d\udd11 VIN: 3FA6P0MU3KR139745\n\ud83d\udcc5 Age: 33 days\n\ud83d\udd17 URL: https://www.rightway.com/d/taylor-mi/car/used-2019-ford-fusion-hybrid-for-sale-3fa6p0mu3kr139745/"
+  }
 }
