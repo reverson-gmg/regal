@@ -1,0 +1,64 @@
+{
+    "userId": "kuykendall_9377740286",
+    "name": "crm_sms.sent",
+    "eventSource": "Promax",
+    "originalTimestamp": "2026-02-08T01:29:00+00:00",
+    "traits": {
+        "activity": {
+            "at": "2026-02-08T01:29:00+00:00",
+            "crm_sms": {
+                "sent": {
+                    "at": "2026-02-08T01:29:00+00:00",
+                    "dealer_id": 6702
+                },
+                "last": {
+                    "at": "2026-02-08T01:29:00+00:00",
+                    "dealer_id": 6702,
+                    "type": "sent"
+                }
+            }
+        }
+    },
+    "properties": {
+        "event_id": "4d5b0978-29f6-082c-0ccf-180a13a17e5c",
+        "direction": "OUTBOUND",
+        "body": "Are you still in the market?  YES / NO..  Just want to be courteous of my customer time.  If you are not interested, I dont want to keep bothering you.. Thank you very much, Vince West",
+        "sent_at": "2026-02-08T01:29:00+00:00",
+        "sent_at_display": "Sat, Feb 7, 2026 - 8:29 PM",
+        "customer": {
+            "id": 184558810,
+            "url": "https://promaxonline.com/customer/workscreen?customer=184558810",
+            "first_name": "Valery",
+            "last_name": "Kuykendall",
+            "name": "Valery Kuykendall",
+            "cell_phone": "(937) 774-0286",
+            "email": "valerykuykendall7@gmail.com",
+            "sales_rep_1": {
+                "id": 9062078,
+                "first_name": "Vince",
+                "last_name": "West",
+                "name": "Vince West",
+                "name_at_dealership": "Vince West | Dayton, OH"
+            }
+        },
+        "dealer": {
+            "id": 6702,
+            "address": "410 W National Rd",
+            "address_2": "",
+            "city": "Vandalia",
+            "state": "Ohio",
+            "st": "OH",
+            "region_name": "Southern OH",
+            "zip_code": "45377",
+            "time_zone": "eastern",
+            "slug": "dayton-oh",
+            "crm_email": "rightwayvandalia@promaxonline.net",
+            "name": "Dayton, OH",
+            "name_no_st": "Dayton",
+            "phone": "(937) 280-0982",
+            "internal_name": "Vandalia",
+            "website": "https://www.rightway.com/d/dayton-oh/",
+            "area_code": "937"
+        }
+    }
+}
