@@ -1,0 +1,74 @@
+{
+    "userId": "ward_8167829475",
+    "name": "crm_call.outbound",
+    "eventSource": "Promax",
+    "originalTimestamp": "2026-02-07T22:07:00+00:00",
+    "traits": {
+        "activity": {
+            "at": "2026-02-07T22:07:00+00:00",
+            "crm_call": {
+                "outbound": {
+                    "at": "2026-02-07T22:07:00+00:00",
+                    "dealer_id": 7816,
+                    "disposition": "voicemail"
+                },
+                "last": {
+                    "at": "2026-02-07T22:07:00+00:00",
+                    "dealer_id": 7816,
+                    "type": "OUTBOUND",
+                    "disposition": "voicemail"
+                }
+            }
+        }
+    },
+    "properties": {
+        "event_id": "0c1976b7-315c-96d0-11a7-6268def4e812",
+        "direction": "OUTBOUND",
+        "notes": "Vm",
+        "disposition": "voicemail",
+        "answered_at": "2026-02-07T22:07:00+00:00",
+        "answered_at_display": "Sat, Feb 7, 2026 - 4:07 PM",
+        "answered_by": {
+            "id": 8998352,
+            "first_name": "Rebecca",
+            "last_name": "Gomez",
+            "name": "Rebecca Gomez",
+            "name_at_dealership": "Rebecca Gomez | Kansas City, MO (Northland)"
+        },
+        "customer": {
+            "id": 184994519,
+            "url": "https://promaxonline.com/customer/workscreen?customer=184994519",
+            "first_name": "Theopolis",
+            "last_name": "Ward",
+            "name": "Theopolis Ward",
+            "cell_phone": "(816) 782-9475",
+            "email": "infinitecreations2.14.369@gmail.com",
+            "sales_rep_1": {
+                "id": 8998352,
+                "first_name": "Rebecca",
+                "last_name": "Gomez",
+                "name": "Rebecca Gomez",
+                "name_at_dealership": "Rebecca Gomez | Kansas City, MO (Northland)"
+            }
+        },
+        "dealer": {
+            "id": 7816,
+            "address": "2837 NE Vivion Rd",
+            "address_2": "",
+            "city": "Kansas City",
+            "state": "Missouri",
+            "st": "MO",
+            "region_name": "White",
+            "zip_code": "64119",
+            "time_zone": "central",
+            "slug": "kansas-city-mo-northland",
+            "crm_email": "rightwaynorthland@promaxonline.net",
+            "name": "Kansas City, MO (Northland)",
+            "name_no_st": "Kansas City (Northland)",
+            "phone": "(816) 595-9174",
+            "internal_name": "Northland",
+            "website": "https://www.rightway.com/d/kansas-city-mo-northland/",
+            "area_code": "816"
+        }
+    }
+}

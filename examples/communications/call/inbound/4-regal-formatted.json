@@ -1,0 +1,74 @@
+{
+    "userId": "savage_2629773556",
+    "name": "crm_call.inbound",
+    "eventSource": "Promax",
+    "originalTimestamp": "2026-02-07T20:53:00+00:00",
+    "traits": {
+        "activity": {
+            "at": "2026-02-07T20:53:00+00:00",
+            "crm_call": {
+                "inbound": {
+                    "at": "2026-02-07T20:53:00+00:00",
+                    "dealer_id": 8848,
+                    "disposition": "unknown"
+                },
+                "last": {
+                    "at": "2026-02-07T20:53:00+00:00",
+                    "dealer_id": 8848,
+                    "type": "INBOUND",
+                    "disposition": "unknown"
+                }
+            }
+        }
+    },
+    "properties": {
+        "event_id": "31f04baf-158b-e16a-2509-3dffd3a4885e",
+        "direction": "INBOUND",
+        "notes": "Spoke with amy and informed me that she will try to come in sometime next week.",
+        "disposition": "unknown",
+        "answered_at": "2026-02-07T20:53:00+00:00",
+        "answered_at_display": "Sat, Feb 7, 2026 - 2:53 PM",
+        "answered_by": {
+            "id": 9057085,
+            "first_name": "Joanna",
+            "last_name": "Bahena",
+            "name": "Joanna Bahena",
+            "name_at_dealership": "Joanna Bahena | Kenosha, WI"
+        },
+        "customer": {
+            "id": 183903211,
+            "url": "https://promaxonline.com/customer/workscreen?customer=183903211",
+            "first_name": "Amy",
+            "last_name": "Savage",
+            "name": "Amy Savage",
+            "cell_phone": "(262) 977-3556",
+            "email": "amyks77@yahoo.com",
+            "sales_rep_1": {
+                "id": 9057085,
+                "first_name": "Joanna",
+                "last_name": "Bahena",
+                "name": "Joanna Bahena",
+                "name_at_dealership": "Joanna Bahena | Kenosha, WI"
+            }
+        },
+        "dealer": {
+            "id": 8848,
+            "address": "4728 75th St",
+            "address_2": "",
+            "city": "Kenosha",
+            "state": "Wisconsin",
+            "st": "WI",
+            "region_name": "Shapiro",
+            "zip_code": "53142",
+            "time_zone": "central",
+            "slug": "kenosha-wi",
+            "crm_email": "rightwaykenosha@promaxonline.net",
+            "name": "Kenosha, WI",
+            "name_no_st": "Kenosha",
+            "phone": "(262) 577-9010",
+            "internal_name": "Kenosha",
+            "website": "https://www.rightway.com/d/kenosha-wi/",
+            "area_code": "262"
+        }
+    }
+}

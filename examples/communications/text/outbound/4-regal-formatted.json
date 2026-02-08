@@ -1,20 +1,20 @@
 {
     "userId": "kuykendall_9377740286",
-    "name": "crm_sms.sent",
+    "name": "crm_sms.outbound",
     "eventSource": "Promax",
     "originalTimestamp": "2026-02-08T01:29:00+00:00",
     "traits": {
         "activity": {
             "at": "2026-02-08T01:29:00+00:00",
             "crm_sms": {
-                "sent": {
+                "outbound": {
                     "at": "2026-02-08T01:29:00+00:00",
                     "dealer_id": 6702
                 },
                 "last": {
                     "at": "2026-02-08T01:29:00+00:00",
                     "dealer_id": 6702,
-                    "type": "sent"
+                    "direction": "OUTBOUND"
                 }
             }
         }
@@ -25,6 +25,13 @@
         "body": "Are you still in the market?  YES / NO..  Just want to be courteous of my customer time.  If you are not interested, I dont want to keep bothering you.. Thank you very much, Vince West",
         "sent_at": "2026-02-08T01:29:00+00:00",
         "sent_at_display": "Sat, Feb 7, 2026 - 8:29 PM",
+        "sent_by": {
+            "id": 9036256,
+            "first_name": "Tyler",
+            "last_name": "McGuire",
+            "name": "Tyler McGuire",
+            "name_at_dealership": "Tyler McGuire | Lafayette, IN"
+        },
         "customer": {
             "id": 184558810,
             "url": "https://promaxonline.com/customer/workscreen?customer=184558810",
