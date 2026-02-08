@@ -1,0 +1,40 @@
+{
+  "event": "promax_websocket.showroom_visit",
+  "event_type": "delete",
+  "event_version": "1.2",
+  "hookdeck_sent_at": "2026-02-07T19:20:00.000Z",
+  "websocket_uuid": "c4d5e6f7-8a9b-0c1d-2e3f-4a5b6c7d8e9f",
+  "promax_websocket_timestamp": 1770492000000,
+  "payload_hash": "d3e5f7a9b1c3d5e7f9a1b3c5d7e9f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3",
+  "customer_id": 174556873,
+  "dealer_id": 7627,
+  "showroom_visit_id": 38588505,
+  "promax_customer": {
+    "id": 174556873,
+    "dealer_id": 7627,
+    "field_last_received_at": {
+      "dealer_id": 1770492000000
+    },
+    "field_last_received_by": {
+      "dealer_id": "c4d5e6f7-8a9b-0c1d-2e3f-4a5b6c7d8e9f"
+    }
+  },
+  "promax_showroom_visit_delete": {
+    "id": 38588505,
+    "dealer_id": 7627,
+    "customer_id": 174556873,
+    "deleted_by": 8920527,
+    "deleted_at": 1770492000000
+  },
+  "original_payload": {
+    "customer_id": 174556873,
+    "dealer_id": 7627,
+    "showroom_visit": {
+      "delete": {
+        "employee_id": 8920527,
+        "id": 38588505
+      }
+    },
+    "timestamp": 1770492000000
+  }
+}
