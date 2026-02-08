@@ -1,0 +1,17 @@
+{
+  "customer_id": 185145957,
+  "dealer_id": 4141,
+  "service_appointment": {
+    "appointment": {
+      "comments": "30k mile service - oil change, tire rotation, brake inspection",
+      "date_time": "2026-02-12T14:00:00Z",
+      "id": 88401295
+    },
+    "dealer_parties": {
+      "employee_id": 9037373,
+      "first_name": "David",
+      "last_name": "Martinez"
+    }
+  },
+  "timestamp": 1770509900000
+}
