@@ -2,58 +2,58 @@
   "event": "promax_websocket.showroom_visit",
   "event_type": "exit_note",
   "event_version": "1.2",
-  "hookdeck_sent_at": "2026-02-08T00:16:47.860Z",
-  "websocket_uuid": "9df60784-248b-8b0e-d606-7ee3e44b34e6",
-  "promax_websocket_timestamp": 1770509803230,
-  "payload_hash": "70765a7e01af1e63cf8adbd7b5d4362b0347eb74b762e2071e766b4ea173a108",
-  "customer_id": 185145957,
-  "dealer_id": 4141,
-  "showroom_visit_id": 38587885,
+  "hookdeck_sent_at": "2026-02-07T18:49:20.029Z",
+  "websocket_uuid": "bce0425d-4ad3-c85e-bedf-733304f6139d",
+  "promax_websocket_timestamp": 1770490158161,
+  "payload_hash": "90a675d8a35732822e7fa763d5cc90fa7a489030669562c7e4c9898015c496f7",
+  "customer_id": 147655500,
+  "dealer_id": 4301,
+  "showroom_visit_id": 38588493,
   "promax_customer": {
-    "id": 185145957,
-    "dealer_id": 4141,
-    "last_showroom_visit": 1770509803230,
+    "id": 147655500,
+    "dealer_id": 4301,
+    "last_showroom_visit": 1770490158161,
     "field_last_received_at": {
-      "dealer_id": 1770509803230,
-      "last_showroom_visit": 1770509803230
+      "dealer_id": 1770490158161,
+      "last_showroom_visit": 1770490158161
     },
     "field_last_received_by": {
-      "dealer_id": "9df60784-248b-8b0e-d606-7ee3e44b34e6",
-      "last_showroom_visit": "9df60784-248b-8b0e-d606-7ee3e44b34e6"
+      "dealer_id": "bce0425d-4ad3-c85e-bedf-733304f6139d",
+      "last_showroom_visit": "bce0425d-4ad3-c85e-bedf-733304f6139d"
     }
   },
   "promax_showroom_visit": {
-    "id": 38587885,
-    "dealer_id": 4141,
-    "customer_id": 185145957,
-    "date_time": "2026-02-07T16:51:00Z",
-    "exit_note_id": 2743695232,
-    "exit_at": "2026-02-08T00:16:43.230Z",
-    "exit_by": 9037373,
+    "id": 38588493,
+    "dealer_id": 4301,
+    "customer_id": 147655500,
+    "date_time": "2026-02-07T18:24:00Z",
+    "exit_note_id": 2743746498,
+    "exit_at": "2026-02-07T18:49:18.161Z",
+    "exit_by": 9010950,
     "is_manager_note": false,
-    "exit_note": "p33 needs more money or cox",
+    "exit_note": "P33.  NEEDS 1500-2K DOWN",
     "reason_unsold": "Cash Down"
   },
   "promax_customer_last_activity": {
-    "id": 185145957,
-    "dealer_id": 4141,
-    "last_showroom_visit_exit_note": 1770509803230,
-    "last_showroom_visit": 1770483060000
+    "id": 147655500,
+    "dealer_id": 4301,
+    "last_showroom_visit_exit_note": 1770490158161,
+    "last_showroom_visit": 1770488640000
   },
   "original_payload": {
-    "customer_id": 185145957,
-    "dealer_id": 4141,
+    "customer_id": 147655500,
+    "dealer_id": 4301,
     "showroom_visit": {
       "exit_note": {
-        "date": "2026-02-07T16:51:00Z",
-        "employee_id": 9037373,
-        "id": 2743695232,
+        "date": "2026-02-07T18:24:00Z",
+        "employee_id": 9010950,
+        "id": 2743746498,
         "is_manager_note": false,
-        "quick_note": "p33 needs more money or cox",
+        "quick_note": "P33.  NEEDS 1500-2K DOWN",
         "reason_unsold": "Cash Down",
-        "showroom_visit_id": 38587885
+        "showroom_visit_id": 38588493
       }
     },
-    "timestamp": 1770509803230
+    "timestamp": 1770490158161
   }
 }

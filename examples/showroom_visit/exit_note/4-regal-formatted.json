@@ -1,0 +1,136 @@
+{
+    "userId": "jordan_8105881983",
+    "name": "showroom_visit.exit_note",
+    "eventSource": "Promax",
+    "originalTimestamp": "2026-02-07T18:49:18+00:00",
+    "traits": {
+        "firstName": "Dequiseshia",
+        "lastName": "Jordan",
+        "dealer": {
+            "id": 4301,
+            "address": "4083 Pierson Rd",
+            "address_2": "",
+            "city": "Flint",
+            "state": "Michigan",
+            "st": "MI",
+            "region_name": "McCrum",
+            "zip_code": "48504",
+            "time_zone": "eastern",
+            "slug": "flint-mi",
+            "crm_email": "rightwaypierson@promaxonline.net",
+            "name": "Flint, MI",
+            "name_no_st": "Flint",
+            "phone": "(810) 787-4350",
+            "internal_name": "Pierson",
+            "website": "https://www.rightway.com/d/flint-mi/",
+            "area_code": "810"
+        },
+        "activity": {
+            "at": "2026-02-07T18:49:18+00:00",
+            "showroom_visits": {
+                "exit_note": {
+                    "at": "2026-02-07T18:49:18+00:00",
+                    "dealer_id": 4301,
+                    "reason_unsold": "Cash Down",
+                    "showroom_visit_id": 38588493
+                },
+                "last": {
+                    "at": "2026-02-07T18:49:18+00:00",
+                    "dealer_id": 4301,
+                    "customer_id": 147655500,
+                    "showroom_visit_id": 38588493,
+                    "type": "exit_note"
+                }
+            }
+        }
+    },
+    "properties": {
+        "event_id": "38588493",
+        "summary": "Dequiseshia Jordan left our Flint, MI dealership on Sat, Feb 7, 2026 at 1:49 PM and was checked out by Eric Boden. Reason Unsold: Cash Down. Note: P33.  needs 1500-2k down.",
+        "visit_type": "phone_appt_show",
+        "visit_type_display": "Phone Appt Show",
+        "start": {
+            "at": "2026-02-07T18:24:00+00:00",
+            "at_display": "Sat, Feb 7, 2026 - 1:24 PM",
+            "by": {
+                "id": 9053704,
+                "first_name": "Garret",
+                "last_name": "Hall",
+                "name": "Garret Hall",
+                "name_at_dealership": "Garret Hall | Flint, MI"
+            }
+        },
+        "exit": {
+            "id": 2743746498,
+            "reason_unsold": "Cash Down",
+            "note": "P33.  needs 1500-2k down",
+            "is_manager_note": "No",
+            "at": "2026-02-07T18:49:18+00:00",
+            "at_display": "Sat, Feb 7, 2026 - 1:49 PM",
+            "by": {
+                "id": 9010950,
+                "first_name": "Eric",
+                "last_name": "Boden",
+                "name": "Eric Boden",
+                "name_at_dealership": "Eric Boden | Flint, MI"
+            }
+        },
+        "appointment": {
+            "id": 3267921298,
+            "scheduled_by": "Garret Hall",
+            "scheduled_for": "Sat, Feb 7, 2026 - 1:45 PM",
+            "set_via": "Phone",
+            "set_at": "Wed, Feb 4, 2026 - 4:26 PM",
+            "confirmed_status": "No"
+        },
+        "customer": {
+            "id": 147655500,
+            "url": "https://promaxonline.com/customer/workscreen?customer=147655500",
+            "first_name": "Dequiseshia",
+            "last_name": "Jordan",
+            "name": "Dequiseshia Jordan",
+            "cell_phone": "(810) 588-1983",
+            "home_phone": "(810) 588-1983",
+            "email": "djorda05@yahoo.com",
+            "sales_rep_1": {
+                "id": 9053704,
+                "first_name": "Garret",
+                "last_name": "Hall",
+                "name": "Garret Hall",
+                "name_at_dealership": "Garret Hall | Flint, MI"
+            }
+        },
+        "dealer": {
+            "id": 4301,
+            "address": "4083 Pierson Rd",
+            "address_2": "",
+            "city": "Flint",
+            "state": "Michigan",
+            "st": "MI",
+            "region_name": "McCrum",
+            "zip_code": "48504",
+            "time_zone": "eastern",
+            "slug": "flint-mi",
+            "crm_email": "rightwaypierson@promaxonline.net",
+            "name": "Flint, MI",
+            "name_no_st": "Flint",
+            "phone": "(810) 787-4350",
+            "internal_name": "Pierson",
+            "website": "https://www.rightway.com/d/flint-mi/",
+            "area_code": "810"
+        },
+        "custom_object_showroom_visit_id": "38588493",
+        "custom_object_showroom_visit_customer_id": "147655500",
+        "custom_object_showroom_visit_name": "Sat, Feb 7, 2026 | Flint, MI",
+        "custom_object_showroom_visit_date_display": "Sat, Feb 7, 2026 - 1:49 PM",
+        "custom_object_showroom_visit_start_at_display": "Sat, Feb 7, 2026 - 1:24 PM",
+        "custom_object_showroom_visit_exit_at_display": "Sat, Feb 7, 2026 - 1:49 PM",
+        "custom_object_showroom_visit_dealer": "Flint, MI",
+        "custom_object_showroom_visit_type": "Phone Appt Show",
+        "custom_object_showroom_visit_start_by": "Garret Hall",
+        "custom_object_showroom_visit_exit_by": "Eric Boden",
+        "custom_object_showroom_visit_sales_rep_1": "Garret Hall",
+        "custom_object_showroom_visit_exit_note": "P33.  needs 1500-2k down",
+        "custom_object_showroom_visit_exit_reason": "Cash Down"
+    }
+}

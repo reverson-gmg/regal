@@ -1,0 +1,117 @@
+{
+    "userId": "mcleroy_3167061942",
+    "name": "showroom_visit.new_visit",
+    "eventSource": "Promax",
+    "originalTimestamp": "2026-02-07T21:06:15+00:00",
+    "traits": {
+        "firstName": "Leanthony",
+        "lastName": "McLeroy",
+        "dealer": {
+            "id": 7816,
+            "address": "2837 NE Vivion Rd",
+            "address_2": "",
+            "city": "Kansas City",
+            "state": "Missouri",
+            "st": "MO",
+            "region_name": "White",
+            "zip_code": "64119",
+            "time_zone": "central",
+            "slug": "kansas-city-mo-northland",
+            "crm_email": "rightwaynorthland@promaxonline.net",
+            "name": "Kansas City, MO (Northland)",
+            "name_no_st": "Kansas City (Northland)",
+            "phone": "(816) 595-9174",
+            "internal_name": "Northland",
+            "website": "https://www.rightway.com/d/kansas-city-mo-northland/",
+            "area_code": "816"
+        },
+        "activity": {
+            "at": "2026-02-07T21:06:15+00:00",
+            "showroom_visits": {
+                "new_visit": {
+                    "at": "2026-02-07T21:06:15+00:00",
+                    "dealer_id": 7816,
+                    "customer_id": 171261469,
+                    "showroom_visit_id": 38589327
+                },
+                "last": {
+                    "at": "2026-02-07T21:06:15+00:00",
+                    "dealer_id": 7816,
+                    "customer_id": 171261469,
+                    "showroom_visit_id": 38589327,
+                    "type": "new_visit"
+                }
+            }
+        }
+    },
+    "properties": {
+        "event_id": "38589327",
+        "summary": "Leanthony McLeroy visited our Kansas City, MO (Northland) dealership as a Fresh Walk-In on Sat, Feb 7, 2026 at 3:06 PM and was checked in by Katlyn Johnson. Had an appointment scheduled for 2/5/26 at 6:15 PM.",
+        "visit_type": "fresh_walk_in",
+        "visit_type_display": "Fresh Walk-In",
+        "start": {
+            "at": "2026-02-07T21:06:15+00:00",
+            "at_display": "Sat, Feb 7, 2026 - 3:06 PM",
+            "by": {
+                "id": 9018033,
+                "first_name": "Katlyn",
+                "last_name": "Johnson",
+                "name": "Katlyn Johnson",
+                "name_at_dealership": "Katlyn Johnson | Kansas City, MO (Northland)"
+            }
+        },
+        "appointment": {
+            "id": 3268373562,
+            "scheduled_by": "Katlyn Johnson",
+            "scheduled_for": "Thu, Feb 5, 2026 - 6:15 PM",
+            "set_via": "Phone",
+            "set_at": "Thu, Feb 5, 2026 - 4:01 PM",
+            "confirmed_status": "No"
+        },
+        "customer": {
+            "id": 171261469,
+            "url": "https://promaxonline.com/customer/workscreen?customer=171261469",
+            "first_name": "Leanthony",
+            "last_name": "McLeroy",
+            "name": "Leanthony McLeroy",
+            "cell_phone": "(316) 706-1942",
+            "home_phone": "(316) 706-1942",
+            "email": "leemcleroy32@gmail.com",
+            "sales_rep_1": {
+                "id": 9018033,
+                "first_name": "Katlyn",
+                "last_name": "Johnson",
+                "name": "Katlyn Johnson",
+                "name_at_dealership": "Katlyn Johnson | Kansas City, MO (Northland)"
+            }
+        },
+        "dealer": {
+            "id": 7816,
+            "address": "2837 NE Vivion Rd",
+            "address_2": "",
+            "city": "Kansas City",
+            "state": "Missouri",
+            "st": "MO",
+            "region_name": "White",
+            "zip_code": "64119",
+            "time_zone": "central",
+            "slug": "kansas-city-mo-northland",
+            "crm_email": "rightwaynorthland@promaxonline.net",
+            "name": "Kansas City, MO (Northland)",
+            "name_no_st": "Kansas City (Northland)",
+            "phone": "(816) 595-9174",
+            "internal_name": "Northland",
+            "website": "https://www.rightway.com/d/kansas-city-mo-northland/",
+            "area_code": "816"
+        },
+        "custom_object_showroom_visit_id": "38589327",
+        "custom_object_showroom_visit_customer_id": "171261469",
+        "custom_object_showroom_visit_name": "Sat, Feb 7, 2026 | Kansas City, MO (Northland)",
+        "custom_object_showroom_visit_date_display": "Sat, Feb 7, 2026 - 3:06 PM",
+        "custom_object_showroom_visit_start_at_display": "Sat, Feb 7, 2026 - 3:06 PM",
+        "custom_object_showroom_visit_dealer": "Kansas City, MO (Northland)",
+        "custom_object_showroom_visit_type": "Fresh Walk-In",
+        "custom_object_showroom_visit_start_by": "Katlyn Johnson",
+        "custom_object_showroom_visit_sales_rep_1": "Katlyn Johnson"
+    }
+}

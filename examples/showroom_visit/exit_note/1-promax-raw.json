@@ -1,16 +1,16 @@
 {
-  "customer_id": 185145957,
-  "dealer_id": 4141,
+  "customer_id": 147655500,
+  "dealer_id": 4301,
   "showroom_visit": {
     "exit_note": {
-      "date": "2026-02-07T16:51:00Z",
-      "employee_id": 9037373,
-      "id": 2743695232,
+      "date": "2026-02-07T18:24:00Z",
+      "employee_id": 9010950,
+      "id": 2743746498,
       "is_manager_note": false,
-      "quick_note": "p33 needs more money or cox",
+      "quick_note": "P33.  NEEDS 1500-2K DOWN",
       "reason_unsold": "Cash Down",
-      "showroom_visit_id": 38587885
+      "showroom_visit_id": 38588493
     }
   },
-  "timestamp": 1770509803230
+  "timestamp": 1770490158161
 }
