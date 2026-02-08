@@ -19,6 +19,7 @@
 //   ✅ Dealer object mapping with computed website URL and area_code extraction
 //   ✅ Person/employee enrichment (name, name_at_dealership) with null-safety
 //   ✅ Phone number formatting (10-digit → (XXX) XXX-XXXX)
+//   ✅ Call direction-aware time/person keys (answered_at/by for inbound, called_at/by for outbound)
 //   ✅ Call notes: capitalize first letter, preserve interior casing, conditional trailing period
 //   ✅ Call recording note: structured fields (talk_time, disposition, recording_link)
 //   ✅ SMS body passed through unchanged
@@ -588,15 +589,22 @@ function buildCallProperties(comm, timestamp, displayTime, direction, person, cu
     event_id: comm.id,
     direction: direction.toUpperCase(),
     notes: formatCallNotes(comm.body),
-    disposition: comm.disposition || 'unknown',
-    answered_at: timestamp,
-    answered_at_display: displayTime
+    disposition: comm.disposition || 'unknown'
   };
 
-  // answered_by is only included when a valid employee record exists.
-  // Xano returns `false` when the employee is not found.
-  if (person) {
-    props.answered_by = person;
+  // Outbound calls use called_at/called_by; inbound calls use answered_at/answered_by
+  if (direction === 'outbound') {
+    props.called_at = timestamp;
+    props.called_at_display = displayTime;
+    if (person) {
+      props.called_by = person;
+    }
+  } else {
+    props.answered_at = timestamp;
+    props.answered_at_display = displayTime;
+    if (person) {
+      props.answered_by = person;
+    }
   }
 
   props.customer = customerObj;
