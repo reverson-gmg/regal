@@ -840,35 +840,22 @@ addHandler('transform', (request, context) => {
       dealer_id: dealer_id
     };
 
-    if (eventType === 'text') {
+    const DIRECTION_COMM_TYPE = { text: 'sms', call: 'call', email: 'email' };
+    const commType = DIRECTION_COMM_TYPE[eventType];
+    if (commType) {
       if (direction === 'inbound') {
-        addIfHasValue(promaxCustomerLastActivity, 'last_ib_sms', dexWsTimestamp);
+        promaxCustomerLastActivity[`last_ib_${commType}`] = dexWsTimestamp;
       } else if (direction === 'outbound') {
-        addIfHasValue(promaxCustomerLastActivity, 'last_ob_sms', dexWsTimestamp);
+        promaxCustomerLastActivity[`last_ob_${commType}`] = dexWsTimestamp;
       }
-    } else if (eventType === 'call') {
-      if (direction === 'inbound') {
-        addIfHasValue(promaxCustomerLastActivity, 'last_ib_call', dexWsTimestamp);
-      } else if (direction === 'outbound') {
-        addIfHasValue(promaxCustomerLastActivity, 'last_ob_call', dexWsTimestamp);
-      }
-    } else if (eventType === 'email') {
-      if (direction === 'inbound') {
-        addIfHasValue(promaxCustomerLastActivity, 'last_ib_email', dexWsTimestamp);
-      } else if (direction === 'outbound') {
-        addIfHasValue(promaxCustomerLastActivity, 'last_ob_email', dexWsTimestamp);
-      }
-    } else if (eventType === 'user_note') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_user_note', dexWsTimestamp);
-    } else if (eventType === 'call_recording_note') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_call_recording_note', dexWsTimestamp);
     } else if (eventType === 'lead_note') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_lead_note', dexWsTimestamp);
+      promaxCustomerLastActivity.last_lead_note = dexWsTimestamp;
       // Add dynamic lead event field if "Lead Event:" was found in body
       if (leadEventName) {
-        const dynamicFieldName = `last_lead_${leadEventName}`;
-        promaxCustomerLastActivity[dynamicFieldName] = dexWsTimestamp;
+        promaxCustomerLastActivity[`last_lead_${leadEventName}`] = dexWsTimestamp;
       }
+    } else if (eventType === 'user_note' || eventType === 'call_recording_note') {
+      promaxCustomerLastActivity[`last_${eventType}`] = dexWsTimestamp;
     }
 
     // ============= BUILD FINAL PAYLOAD =============

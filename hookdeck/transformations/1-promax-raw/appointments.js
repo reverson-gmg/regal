@@ -337,22 +337,17 @@ addHandler('transform', (request, context) => {
       dealer_id: dealer_id
     };
 
-    // primary_tier: 1 for set, current, confirmed, shown, sold, rescheduled, unsold
-    const primaryTierEvents = new Set(['set', 'current', 'confirmed', 'shown', 'sold', 'rescheduled', 'unsold']);
-    if (primaryTierEvents.has(eventType)) {
-      addIfHasValue(promaxCustomer, 'primary_tier', 1);
-      addIfHasValue(promaxCustomer, 'last_primary_tier_event', dexWsTimestamp);
+    // primary_tier, last_appt_updated_at: for set, current, confirmed, shown, sold, rescheduled, unsold
+    const ACTIVE_APPT_EVENTS = new Set(['set', 'current', 'confirmed', 'shown', 'sold', 'rescheduled', 'unsold']);
+    if (ACTIVE_APPT_EVENTS.has(eventType)) {
+      promaxCustomer.primary_tier = 1;
+      promaxCustomer.last_primary_tier_event = dexWsTimestamp;
+      promaxCustomer.last_appt_updated_at = dexWsTimestamp;
     }
 
     // last_appt_scheduled_for: only for 'set' event, use dateTime
     if (eventType === 'set') {
-      addIfHasValue(promaxCustomer, 'last_appt_scheduled_for', dateTime);
-    }
-
-    // last_appt_updated_at: for set, current, confirmed, shown, sold, rescheduled, unsold - use dexWsTimestamp
-    const apptUpdatedEvents = new Set(['set', 'current', 'confirmed', 'shown', 'sold', 'rescheduled', 'unsold']);
-    if (apptUpdatedEvents.has(eventType)) {
-      addIfHasValue(promaxCustomer, 'last_appt_updated_at', dexWsTimestamp);
+      promaxCustomer.last_appt_scheduled_for = dateTime;
     }
 
     // Generate metadata for promax_customer
@@ -385,45 +380,38 @@ addHandler('transform', (request, context) => {
     };
 
     // ============= EVENT-TYPE-SPECIFIC PROCESSING =============
+    // All event types get status + status_updated_at
+    promaxAppointment.status = status;
+    promaxAppointment.status_updated_at = dexWsTimestamp;
+
     if (eventType === 'set') {
-      // Set event: scheduled_at, scheduled_for, scheduled_by, status, status_updated_at, set_via, comments
+      // Set event: scheduled_at, scheduled_for, scheduled_by, set_via, comments
       const rootDealerParties = salesAppointment.dealer_parties;
       const scheduledBy = rootDealerParties ? getOrNull(rootDealerParties.employee_id) : null;
       const setVia = getOrNull(appointment.set_via);
       const comments = getOrNull(appointment.comments);
 
-      addIfHasValue(promaxAppointment, 'scheduled_at', dexWsTimestamp);
-      addIfHasValue(promaxAppointment, 'scheduled_for', dateTime);
+      promaxAppointment.scheduled_at = dexWsTimestamp;
+      promaxAppointment.scheduled_for = dateTime;
       addIfHasValue(promaxAppointment, 'scheduled_by', scheduledBy);
-      addIfHasValue(promaxAppointment, 'status', status);
-      addIfHasValue(promaxAppointment, 'status_updated_at', dexWsTimestamp);
       addIfHasValue(promaxAppointment, 'set_via', setVia);
       addIfHasValue(promaxAppointment, 'comments', comments);
 
     } else if (eventType === 'confirmed') {
-      // Confirmed event: status, status_updated_at, confirmed_at, confirmed_by
+      // Confirmed event: confirmed_at, confirmed_by
       const confirmedStatus = appointment.confirmed_status;
       const confirmedDealerParties = confirmedStatus ? confirmedStatus.dealer_parties : null;
       const confirmedBy = confirmedDealerParties ? getOrNull(confirmedDealerParties.employee_id) : null;
 
-      addIfHasValue(promaxAppointment, 'status', status);
-      addIfHasValue(promaxAppointment, 'status_updated_at', dexWsTimestamp);
-      addIfHasValue(promaxAppointment, 'confirmed_at', dexWsTimestamp);
+      promaxAppointment.confirmed_at = dexWsTimestamp;
       addIfHasValue(promaxAppointment, 'confirmed_by', confirmedBy);
 
     } else if (eventType === 'rescheduled') {
-      // Rescheduled event: status, status_updated_at, new_appointment_id
+      // Rescheduled event: new_appointment_id
       const details = appointmentStatus.details;
       const newAppointmentId = details ? getOrNull(details.new_appointment_id) : null;
 
-      addIfHasValue(promaxAppointment, 'status', status);
-      addIfHasValue(promaxAppointment, 'status_updated_at', dexWsTimestamp);
       addIfHasValue(promaxAppointment, 'new_appointment_id', newAppointmentId);
-
-    } else {
-      // All other status change events: status, status_updated_at
-      addIfHasValue(promaxAppointment, 'status', status);
-      addIfHasValue(promaxAppointment, 'status_updated_at', dexWsTimestamp);
     }
 
     // ============= BUILD PROMAX_APPOINTMENT_UPDATE OBJECT =============
@@ -438,7 +426,7 @@ addHandler('transform', (request, context) => {
 
     // For confirmed events, use websocket timestamp; otherwise use the appointment date_time
     if (eventType === 'confirmed') {
-      addIfHasValue(promaxAppointmentUpdate, 'date_time', dexWsTimestamp);
+      promaxAppointmentUpdate.date_time = dexWsTimestamp;
     } else {
       addIfHasValue(promaxAppointmentUpdate, 'date_time', dateTime);
     }
@@ -473,27 +461,14 @@ addHandler('transform', (request, context) => {
     };
 
     // Map event types to last activity fields
+    // 'set' has two fields; 'current' maps to last_appt_set; all others map to last_appt_{eventType}
     if (eventType === 'set') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_appt_scheduled_for', dateTime);
-      addIfHasValue(promaxCustomerLastActivity, 'last_appt_set', dexWsTimestamp);
+      promaxCustomerLastActivity.last_appt_scheduled_for = dateTime;
+      promaxCustomerLastActivity.last_appt_set = dexWsTimestamp;
     } else if (eventType === 'current') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_appt_set', dexWsTimestamp);
-    } else if (eventType === 'confirmed') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_appt_confirmed', dexWsTimestamp);
-    } else if (eventType === 'missed') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_appt_missed', dexWsTimestamp);
-    } else if (eventType === 'shown') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_appt_shown', dexWsTimestamp);
-    } else if (eventType === 'sold') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_appt_sold', dexWsTimestamp);
-    } else if (eventType === 'unsold') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_appt_unsold', dexWsTimestamp);
-    } else if (eventType === 'cancelled') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_appt_cancelled', dexWsTimestamp);
-    } else if (eventType === 'rescheduled') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_appt_rescheduled', dexWsTimestamp);
-    } else if (eventType === 'deleted') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_appt_deleted', dexWsTimestamp);
+      promaxCustomerLastActivity.last_appt_set = dexWsTimestamp;
+    } else {
+      promaxCustomerLastActivity[`last_appt_${eventType}`] = dexWsTimestamp;
     }
 
     // ============= BUILD FINAL PAYLOAD =============
