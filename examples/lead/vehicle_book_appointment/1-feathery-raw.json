@@ -1,0 +1,75 @@
+{
+  "type": "vehicle_book_appointment",
+  "source": "website",
+  "zip_code": "60628",
+  "dealer_id": "4141",
+  "last_name": "Allen",
+  "first_name": "Parys",
+  "submission": {
+    "address": {
+      "zip_code": "60628"
+    },
+    "message": "Hello RightWay, I am interested in your 2017 Honda Accord Coupe and would like to book an appointment.",
+    "appointment": {
+      "date": "2026-02-08",
+      "time": "Evening"
+    },
+    "lead_summary": "Parys Allen is interested in a 2017 Honda Accord Coupe and wants to book an appointment for 2/8/26 in the Evening."
+  },
+  "vehicle_vin": "1HGCT2B82HA005856",
+  "phone_number": "17084755204",
+  "submitted_at": "2026-02-08 16:35:09+00:00",
+  "email_address": "allenparys32@gmail.com",
+  "form_metadata": {
+    "id": "26VB8P",
+    "url": "https://www.rightway.com/d/chicago-il-midlothian/car/used-2017-honda-accord-coupe-for-sale-1hgct2b82ha005856/#success",
+    "name": "book-vehicle",
+    "embed_type": "full-screen",
+    "referral_url": "https://www.rightway.com/d/chicago-il-midlothian/used-cars/?make=honda&model=accord+coupe"
+  },
+  "dealer_metadata": {
+    "st": "IL",
+    "map": "https://maps.app.goo.gl/xrnrvwPKCDhXteJ56",
+    "zip": "60445",
+    "city": "Midlothian",
+    "name": "Chicago, IL (Midlothian)",
+    "phone": "(708) 389-4264",
+    "state": "Illinois",
+    "region": "Shapiro",
+    "address": "14409 Pulaski Rd",
+    "website": "https://www.rightway.com/d/chicago-il-midlothian/",
+    "name_no_st": "Chicago (Midlothian)",
+    "name_promax": "Midlothian 4141",
+    "name_internal": "Midlothian"
+  },
+  "vehicle_metadata": {
+    "age": "242",
+    "make": "Honda",
+    "trim": "EX-L V6",
+    "year": "2017",
+    "model": "Accord Coupe",
+    "stock": "HA005856",
+    "mileage": "127247",
+    "dealer_id": "5391",
+    "body_style": "Car",
+    "location_type": "external"
+  },
+  "email_verification": {
+    "free": true,
+    "role": false,
+    "reason": "accepted_email",
+    "result": "deliverable",
+    "sendex": 0.833,
+    "accept_all": false,
+    "disposable": false,
+    "verified_at": "2026-02-08 16:33:15+00:00",
+    "did_you_mean": ""
+  },
+  "phone_verification": {
+    "line_type": "mobile",
+    "verified_at": "2026-02-08 16:35:09+00:00",
+    "carrier_name": "Verizon Wireless",
+    "valid_number": true
+  },
+  "submission_user_id": "d749a69f-7590-4d48-a02b-cd7f8165de09"
+}

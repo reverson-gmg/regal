@@ -1,0 +1,59 @@
+{
+  "type": "vehicle_text_us",
+  "source": "website",
+  "zip_code": "",
+  "dealer_id": "8644",
+  "last_name": "Taylor",
+  "first_name": "Sierra",
+  "submission": {
+    "address": {
+      "zip_code": ""
+    },
+    "message": "Hello I was wondering how much this car is",
+    "lead_summary": "Sierra Taylor sent a message about our 2018 Kia Stinger and wants us to text them back."
+  },
+  "vehicle_vin": "KNAE55LC7J6018548",
+  "phone_number": "12318844705",
+  "submitted_at": "2026-02-08 00:08:34+00:00",
+  "form_metadata": {
+    "id": "khWUqD",
+    "url": "https://www.rightway.com/d/cadillac-mi/car/used-2018-kia-stinger-for-sale-knae55lc7j6018548/?_gl=1*72z447*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiA4pvMBhDYARIsAGfgwvxhTNvCxdn4xVlPhbFdFKOg5DiPbazToDGTf2Huo6iWs5YVxKCIC7oaAoXyEALw_wcB&gbraid=0AAAAAD0VzWbYZ2MYbbEbsftSTB6rCfP_l#success",
+    "name": "message-vehicle",
+    "embed_type": "popup",
+    "referral_url": ""
+  },
+  "dealer_metadata": {
+    "st": "MI",
+    "map": "https://maps.app.goo.gl/n5bpgirRnAbJG7Xu5",
+    "zip": "49601",
+    "city": "Cadillac",
+    "name": "Cadillac, MI",
+    "phone": "(231) 253-3901",
+    "state": "Michigan",
+    "region": "McCrum",
+    "address": "1605 N Mitchell St",
+    "website": "https://www.rightway.com/d/cadillac-mi/",
+    "name_no_st": "Cadillac",
+    "name_promax": "Cadillac 8644",
+    "name_internal": "Cadillac"
+  },
+  "vehicle_metadata": {
+    "age": "675",
+    "make": "Kia",
+    "trim": "GT2",
+    "year": "2018",
+    "model": "Stinger",
+    "stock": "XJ6018548",
+    "mileage": "36182",
+    "dealer_id": "8871",
+    "body_style": "Car",
+    "location_type": "external"
+  },
+  "phone_verification": {
+    "line_type": "mobile",
+    "verified_at": "2026-02-08 00:08:34+00:00",
+    "carrier_name": "AT&T Wireless",
+    "valid_number": true
+  },
+  "submission_user_id": "ca01fa3a-8624-454c-9d12-bfd9407a18ed"
+}

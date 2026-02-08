@@ -1,0 +1,150 @@
+{
+    "lead": {
+        "type": "book_appointment",
+        "source": "website",
+        "zip_code": "48023",
+        "dealer_id": "4297",
+        "last_name": "Hunt ",
+        "first_name": "Deborah",
+        "submission": {
+            "address": {
+                "zip_code": "48023"
+            },
+            "message": "Thank you so much looking forward to met you ",
+            "appointment": {
+                "date": "2026-02-20",
+                "time": "Evening"
+            },
+            "lead_summary": "Deborah Hunt  is interested wants to book an appointment for 2/20/26 in the Evening."
+        },
+        "phone_number": "2482843008",
+        "submitted_at": "2026-02-08 18:34:42+00:00",
+        "email_address": "napierdeborah8@gmail.com",
+        "form_metadata": {
+            "id": "Ke2Aag",
+            "url": "https://www.rightway.com/d/clinton-twp-mi/appointment/",
+            "name": "appointment",
+            "embed_type": "landing",
+            "referral_url": "https://www.rightway.com/appointment/"
+        },
+        "dealer_metadata": {
+            "st": "MI",
+            "map": "https://maps.app.goo.gl/qzUXkgwUsC7yE2qR8",
+            "zip": "48035",
+            "city": "Clinton Twp",
+            "name": "Clinton Twp, MI",
+            "phone": "(586) 792-0264",
+            "state": "Michigan",
+            "region": "Perrin",
+            "address": "34966 Southbound Gratiot Ave",
+            "website": "https://www.rightway.com/d/clinton-twp-mi/",
+            "name_no_st": "Clinton Twp",
+            "name_promax": "Gratiot 4297",
+            "name_internal": "Gratiot"
+        },
+        "email_verification": {
+            "free": true,
+            "role": false,
+            "reason": "accepted_email",
+            "result": "deliverable",
+            "sendex": 0.857,
+            "accept_all": false,
+            "disposable": false
+        },
+        "phone_verification": {
+            "line_type": "mobile",
+            "carrier_name": "T-Mobile USA",
+            "valid_number": true
+        },
+        "submission_user_id": "97a4dc79-aada-4e74-92d3-afe59c2bd320",
+        "event": "lead.website",
+        "event_version": "1.0",
+        "id": "e0a2fd1b-2ce6-41f8-83a0-0d873fc308b5",
+        "hookdeck_sent_at": "2026-02-08T18:34:45.425Z",
+        "last_name_normalized": "hunt",
+        "regal_external_id": "hunt_2482843008",
+        "regal_external_uuid": "75192310-2e3b-bbeb-082e-146646bb367b"
+    },
+    "dealer": {
+        "id": 4297,
+        "created_at": 1761618631450,
+        "dex_updated_at": 1761618631449,
+        "promax_active": true,
+        "promax_name": "Rightway Automotive Credit - Gratiot",
+        "xano_updated_at": 1770536251036,
+        "marketing_name": "Clinton Twp, MI",
+        "marketing_name_no_st": "Clinton Twp",
+        "status": "open",
+        "address": "34966 Southbound Gratiot Ave",
+        "address_2": "",
+        "city": "Clinton Twp",
+        "state": "Michigan",
+        "st": "MI",
+        "region_name": "Perrin",
+        "zip_code": "48035",
+        "time_zone": "eastern",
+        "phone_number_main": "(586) 792-0264",
+        "gmg_nickname": "Gratiot",
+        "slug": "clinton-twp-mi",
+        "crm_email": "rightwaygratiot@promaxonline.net",
+        "hours": {
+            "friday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "monday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "sunday": {
+                "display": "Closed",
+                "is_open": false,
+                "open_time": "",
+                "close_time": "",
+                "open_time_display": "",
+                "close_time_display": ""
+            },
+            "tuesday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "saturday": {
+                "display": "10am - 3pm",
+                "is_open": true,
+                "open_time": "10:00",
+                "close_time": "15:00",
+                "open_time_display": "10am",
+                "close_time_display": "3pm"
+            },
+            "thursday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "wednesday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            }
+        }
+    },
+    "vehicle_dealer": false
+}

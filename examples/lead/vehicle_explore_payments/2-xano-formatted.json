@@ -1,0 +1,91 @@
+{
+  "type": "vehicle_explore_payments",
+  "source": "website",
+  "zip_code": "46619",
+  "dealer_id": "6492",
+  "last_name": "Brown",
+  "first_name": "Walter",
+  "submission": {
+    "address": {
+      "zip_code": "46619"
+    },
+    "employment": {
+      "status": "SSI / Disability",
+      "income_monthly": 1000
+    },
+    "ip_address": "172.56.248.16",
+    "preferences": {
+      "trade_in": "No",
+      "purchase_timeframe": "ASAP",
+      "preferred_down_payment": "$0 down"
+    },
+    "lead_summary": "Walter Brown is exploring payments on a 2024 Chevrolet Tahoe - they want to get approved for a new car ASAP. Has poor credit (below 600), $0 down, no trade-in, and wants monthly payments. Is on SSI / disability making $1,000/mo after taxes. No bankruptcy or repossession within the last 2 years.",
+    "credit_profile": {
+      "bankruptcy": "No",
+      "repossession": "No",
+      "credit_estimate": "Poor (Below 600)"
+    }
+  },
+  "vehicle_vin": "1GNSKNKD6RR179404",
+  "phone_number": "5743812509",
+  "submitted_at": "2026-02-08 20:25:24+00:00",
+  "email_address": "wally8582@gmail.com",
+  "form_metadata": {
+    "id": "SvtNjE",
+    "url": "https://www.rightway.com/d/south-bend-in/car/used-2024-chevrolet-tahoe-for-sale-1gnsknkd6rr179404/",
+    "name": "explore-payments",
+    "embed_type": "full-screen",
+    "referral_url": "https://www.rightway.com/d/south-bend-in/used-cars/?body_style=suv"
+  },
+  "dealer_metadata": {
+    "st": "IN",
+    "map": "https://maps.app.goo.gl/vNEbAFtFwFR37oGg7",
+    "zip": "46637",
+    "city": "South Bend",
+    "name": "South Bend, IN",
+    "phone": "(574) 404-5473",
+    "state": "Indiana",
+    "region": "Shapiro",
+    "address": "50537 State Hwy 933",
+    "website": "https://www.rightway.com/d/south-bend-in/",
+    "name_no_st": "South Bend",
+    "name_promax": "Michiana 6492",
+    "name_internal": "Michiana"
+  },
+  "vehicle_metadata": {
+    "age": "65",
+    "make": "Chevrolet",
+    "trim": "LT",
+    "year": "2024",
+    "model": "Tahoe",
+    "stock": "RR179404",
+    "mileage": "62780",
+    "dealer_id": "4300",
+    "body_style": "SUV",
+    "location_type": "external"
+  },
+  "email_verification": {
+    "free": true,
+    "role": false,
+    "reason": "accepted_email",
+    "result": "deliverable",
+    "sendex": 0.783,
+    "accept_all": false,
+    "disposable": false,
+    "verified_at": "2026-02-08 20:25:22+00:00"
+  },
+  "phone_verification": {
+    "line_type": "mobile",
+    "verified_at": "2026-02-08 20:25:23+00:00",
+    "carrier_name": "AT&T Wireless",
+    "valid_number": true
+  },
+  "submission_user_id": "1dc6323d-4101-496b-855f-85dcaf162bab",
+  "event": "lead.website",
+  "event_version": "1.0",
+  "id": "9dcf3a6d-5d56-a0b6-5d27-a300b1f6af5c",
+  "hookdeck_sent_at": "2026-02-08T20:25:27.872Z",
+  "last_name_normalized": "brown",
+  "regal_external_id": "brown_5743812509",
+  "regal_external_uuid": "5aa84e57-0c1a-29d8-aa03-79e35b0c94f7"
+}

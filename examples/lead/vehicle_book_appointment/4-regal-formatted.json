@@ -1,0 +1,268 @@
+{
+    "userId": "allen_7084755204",
+    "name": "lead.website",
+    "eventSource": "Website",
+    "originalTimestamp": "2026-02-08T10:35:09-06:00",
+    "traits": {
+        "firstName": "Parys",
+        "lastName": "Allen",
+        "phones": {
+            "+17084755204": {
+                "label": "Mobile",
+                "isPrimary": true
+            }
+        },
+        "emails": {
+            "allenparys32@gmail.com": {
+                "label": "Personal",
+                "isPrimary": true
+            }
+        },
+        "dealer": {
+            "id": 4141,
+            "address": "14409 Pulaski Rd",
+            "address_2": "",
+            "city": "Midlothian",
+            "state": "Illinois",
+            "st": "IL",
+            "region_name": "Shapiro",
+            "zip_code": "60445",
+            "time_zone": "Central",
+            "slug": "chicago-il-midlothian",
+            "crm_email": "rightwaypulaski@promaxonline.net",
+            "name": "Chicago, IL (Midlothian)",
+            "name_no_st": "Chicago (Midlothian)",
+            "phone": "(708) 389-4264",
+            "internal_name": "Midlothian",
+            "website": "https://www.rightway.com/d/chicago-il-midlothian/",
+            "area_code": "708",
+            "hours": {
+                "display": "Mon: 9am - 7pm\nTue: 9am - 7pm\nWed: 9am - 7pm\nThu: 9am - 7pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
+                "monday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "tuesday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "wednesday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "thursday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "friday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "saturday": {
+                    "display": "10am - 3pm",
+                    "is_open": true,
+                    "open_time": "10:00",
+                    "close_time": "15:00",
+                    "open_time_display": "10am",
+                    "close_time_display": "3pm"
+                },
+                "sunday": {
+                    "display": "Closed",
+                    "is_open": false,
+                    "open_time": "",
+                    "close_time": "",
+                    "open_time_display": "",
+                    "close_time_display": ""
+                }
+            }
+        },
+        "verification": {
+            "phone": {
+                "line_type": "mobile",
+                "carrier_name": "Verizon Wireless",
+                "valid_number": true,
+                "at": "2026-02-08T10:35:09-06:00"
+            },
+            "email": {
+                "free": true,
+                "role": false,
+                "reason": "accepted_email",
+                "result": "deliverable",
+                "score": 0.833,
+                "accept_all": false,
+                "disposable": false,
+                "at": "2026-02-08T10:33:15-06:00"
+            }
+        },
+        "activity": {
+            "at": "2026-02-08T10:35:09-06:00",
+            "leads": {
+                "vehicle_book_appointment": {
+                    "at": "2026-02-08T10:35:09-06:00",
+                    "dealer_id": "4141",
+                    "dealer": "Chicago, IL (Midlothian)",
+                    "score": 0,
+                    "appt_date": "2026-02-08",
+                    "appt_time": "Evening"
+                },
+                "last": {
+                    "at": "2026-02-08T10:35:09-06:00",
+                    "dealer_id": "4141",
+                    "dealer": "Chicago, IL (Midlothian)",
+                    "score": 0,
+                    "appt_date": "2026-02-08",
+                    "appt_time": "Evening",
+                    "type": "vehicle_book_appointment"
+                }
+            }
+        },
+        "appointment": {
+            "date": "2026-02-08",
+            "time": "Evening"
+        }
+    },
+    "properties": {
+        "event_type": "vehicle_book_appointment",
+        "event_type_name": "Vehicle Schedule Appointment",
+        "first_name": "Parys",
+        "last_name": "Allen",
+        "phone": "(708) 475-5204",
+        "email": "allenparys32@gmail.com",
+        "summary": "Parys Allen is interested in a 2017 Honda Accord Coupe and wants to book an appointment for 2/8/26 in the Evening.",
+        "submission": {
+            "at": "2026-02-08T10:35:09-06:00",
+            "at_display": "Sun, Feb 8, 2026 - 10:35 AM",
+            "message": "Hello RightWay, I am interested in your 2017 Honda Accord Coupe and would like to book an appointment.",
+            "appointment": {
+                "date": "2026-02-08",
+                "time": "Evening",
+                "date_display": "Sun, Feb 8, 2026"
+            }
+        },
+        "vehicle": {
+            "vin": "1HGCT2B82HA005856",
+            "year": "2017",
+            "make": "Honda",
+            "model": "Accord Coupe",
+            "trim": "EX-L V6",
+            "body_style": "Car",
+            "mileage": "127247",
+            "stock": "HA005856",
+            "age": "242",
+            "dealer_id": "5391",
+            "location": "Cleveland, OH (Parma)",
+            "location_type": "external"
+        },
+        "dealer": {
+            "id": 4141,
+            "address": "14409 Pulaski Rd",
+            "address_2": "",
+            "city": "Midlothian",
+            "state": "Illinois",
+            "st": "IL",
+            "region_name": "Shapiro",
+            "zip_code": "60445",
+            "time_zone": "Central",
+            "slug": "chicago-il-midlothian",
+            "name": "Chicago, IL (Midlothian)",
+            "name_no_st": "Chicago (Midlothian)",
+            "phone": "(708) 389-4264",
+            "internal_name": "Midlothian",
+            "website": "https://www.rightway.com/d/chicago-il-midlothian/",
+            "area_code": "708",
+            "hours": {
+                "display": "Mon: 9am - 7pm\nTue: 9am - 7pm\nWed: 9am - 7pm\nThu: 9am - 7pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
+                "monday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "tuesday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "wednesday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "thursday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "friday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "saturday": {
+                    "display": "10am - 3pm",
+                    "is_open": true,
+                    "open_time": "10:00",
+                    "close_time": "15:00",
+                    "open_time_display": "10am",
+                    "close_time_display": "3pm"
+                },
+                "sunday": {
+                    "display": "Closed",
+                    "is_open": false,
+                    "open_time": "",
+                    "close_time": "",
+                    "open_time_display": "",
+                    "close_time_display": ""
+                }
+            }
+        },
+        "form_metadata": {
+            "id": "26VB8P",
+            "url": "https://www.rightway.com/d/chicago-il-midlothian/car/used-2017-honda-accord-coupe-for-sale-1hgct2b82ha005856/",
+            "name": "book-vehicle",
+            "embed_type": "full-screen",
+            "referral_url": "https://www.rightway.com/d/chicago-il-midlothian/used-cars/?make=honda&model=accord+coupe"
+        },
+        "custom_object_lead_id": "dc2a8977-9072-afd0-6f7f-367b7b892d01",
+        "custom_object_lead_name": "Web - Vehicle Schedule Appointment (2/8/26)",
+        "custom_object_lead_received_display": "Sun, Feb 8, 2026 - 10:35 AM",
+        "custom_object_lead_dealer": "Chicago, IL (Midlothian)",
+        "custom_object_lead_summary": "Parys Allen is interested in a 2017 Honda Accord Coupe and wants to book an appointment for 2/8/26 in the Evening.",
+        "custom_object_lead_message": "Hello RightWay, I am interested in your 2017 Honda Accord Coupe and would like to book an appointment.",
+        "custom_object_lead_details": "🚗 Vehicle: 2017 Honda Accord Coupe\n📅 Appt: Sun, Feb 8, 2026\n🕒 Time: Evening\n🚘 Body Style: Car\n🎨 Color: \n📍 Location: Cleveland, OH (Parma)\n🆔 Stock #: HA005856\n🔑 VIN: 1HGCT2B82HA005856\n📅 Age: 242 days\n🔗 URL: https://www.rightway.com/d/chicago-il-midlothian/car/used-2017-honda-accord-coupe-for-sale-1hgct2b82ha005856/"
+    }
+}

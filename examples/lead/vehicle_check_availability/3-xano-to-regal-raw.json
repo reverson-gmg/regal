@@ -1,0 +1,237 @@
+{
+    "lead": {
+        "type": "vehicle_check_availability",
+        "source": "website",
+        "dealer_id": "7429",
+        "last_name": "Moran",
+        "first_name": "Mallory",
+        "submission": {
+            "message": "Hello RightWay, is your 2021 Jeep Renegade still available?",
+            "lead_summary": "Mallory Moran is interested in a 2021 Jeep Renegade and wants to know if it's available."
+        },
+        "vehicle_vin": "ZACNJDBB2MPM28173",
+        "phone_number": "8166604425",
+        "submitted_at": "2026-02-08 17:29:20+00:00",
+        "email_address": "tattooedpartygirl@gmail.com",
+        "form_metadata": {
+            "id": "8hPblc",
+            "url": "https://www.rightway.com/d/kansas-city-mo-independence/car/used-2021-jeep-renegade-for-sale-zacnjdbb2mpm28173/#contact",
+            "name": "check-availability",
+            "embed_type": "popup",
+            "referral_url": "https://www.rightway.com/d/kansas-city-mo-independence/used-cars/?sort=lowest_price"
+        },
+        "dealer_metadata": {
+            "st": "MO",
+            "map": "https://maps.app.goo.gl/4ihVinJiPhDgZByw5",
+            "zip": "64055",
+            "city": "Independence",
+            "name": "Kansas City, MO (Independence)",
+            "phone": "(816) 659-8950",
+            "state": "Missouri",
+            "region": "White",
+            "address": "3237 S Noland Rd",
+            "website": "https://www.rightway.com/d/kansas-city-mo-independence/",
+            "name_no_st": "Kansas City (Independence)",
+            "name_promax": "Independence 7429",
+            "name_internal": "Independence"
+        },
+        "vehicle_metadata": {
+            "age": "5",
+            "make": "Jeep",
+            "trim": "Latitude",
+            "year": "2021",
+            "model": "Renegade",
+            "stock": "MPM28173",
+            "mileage": "110305",
+            "dealer_id": "8338",
+            "body_style": "SUV",
+            "location_type": "external"
+        },
+        "email_verification": {
+            "free": true,
+            "role": false,
+            "reason": "accepted_email",
+            "result": "deliverable",
+            "sendex": 0.863,
+            "accept_all": false,
+            "disposable": false,
+            "verified_at": "2026-02-08 17:29:20+00:00"
+        },
+        "phone_verification": {
+            "line_type": "mobile",
+            "verified_at": "2026-02-08 17:29:19+00:00",
+            "carrier_name": "Dish Wireless",
+            "valid_number": true
+        },
+        "submission_user_id": "4e3db0e0-e2b8-4767-ba67-b545a6dd664f",
+        "event": "lead.website",
+        "event_version": "1.0",
+        "id": "7aeaf670-0da0-e353-102c-a090357be6af",
+        "hookdeck_sent_at": "2026-02-08T17:29:23.181Z",
+        "last_name_normalized": "moran",
+        "regal_external_id": "moran_8166604425",
+        "regal_external_uuid": "c2a8cbc9-6bc3-2725-f35c-a7341b5d406d"
+    },
+    "dealer": {
+        "id": 7429,
+        "created_at": 1761618631275,
+        "dex_updated_at": 1761618631274,
+        "promax_active": true,
+        "promax_name": "Rightway Automotive Credit - Independence",
+        "xano_updated_at": 1770536251036,
+        "marketing_name": "Kansas City, MO (Independence)",
+        "marketing_name_no_st": "Kansas City (Independence)",
+        "status": "open",
+        "address": "3237 S Noland Rd",
+        "address_2": "",
+        "city": "Independence",
+        "state": "Missouri",
+        "st": "MO",
+        "region_name": "White",
+        "zip_code": "64055",
+        "time_zone": "central",
+        "phone_number_main": "(816) 659-8950",
+        "gmg_nickname": "Independence",
+        "slug": "kansas-city-mo-independence",
+        "crm_email": "rightwayindependence@promaxonline.net",
+        "hours": {
+            "friday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "monday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "sunday": {
+                "display": "Closed",
+                "is_open": false,
+                "open_time": "",
+                "close_time": "",
+                "open_time_display": "",
+                "close_time_display": ""
+            },
+            "tuesday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "saturday": {
+                "display": "10am - 4pm",
+                "is_open": true,
+                "open_time": "10:00",
+                "close_time": "16:00",
+                "open_time_display": "10am",
+                "close_time_display": "4pm"
+            },
+            "thursday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "wednesday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            }
+        }
+    },
+    "vehicle_dealer": {
+        "id": 8338,
+        "created_at": 1761618630838,
+        "dex_updated_at": 1761618630836,
+        "promax_active": true,
+        "promax_name": "Rightway Automotive Credit - Raytown",
+        "xano_updated_at": 1770536251036,
+        "marketing_name": "Kansas City, MO (Raytown)",
+        "marketing_name_no_st": "Kansas City, MO (Raytown)",
+        "status": "open",
+        "address": "6824 Blue Ridge Blvd",
+        "address_2": "",
+        "city": "Raytown",
+        "state": "Missouri",
+        "st": "MO",
+        "region_name": "White",
+        "zip_code": "64133",
+        "time_zone": "central",
+        "phone_number_main": "(816) 908-9790",
+        "gmg_nickname": "Raytown",
+        "slug": "kansas-city-mo-raytown",
+        "crm_email": "rightwayautocreditblueridge@promaxonline.net",
+        "hours": {
+            "friday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "monday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "sunday": {
+                "display": "Closed",
+                "is_open": false,
+                "open_time": "",
+                "close_time": "",
+                "open_time_display": "",
+                "close_time_display": ""
+            },
+            "tuesday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "saturday": {
+                "display": "10am - 4pm",
+                "is_open": true,
+                "open_time": "10:00",
+                "close_time": "16:00",
+                "open_time_display": "10am",
+                "close_time_display": "4pm"
+            },
+            "thursday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "wednesday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            }
+        }
+    }
+}

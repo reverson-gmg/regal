@@ -1,0 +1,255 @@
+{
+    "userId": "moran_8166604425",
+    "name": "lead.website",
+    "eventSource": "Website",
+    "originalTimestamp": "2026-02-08T11:29:20-06:00",
+    "traits": {
+        "firstName": "Mallory",
+        "lastName": "Moran",
+        "phones": {
+            "+18166604425": {
+                "label": "Mobile",
+                "isPrimary": true
+            }
+        },
+        "emails": {
+            "tattooedpartygirl@gmail.com": {
+                "label": "Personal",
+                "isPrimary": true
+            }
+        },
+        "dealer": {
+            "id": 7429,
+            "address": "3237 S Noland Rd",
+            "address_2": "",
+            "city": "Independence",
+            "state": "Missouri",
+            "st": "MO",
+            "region_name": "White",
+            "zip_code": "64055",
+            "time_zone": "Central",
+            "slug": "kansas-city-mo-independence",
+            "crm_email": "rightwayindependence@promaxonline.net",
+            "name": "Kansas City, MO (Independence)",
+            "name_no_st": "Kansas City (Independence)",
+            "phone": "(816) 659-8950",
+            "internal_name": "Independence",
+            "website": "https://www.rightway.com/d/kansas-city-mo-independence/",
+            "area_code": "816",
+            "hours": {
+                "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 7pm\nFri: 9am - 6pm\nSat: 10am - 4pm\nSun: Closed",
+                "monday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "tuesday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "wednesday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "thursday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "friday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "saturday": {
+                    "display": "10am - 4pm",
+                    "is_open": true,
+                    "open_time": "10:00",
+                    "close_time": "16:00",
+                    "open_time_display": "10am",
+                    "close_time_display": "4pm"
+                },
+                "sunday": {
+                    "display": "Closed",
+                    "is_open": false,
+                    "open_time": "",
+                    "close_time": "",
+                    "open_time_display": "",
+                    "close_time_display": ""
+                }
+            }
+        },
+        "verification": {
+            "phone": {
+                "line_type": "mobile",
+                "carrier_name": "Dish Wireless",
+                "valid_number": true,
+                "at": "2026-02-08T11:29:19-06:00"
+            },
+            "email": {
+                "free": true,
+                "role": false,
+                "reason": "accepted_email",
+                "result": "deliverable",
+                "score": 0.863,
+                "accept_all": false,
+                "disposable": false,
+                "at": "2026-02-08T11:29:20-06:00"
+            }
+        },
+        "activity": {
+            "at": "2026-02-08T11:29:20-06:00",
+            "leads": {
+                "vehicle_check_availability": {
+                    "at": "2026-02-08T11:29:20-06:00",
+                    "dealer_id": "7429",
+                    "dealer": "Kansas City, MO (Independence)",
+                    "score": 0
+                },
+                "last": {
+                    "at": "2026-02-08T11:29:20-06:00",
+                    "dealer_id": "7429",
+                    "dealer": "Kansas City, MO (Independence)",
+                    "score": 0,
+                    "type": "vehicle_check_availability"
+                }
+            }
+        }
+    },
+    "properties": {
+        "event_type": "vehicle_check_availability",
+        "event_type_name": "Vehicle Check Availability",
+        "first_name": "Mallory",
+        "last_name": "Moran",
+        "phone": "(816) 660-4425",
+        "email": "tattooedpartygirl@gmail.com",
+        "summary": "Mallory Moran is interested in a 2021 Jeep Renegade and wants to know if it's available.",
+        "submission": {
+            "at": "2026-02-08T11:29:20-06:00",
+            "at_display": "Sun, Feb 8, 2026 - 11:29 AM",
+            "message": "Hello RightWay, is your 2021 Jeep Renegade still available?"
+        },
+        "vehicle": {
+            "vin": "ZACNJDBB2MPM28173",
+            "year": "2021",
+            "make": "Jeep",
+            "model": "Renegade",
+            "trim": "Latitude",
+            "body_style": "SUV",
+            "mileage": "110305",
+            "stock": "MPM28173",
+            "age": "5",
+            "dealer_id": "8338",
+            "location": "Kansas City, MO (Raytown)",
+            "location_type": "external"
+        },
+        "dealer": {
+            "id": 7429,
+            "address": "3237 S Noland Rd",
+            "address_2": "",
+            "city": "Independence",
+            "state": "Missouri",
+            "st": "MO",
+            "region_name": "White",
+            "zip_code": "64055",
+            "time_zone": "Central",
+            "slug": "kansas-city-mo-independence",
+            "name": "Kansas City, MO (Independence)",
+            "name_no_st": "Kansas City (Independence)",
+            "phone": "(816) 659-8950",
+            "internal_name": "Independence",
+            "website": "https://www.rightway.com/d/kansas-city-mo-independence/",
+            "area_code": "816",
+            "hours": {
+                "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 7pm\nFri: 9am - 6pm\nSat: 10am - 4pm\nSun: Closed",
+                "monday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "tuesday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "wednesday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "thursday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "friday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "saturday": {
+                    "display": "10am - 4pm",
+                    "is_open": true,
+                    "open_time": "10:00",
+                    "close_time": "16:00",
+                    "open_time_display": "10am",
+                    "close_time_display": "4pm"
+                },
+                "sunday": {
+                    "display": "Closed",
+                    "is_open": false,
+                    "open_time": "",
+                    "close_time": "",
+                    "open_time_display": "",
+                    "close_time_display": ""
+                }
+            }
+        },
+        "form_metadata": {
+            "id": "8hPblc",
+            "url": "https://www.rightway.com/d/kansas-city-mo-independence/car/used-2021-jeep-renegade-for-sale-zacnjdbb2mpm28173/",
+            "name": "check-availability",
+            "embed_type": "popup",
+            "referral_url": "https://www.rightway.com/d/kansas-city-mo-independence/used-cars/?sort=lowest_price"
+        },
+        "custom_object_lead_id": "7aeaf670-0da0-e353-102c-a090357be6af",
+        "custom_object_lead_name": "Web - Vehicle Check Availability (2/8/26)",
+        "custom_object_lead_received_display": "Sun, Feb 8, 2026 - 11:29 AM",
+        "custom_object_lead_dealer": "Kansas City, MO (Independence)",
+        "custom_object_lead_summary": "Mallory Moran is interested in a 2021 Jeep Renegade and wants to know if it's available.",
+        "custom_object_lead_message": "Hello RightWay, is your 2021 Jeep Renegade still available?",
+        "custom_object_lead_details": "🚗 Vehicle: 2021 Jeep Renegade\n🚘 Body Style: SUV\n🎨 Color: \n📍 Location: Kansas City, MO (Raytown)\n🆔 Stock #: MPM28173\n🔑 VIN: ZACNJDBB2MPM28173\n📅 Age: 5 days\n🔗 URL: https://www.rightway.com/d/kansas-city-mo-independence/car/used-2021-jeep-renegade-for-sale-zacnjdbb2mpm28173/"
+    }
+}

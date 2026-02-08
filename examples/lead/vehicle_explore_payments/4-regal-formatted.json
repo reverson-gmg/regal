@@ -1,0 +1,282 @@
+{
+    "userId": "brown_5743812509",
+    "name": "lead.website",
+    "eventSource": "Website",
+    "originalTimestamp": "2026-02-08T15:25:24-05:00",
+    "traits": {
+        "firstName": "Walter",
+        "lastName": "Brown",
+        "phones": {
+            "+15743812509": {
+                "label": "Mobile",
+                "isPrimary": true
+            }
+        },
+        "emails": {
+            "wally8582@gmail.com": {
+                "label": "Personal",
+                "isPrimary": true
+            }
+        },
+        "dealer": {
+            "id": 6492,
+            "address": "50537 State Hwy 933",
+            "address_2": "",
+            "city": "South Bend",
+            "state": "Indiana",
+            "st": "IN",
+            "region_name": "Shapiro",
+            "zip_code": "46637",
+            "time_zone": "Eastern",
+            "slug": "south-bend-in",
+            "crm_email": "rightwaysouthbend@promaxonline.net",
+            "name": "South Bend, IN",
+            "name_no_st": "South Bend",
+            "phone": "(574) 404-5473",
+            "internal_name": "Michiana",
+            "website": "https://www.rightway.com/d/south-bend-in/",
+            "area_code": "574",
+            "hours": {
+                "display": "Mon: 9am - 7pm\nTue: 9am - 7pm\nWed: 9am - 7pm\nThu: 9am - 7pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
+                "monday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "tuesday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "wednesday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "thursday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "friday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "saturday": {
+                    "display": "10am - 3pm",
+                    "is_open": true,
+                    "open_time": "10:00",
+                    "close_time": "15:00",
+                    "open_time_display": "10am",
+                    "close_time_display": "3pm"
+                },
+                "sunday": {
+                    "display": "Closed",
+                    "is_open": false,
+                    "open_time": "",
+                    "close_time": "",
+                    "open_time_display": "",
+                    "close_time_display": ""
+                }
+            }
+        },
+        "verification": {
+            "phone": {
+                "line_type": "mobile",
+                "carrier_name": "AT&T Wireless",
+                "valid_number": true,
+                "at": "2026-02-08T15:25:23-05:00"
+            },
+            "email": {
+                "free": true,
+                "role": false,
+                "reason": "accepted_email",
+                "result": "deliverable",
+                "score": 0.783,
+                "accept_all": false,
+                "disposable": false,
+                "at": "2026-02-08T15:25:22-05:00"
+            }
+        },
+        "activity": {
+            "at": "2026-02-08T15:25:24-05:00",
+            "leads": {
+                "vehicle_explore_payments": {
+                    "at": "2026-02-08T15:25:24-05:00",
+                    "dealer_id": "6492",
+                    "dealer": "South Bend, IN",
+                    "score": 0
+                },
+                "last": {
+                    "at": "2026-02-08T15:25:24-05:00",
+                    "dealer_id": "6492",
+                    "dealer": "South Bend, IN",
+                    "score": 0,
+                    "type": "vehicle_explore_payments"
+                }
+            }
+        },
+        "preferences": {
+            "trade_in": "No",
+            "purchase_timeframe": "ASAP",
+            "preferred_down_payment": "$0 down"
+        },
+        "credit_profile": {
+            "bankruptcy": "No",
+            "repossession": "No",
+            "credit_estimate": "Poor (Below 600)"
+        },
+        "employment": {
+            "status": "SSI / Disability",
+            "income_monthly": 1000
+        }
+    },
+    "properties": {
+        "event_type": "vehicle_explore_payments",
+        "event_type_name": "Vehicle Explore Payments",
+        "first_name": "Walter",
+        "last_name": "Brown",
+        "phone": "(574) 381-2509",
+        "email": "wally8582@gmail.com",
+        "summary": "Walter Brown is exploring payments on a 2024 Chevrolet Tahoe - they want to get approved for a new car ASAP. Has poor credit (below 600), $0 down, no trade-in, and wants monthly payments. Is on SSI / disability making $1,000/mo after taxes. No bankruptcy or repossession within the last 2 years.",
+        "submission": {
+            "at": "2026-02-08T15:25:24-05:00",
+            "at_display": "Sun, Feb 8, 2026 - 3:25 PM",
+            "employment": {
+                "status": "SSI / Disability",
+                "income_monthly": 1000
+            },
+            "ip_address": "172.56.248.16",
+            "preferences": {
+                "trade_in": "No",
+                "purchase_timeframe": "ASAP",
+                "preferred_down_payment": "$0 down"
+            },
+            "credit_profile": {
+                "bankruptcy": "No",
+                "repossession": "No",
+                "credit_estimate": "Poor (Below 600)"
+            }
+        },
+        "vehicle": {
+            "vin": "1GNSKNKD6RR179404",
+            "year": "2024",
+            "make": "Chevrolet",
+            "model": "Tahoe",
+            "trim": "LT",
+            "body_style": "SUV",
+            "mileage": "62780",
+            "stock": "RR179404",
+            "age": "65",
+            "dealer_id": "4300",
+            "location": "Mt Pleasant, MI",
+            "location_type": "external"
+        },
+        "dealer": {
+            "id": 6492,
+            "address": "50537 State Hwy 933",
+            "address_2": "",
+            "city": "South Bend",
+            "state": "Indiana",
+            "st": "IN",
+            "region_name": "Shapiro",
+            "zip_code": "46637",
+            "time_zone": "Eastern",
+            "slug": "south-bend-in",
+            "name": "South Bend, IN",
+            "name_no_st": "South Bend",
+            "phone": "(574) 404-5473",
+            "internal_name": "Michiana",
+            "website": "https://www.rightway.com/d/south-bend-in/",
+            "area_code": "574",
+            "hours": {
+                "display": "Mon: 9am - 7pm\nTue: 9am - 7pm\nWed: 9am - 7pm\nThu: 9am - 7pm\nFri: 9am - 6pm\nSat: 10am - 3pm\nSun: Closed",
+                "monday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "tuesday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "wednesday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "thursday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "friday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "saturday": {
+                    "display": "10am - 3pm",
+                    "is_open": true,
+                    "open_time": "10:00",
+                    "close_time": "15:00",
+                    "open_time_display": "10am",
+                    "close_time_display": "3pm"
+                },
+                "sunday": {
+                    "display": "Closed",
+                    "is_open": false,
+                    "open_time": "",
+                    "close_time": "",
+                    "open_time_display": "",
+                    "close_time_display": ""
+                }
+            }
+        },
+        "form_metadata": {
+            "id": "SvtNjE",
+            "url": "https://www.rightway.com/d/south-bend-in/car/used-2024-chevrolet-tahoe-for-sale-1gnsknkd6rr179404/",
+            "name": "explore-payments",
+            "embed_type": "full-screen",
+            "referral_url": "https://www.rightway.com/d/south-bend-in/used-cars/?body_style=suv"
+        },
+        "custom_object_lead_id": "9dcf3a6d-5d56-a0b6-5d27-a300b1f6af5c",
+        "custom_object_lead_name": "Web - Vehicle Explore Payments (2/8/26)",
+        "custom_object_lead_received_display": "Sun, Feb 8, 2026 - 3:25 PM",
+        "custom_object_lead_dealer": "South Bend, IN",
+        "custom_object_lead_summary": "Walter Brown is exploring payments on a 2024 Chevrolet Tahoe - they want to get approved for a new car ASAP. Has poor credit (below 600), $0 down, no trade-in, and wants monthly payments. Is on SSI / disability making $1,000/mo after taxes. No bankruptcy or repossession within the last 2 years.",
+        "custom_object_lead_details": "🚗 Vehicle: 2024 Chevrolet Tahoe\n🎯 Stage: \n⏱️ Timeframe: ASAP\n💳 Credit: Poor (Below 600)\n💰 Down Payment: $0 down\n🧾 Monthly Income: $1000\n👷 Employment: SSI / Disability\n🔄 Trade-In: No\n📉 Repo: No\n⚖️ Bankruptcy: No\n🆔 Stock #: RR179404\n🔑 VIN: 1GNSKNKD6RR179404\n📍 Location: Mt Pleasant, MI\n📅 Age: 65 days\n🔗 URL: https://www.rightway.com/d/south-bend-in/car/used-2024-chevrolet-tahoe-for-sale-1gnsknkd6rr179404/"
+    }
+}

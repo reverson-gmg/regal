@@ -1,0 +1,187 @@
+{
+    "lead": {
+        "type": "get_approved_complete",
+        "source": "website",
+        "zip_code": "40118",
+        "dealer_id": "9107",
+        "last_name": "Miller",
+        "first_name": "Donald",
+        "submission": {
+            "score": 97,
+            "address": {
+                "street": "9905 Callie Drive",
+                "street_line2": "apt 5",
+                "zip_code": "40118",
+                "city": "Louisville",
+                "state": "Kentucky"
+            },
+            "housing": {
+                "status": "I live w/ friends & family",
+                "payment_monthly": 0,
+                "residence_duration": "Over 3 years"
+            },
+            "employment": {
+                "title": "Retired ",
+                "status": "SSI / Disability",
+                "duration": "Over 3 years",
+                "employer": "Retired ",
+                "income_monthly": 2083.33,
+                "payment_method": "Yes - Direct Deposit"
+            },
+            "ip_address": "75.185.4.20",
+            "preferences": {
+                "trade_in": "No",
+                "body_style": "SUV",
+                "payment_range": "Under $300 / month",
+                "shopping_stage": "Ready to buy",
+                "purchase_timeframe": "ASAP",
+                "preferred_down_payment": "$500 down"
+            },
+            "customer_age": 52,
+            "lead_summary": "Donald Miller just completed a credit app - they’re ready to buy and want to get approved for a SUV ASAP. Has unknown credit, $500 down, no trade-in, and wants payments under $300/mo. Lives with friends & family in Louisville and is on SSI / disability making $2,083/mo after taxes. No bankruptcy or repossession within the last 2 years.",
+            "date_of_birth": "1973-08-31",
+            "credit_profile": {
+                "bankruptcy": "No",
+                "repossession": "No",
+                "credit_estimate": "I'm not sure"
+            },
+            "dealer_proximity": {
+                "distance": 7.650341133632421,
+                "duration": 16.4,
+                "distance_display": "7.7 mi",
+                "duration_display": "16 mins"
+            }
+        },
+        "phone_number": "5024758246",
+        "submitted_at": "2026-02-08 20:12:56+00:00",
+        "email_address": "donjaun1973@gmail.com",
+        "form_metadata": {
+            "id": "3D2OT8",
+            "url": "https://www.rightway.com/d/louisville-ky/get-approved/",
+            "name": "get-approved",
+            "embed_type": "landing",
+            "referral_url": "https://www.rightway.com/d/louisville-ky/"
+        },
+        "dealer_metadata": {
+            "st": "KY",
+            "map": "https://maps.app.goo.gl/cqiQYDKVhdW3xtvWA",
+            "zip": "40216",
+            "city": "Louisville",
+            "name": "Louisville, KY",
+            "phone": "(502) 754-6055",
+            "state": "Kentucky",
+            "region": "Shapiro",
+            "address": "5324 Dixie Hwy",
+            "website": "https://www.rightway.com/d/louisville-ky/",
+            "name_no_st": "Louisville",
+            "name_promax": "Pleasure Ridge 9107",
+            "name_internal": "Pleasure Ridge"
+        },
+        "email_verification": {
+            "free": true,
+            "role": false,
+            "reason": "accepted_email",
+            "result": "deliverable",
+            "sendex": 1,
+            "accept_all": false,
+            "disposable": false,
+            "verified_at": "2026-02-08 20:10:35+00:00"
+        },
+        "phone_verification": {
+            "line_type": "mobile",
+            "verified_at": "2026-02-08 20:10:37+00:00",
+            "carrier_name": "T-Mobile USA",
+            "valid_number": true
+        },
+        "submission_user_id": "38ef69a3-9826-4dd5-a753-f0d6764e5d09",
+        "event": "lead.website",
+        "event_version": "1.0",
+        "id": "388480f4-8387-4d56-f1fa-379a3b8286a8",
+        "hookdeck_sent_at": "2026-02-08T20:13:00.297Z",
+        "last_name_normalized": "miller",
+        "regal_external_id": "miller_5024758246",
+        "regal_external_uuid": "5f073d83-d026-408d-235d-22f6ebec6d32"
+    },
+    "dealer": {
+        "id": 9107,
+        "created_at": 1761618631063,
+        "dex_updated_at": 1761618631063,
+        "promax_active": true,
+        "promax_name": "Rightway Auto Sales",
+        "xano_updated_at": 1770536251037,
+        "marketing_name": "Louisville, KY",
+        "marketing_name_no_st": "Louisville",
+        "status": "open",
+        "address": "5324 Dixie Hwy",
+        "address_2": "",
+        "city": "Louisville",
+        "state": "Kentucky",
+        "st": "KY",
+        "region_name": "Southern OH",
+        "zip_code": "40216",
+        "time_zone": "eastern",
+        "phone_number_main": "(502) 754-6055",
+        "gmg_nickname": "Pleasure Ridge",
+        "slug": "louisville-ky",
+        "crm_email": "rightwaypleasureridge@promaxonline.net",
+        "hours": {
+            "friday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "monday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "sunday": {
+                "display": "Closed",
+                "is_open": false,
+                "open_time": "",
+                "close_time": "",
+                "open_time_display": "",
+                "close_time_display": ""
+            },
+            "tuesday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "saturday": {
+                "display": "10am - 3pm",
+                "is_open": true,
+                "open_time": "10:00",
+                "close_time": "15:00",
+                "open_time_display": "10am",
+                "close_time_display": "3pm"
+            },
+            "thursday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "wednesday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            }
+        }
+    },
+    "vehicle_dealer": false
+}

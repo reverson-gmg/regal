@@ -1,0 +1,237 @@
+{
+    "lead": {
+        "type": "inventory_browsing_squeeze",
+        "source": "website",
+        "dealer_id": "9099",
+        "last_name": "Vowell",
+        "first_name": "Camille",
+        "submission": {
+            "ip_address": "108.147.176.103",
+            "lead_summary": "Camille Vowell is browsing our vehicle inventory online - they clicked on a 2020 Subaru Outback and filled out a form to get instant access to our full inventory selection."
+        },
+        "vehicle_vin": "4S4BTACC2L3255999",
+        "phone_number": "8707103760",
+        "submitted_at": "2026-02-08 20:22:54+00:00",
+        "email_address": "wickedsgirl0269@gmail.com",
+        "form_metadata": {
+            "id": "hKKWk9",
+            "url": "https://www.rightway.com/d/joplin-mo/car/used-2020-subaru-outback-for-sale-4s4btacc2l3255999/",
+            "name": "get-instant-access",
+            "embed_type": "popup",
+            "referral_url": "https://www.rightway.com/d/joplin-mo/used-cars/?make=chevrolet&make=gmc&make=dodge&make=subaru&make=jeep&model=journey&model=outback&model=forester&body_style=suv&yr=2013-2020&pg=2"
+        },
+        "dealer_metadata": {
+            "st": "MO",
+            "map": "https://maps.app.goo.gl/u52GMmTKgDkEK98XA",
+            "zip": "64801",
+            "city": "Joplin",
+            "name": "Joplin, MO",
+            "phone": "(417) 434-9430",
+            "state": "Missouri",
+            "region": "White",
+            "address": "1401 S Rangeline Rd",
+            "website": "https://www.rightway.com/d/joplin-mo/",
+            "name_no_st": "Joplin",
+            "name_promax": "Joplin 9099",
+            "name_internal": "Joplin"
+        },
+        "vehicle_metadata": {
+            "age": "103",
+            "make": "Subaru",
+            "trim": "Premium",
+            "year": "2020",
+            "model": "Outback",
+            "stock": "L3255999",
+            "mileage": "178982",
+            "dealer_id": "5391",
+            "body_style": "SUV",
+            "location_type": "external"
+        },
+        "email_verification": {
+            "free": true,
+            "role": false,
+            "reason": "accepted_email",
+            "result": "deliverable",
+            "sendex": 1,
+            "accept_all": false,
+            "disposable": false,
+            "verified_at": "2026-02-08 20:22:35+00:00"
+        },
+        "phone_verification": {
+            "line_type": "mobile",
+            "verified_at": "2026-02-08 20:22:49+00:00",
+            "carrier_name": "AT&T Wireless",
+            "valid_number": true
+        },
+        "submission_user_id": "867e9fd9-5bf6-4dfd-ac58-9141a55e2823",
+        "event": "lead.website",
+        "event_version": "1.0",
+        "id": "901a994d-d932-0143-7492-e1305f6ad836",
+        "hookdeck_sent_at": "2026-02-08T20:22:56.573Z",
+        "last_name_normalized": "vowell",
+        "regal_external_id": "vowell_8707103760",
+        "regal_external_uuid": "e113cb5f-7d82-b9ff-6986-7939b8fe88f9"
+    },
+    "dealer": {
+        "id": 9099,
+        "created_at": 1761618631077,
+        "dex_updated_at": 1761618631077,
+        "promax_active": true,
+        "promax_name": "Rightway Automotive Credit - Joplin",
+        "xano_updated_at": 1770536251037,
+        "marketing_name": "Joplin, MO",
+        "marketing_name_no_st": "Joplin",
+        "status": "open",
+        "address": "1401 S Rangeline Rd",
+        "address_2": "",
+        "city": "Joplin",
+        "state": "Missouri",
+        "st": "MO",
+        "region_name": "White",
+        "zip_code": "64801",
+        "time_zone": "central",
+        "phone_number_main": "(417) 434-9430",
+        "gmg_nickname": "Joplin",
+        "slug": "joplin-mo",
+        "crm_email": "rightwayjoplin@promaxonline.net",
+        "hours": {
+            "friday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "monday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "sunday": {
+                "display": "Closed",
+                "is_open": false,
+                "open_time": "",
+                "close_time": "",
+                "open_time_display": "",
+                "close_time_display": ""
+            },
+            "tuesday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "saturday": {
+                "display": "10am - 4pm",
+                "is_open": true,
+                "open_time": "10:00",
+                "close_time": "16:00",
+                "open_time_display": "10am",
+                "close_time_display": "4pm"
+            },
+            "thursday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "wednesday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            }
+        }
+    },
+    "vehicle_dealer": {
+        "id": 5391,
+        "created_at": 1761618630989,
+        "dex_updated_at": 1761618630984,
+        "promax_active": true,
+        "promax_name": "Rightway Automotive Credit - Parma",
+        "xano_updated_at": 1770536251036,
+        "marketing_name": "Cleveland, OH (Parma)",
+        "marketing_name_no_st": "Cleveland (Parma)",
+        "status": "open",
+        "address": "7811 Brookpark Rd",
+        "address_2": "",
+        "city": "Parma",
+        "state": "Ohio",
+        "st": "OH",
+        "region_name": "Perrin",
+        "zip_code": "44129",
+        "time_zone": "eastern",
+        "phone_number_main": "(216) 325-0813",
+        "gmg_nickname": "Parma",
+        "slug": "cleveland-oh-parma",
+        "crm_email": "rightwayparma@promaxonline.net",
+        "hours": {
+            "friday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "monday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "sunday": {
+                "display": "Closed",
+                "is_open": false,
+                "open_time": "",
+                "close_time": "",
+                "open_time_display": "",
+                "close_time_display": ""
+            },
+            "tuesday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "saturday": {
+                "display": "10am - 3pm",
+                "is_open": true,
+                "open_time": "10:00",
+                "close_time": "15:00",
+                "open_time_display": "10am",
+                "close_time_display": "3pm"
+            },
+            "thursday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "wednesday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            }
+        }
+    }
+}

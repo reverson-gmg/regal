@@ -1,0 +1,71 @@
+{
+  "type": "inventory_browsing_squeeze",
+  "source": "website",
+  "zip_code": "",
+  "dealer_id": "9099",
+  "last_name": "Vowell",
+  "first_name": "Camille",
+  "submission": {
+    "address": {
+      "zip_code": ""
+    },
+    "ip_address": "108.147.176.103",
+    "lead_summary": "Camille Vowell is browsing our vehicle inventory online - they clicked on a 2020 Subaru Outback and filled out a form to get instant access to our full inventory selection."
+  },
+  "vehicle_vin": "4S4BTACC2L3255999",
+  "phone_number": "18707103760",
+  "submitted_at": "2026-02-08 20:22:54+00:00",
+  "email_address": "wickedsgirl0269@gmail.com",
+  "form_metadata": {
+    "id": "hKKWk9",
+    "url": "https://www.rightway.com/d/joplin-mo/car/used-2020-subaru-outback-for-sale-4s4btacc2l3255999/",
+    "name": "get-instant-access",
+    "embed_type": "popup",
+    "referral_url": "https://www.rightway.com/d/joplin-mo/used-cars/?make=chevrolet&make=gmc&make=dodge&make=subaru&make=jeep&model=journey&model=outback&model=forester&body_style=suv&yr=2013-2020&pg=2"
+  },
+  "dealer_metadata": {
+    "st": "MO",
+    "map": "https://maps.app.goo.gl/u52GMmTKgDkEK98XA",
+    "zip": "64801",
+    "city": "Joplin",
+    "name": "Joplin, MO",
+    "phone": "(417) 434-9430",
+    "state": "Missouri",
+    "region": "White",
+    "address": "1401 S Rangeline Rd",
+    "website": "https://www.rightway.com/d/joplin-mo/",
+    "name_no_st": "Joplin",
+    "name_promax": "Joplin 9099",
+    "name_internal": "Joplin"
+  },
+  "vehicle_metadata": {
+    "age": "103",
+    "make": "Subaru",
+    "trim": "Premium",
+    "year": "2020",
+    "model": "Outback",
+    "stock": "L3255999",
+    "mileage": "178982",
+    "dealer_id": "5391",
+    "body_style": "SUV",
+    "location_type": "external"
+  },
+  "email_verification": {
+    "free": true,
+    "role": false,
+    "reason": "accepted_email",
+    "result": "deliverable",
+    "sendex": 1,
+    "accept_all": false,
+    "disposable": false,
+    "verified_at": "2026-02-08 20:22:35+00:00",
+    "did_you_mean": ""
+  },
+  "phone_verification": {
+    "line_type": "mobile",
+    "verified_at": "2026-02-08 20:22:49+00:00",
+    "carrier_name": "AT&T Wireless",
+    "valid_number": true
+  },
+  "submission_user_id": "867e9fd9-5bf6-4dfd-ac58-9141a55e2823"
+}

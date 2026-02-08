@@ -1,0 +1,80 @@
+{
+  "type": "get_approved_incomplete",
+  "source": "website",
+  "zip_code": "40118",
+  "dealer_id": "9107",
+  "last_name": "Miller",
+  "first_name": "Donald",
+  "submission": {
+    "score": 30,
+    "address": {
+      "zip_code": "40118"
+    },
+    "ip_address": "75.185.4.20",
+    "preferences": {
+      "trade_in": "No",
+      "body_style": "SUV",
+      "payment_range": "Under $300 / month",
+      "shopping_stage": "Ready to buy"
+    },
+    "lead_summary": "Donald Miller just started a credit app - they're ready to buy and want to get approved for a SUV. Has unknown credit, no trade-in, and wants payments under $300/mo.",
+    "credit_profile": {
+      "credit_estimate": "I'm not sure"
+    },
+    "dealer_proximity": {
+      "distance": 7.502454422309767,
+      "duration": 15.866666666666667,
+      "distance_display": "7.5 mi",
+      "duration_display": "16 mins"
+    }
+  },
+  "phone_number": "5024758246",
+  "submitted_at": "2026-02-08 20:10:37+00:00",
+  "email_address": "donjaun1973@gmail.com",
+  "form_metadata": {
+    "id": "3D2OT8",
+    "url": "https://www.rightway.com/d/louisville-ky/get-approved/",
+    "name": "get-approved",
+    "embed_type": "landing",
+    "referral_url": "https://www.rightway.com/d/louisville-ky/"
+  },
+  "dealer_metadata": {
+    "st": "KY",
+    "map": "https://maps.app.goo.gl/cqiQYDKVhdW3xtvWA",
+    "zip": "40216",
+    "city": "Louisville",
+    "name": "Louisville, KY",
+    "phone": "(502) 754-6055",
+    "state": "Kentucky",
+    "region": "Shapiro",
+    "address": "5324 Dixie Hwy",
+    "website": "https://www.rightway.com/d/louisville-ky/",
+    "name_no_st": "Louisville",
+    "name_promax": "Pleasure Ridge 9107",
+    "name_internal": "Pleasure Ridge"
+  },
+  "email_verification": {
+    "free": true,
+    "role": false,
+    "reason": "accepted_email",
+    "result": "deliverable",
+    "sendex": 1,
+    "accept_all": false,
+    "disposable": false,
+    "verified_at": "2026-02-08 20:10:35+00:00"
+  },
+  "phone_verification": {
+    "line_type": "mobile",
+    "verified_at": "2026-02-08 20:10:37+00:00",
+    "carrier_name": "T-Mobile USA",
+    "valid_number": true
+  },
+  "submission_user_id": "38ef69a3-9826-4dd5-a753-f0d6764e5d09",
+  "event": "lead.website",
+  "event_version": "1.0",
+  "id": "0108d662-f8e9-c716-03ca-1f32f8c2bf32",
+  "hookdeck_sent_at": "2026-02-08T20:10:40.456Z",
+  "last_name_normalized": "miller",
+  "regal_external_id": "miller_5024758246",
+  "regal_external_uuid": "5f073d83-d026-408d-235d-22f6ebec6d32"
+}

@@ -1,0 +1,253 @@
+{
+    "userId": "vowell_8707103760",
+    "name": "lead.website",
+    "eventSource": "Website",
+    "originalTimestamp": "2026-02-08T14:22:54-06:00",
+    "traits": {
+        "firstName": "Camille",
+        "lastName": "Vowell",
+        "phones": {
+            "+18707103760": {
+                "label": "Mobile",
+                "isPrimary": true
+            }
+        },
+        "emails": {
+            "wickedsgirl0269@gmail.com": {
+                "label": "Personal",
+                "isPrimary": true
+            }
+        },
+        "dealer": {
+            "id": 9099,
+            "address": "1401 S Rangeline Rd",
+            "address_2": "",
+            "city": "Joplin",
+            "state": "Missouri",
+            "st": "MO",
+            "region_name": "White",
+            "zip_code": "64801",
+            "time_zone": "Central",
+            "slug": "joplin-mo",
+            "crm_email": "rightwayjoplin@promaxonline.net",
+            "name": "Joplin, MO",
+            "name_no_st": "Joplin",
+            "phone": "(417) 434-9430",
+            "internal_name": "Joplin",
+            "website": "https://www.rightway.com/d/joplin-mo/",
+            "area_code": "417",
+            "hours": {
+                "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 7pm\nFri: 9am - 6pm\nSat: 10am - 4pm\nSun: Closed",
+                "monday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "tuesday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "wednesday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "thursday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "friday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "saturday": {
+                    "display": "10am - 4pm",
+                    "is_open": true,
+                    "open_time": "10:00",
+                    "close_time": "16:00",
+                    "open_time_display": "10am",
+                    "close_time_display": "4pm"
+                },
+                "sunday": {
+                    "display": "Closed",
+                    "is_open": false,
+                    "open_time": "",
+                    "close_time": "",
+                    "open_time_display": "",
+                    "close_time_display": ""
+                }
+            }
+        },
+        "verification": {
+            "phone": {
+                "line_type": "mobile",
+                "carrier_name": "AT&T Wireless",
+                "valid_number": true,
+                "at": "2026-02-08T14:22:49-06:00"
+            },
+            "email": {
+                "free": true,
+                "role": false,
+                "reason": "accepted_email",
+                "result": "deliverable",
+                "score": 1,
+                "accept_all": false,
+                "disposable": false,
+                "at": "2026-02-08T14:22:35-06:00"
+            }
+        },
+        "activity": {
+            "at": "2026-02-08T14:22:54-06:00",
+            "leads": {
+                "inventory_browsing_squeeze": {
+                    "at": "2026-02-08T14:22:54-06:00",
+                    "dealer_id": "9099",
+                    "dealer": "Joplin, MO",
+                    "score": 0
+                },
+                "last": {
+                    "at": "2026-02-08T14:22:54-06:00",
+                    "dealer_id": "9099",
+                    "dealer": "Joplin, MO",
+                    "score": 0,
+                    "type": "inventory_browsing_squeeze"
+                }
+            }
+        }
+    },
+    "properties": {
+        "event_type": "inventory_browsing_squeeze",
+        "event_type_name": "Inventory Browsing Access",
+        "first_name": "Camille",
+        "last_name": "Vowell",
+        "phone": "(870) 710-3760",
+        "email": "wickedsgirl0269@gmail.com",
+        "summary": "Camille Vowell is browsing our vehicle inventory online - they clicked on a 2020 Subaru Outback and filled out a form to get instant access to our full inventory selection.",
+        "submission": {
+            "at": "2026-02-08T14:22:54-06:00",
+            "at_display": "Sun, Feb 8, 2026 - 2:22 PM",
+            "ip_address": "108.147.176.103"
+        },
+        "vehicle": {
+            "vin": "4S4BTACC2L3255999",
+            "year": "2020",
+            "make": "Subaru",
+            "model": "Outback",
+            "trim": "Premium",
+            "body_style": "SUV",
+            "mileage": "178982",
+            "stock": "L3255999",
+            "age": "103",
+            "dealer_id": "5391",
+            "location": "Cleveland, OH (Parma)",
+            "location_type": "external"
+        },
+        "dealer": {
+            "id": 9099,
+            "address": "1401 S Rangeline Rd",
+            "address_2": "",
+            "city": "Joplin",
+            "state": "Missouri",
+            "st": "MO",
+            "region_name": "White",
+            "zip_code": "64801",
+            "time_zone": "Central",
+            "slug": "joplin-mo",
+            "name": "Joplin, MO",
+            "name_no_st": "Joplin",
+            "phone": "(417) 434-9430",
+            "internal_name": "Joplin",
+            "website": "https://www.rightway.com/d/joplin-mo/",
+            "area_code": "417",
+            "hours": {
+                "display": "Mon: 9am - 7pm\nTue: 9am - 6pm\nWed: 9am - 6pm\nThu: 9am - 7pm\nFri: 9am - 6pm\nSat: 10am - 4pm\nSun: Closed",
+                "monday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "tuesday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "wednesday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "thursday": {
+                    "display": "9am - 7pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "19:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "7pm"
+                },
+                "friday": {
+                    "display": "9am - 6pm",
+                    "is_open": true,
+                    "open_time": "09:00",
+                    "close_time": "18:00",
+                    "open_time_display": "9am",
+                    "close_time_display": "6pm"
+                },
+                "saturday": {
+                    "display": "10am - 4pm",
+                    "is_open": true,
+                    "open_time": "10:00",
+                    "close_time": "16:00",
+                    "open_time_display": "10am",
+                    "close_time_display": "4pm"
+                },
+                "sunday": {
+                    "display": "Closed",
+                    "is_open": false,
+                    "open_time": "",
+                    "close_time": "",
+                    "open_time_display": "",
+                    "close_time_display": ""
+                }
+            }
+        },
+        "form_metadata": {
+            "id": "hKKWk9",
+            "url": "https://www.rightway.com/d/joplin-mo/car/used-2020-subaru-outback-for-sale-4s4btacc2l3255999/",
+            "name": "get-instant-access",
+            "embed_type": "popup"
+        },
+        "custom_object_lead_id": "901a994d-d932-0143-7492-e1305f6ad836",
+        "custom_object_lead_name": "Web - Inventory Browsing Access (2/8/26)",
+        "custom_object_lead_received_display": "Sun, Feb 8, 2026 - 2:22 PM",
+        "custom_object_lead_dealer": "Joplin, MO",
+        "custom_object_lead_summary": "Camille Vowell is browsing our vehicle inventory online - they clicked on a 2020 Subaru Outback and filled out a form to get instant access to our full inventory selection.",
+        "custom_object_lead_details": "🚗 Vehicle: 2020 Subaru Outback\n🚘 Body Style: SUV\n🎨 Color: \n📍 Location: Cleveland, OH (Parma)\n🆔 Stock #: L3255999\n🔑 VIN: 4S4BTACC2L3255999\n📅 Age: 103 days\n🔗 URL: https://www.rightway.com/d/joplin-mo/car/used-2020-subaru-outback-for-sale-4s4btacc2l3255999/"
+    }
+}

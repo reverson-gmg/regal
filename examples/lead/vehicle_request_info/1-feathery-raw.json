@@ -1,0 +1,71 @@
+{
+  "type": "vehicle_request_info",
+  "source": "website",
+  "zip_code": "",
+  "dealer_id": "5316",
+  "last_name": "Yeager ",
+  "first_name": "Kristopher",
+  "submission": {
+    "address": {
+      "zip_code": ""
+    },
+    "message": "Hello RightWay, is your 2018 Toyota Camry still available?",
+    "lead_summary": "Kristopher Yeager  is requesting more info about our 2018 Toyota Camry."
+  },
+  "vehicle_vin": "4T1B61HK1JU013168",
+  "phone_number": "15139681437",
+  "submitted_at": "2026-02-08 00:44:57+00:00",
+  "email_address": "krisyeager12@gmail.com",
+  "form_metadata": {
+    "id": "8hPblc",
+    "url": "https://www.rightway.com/d/cincinnati-oh-fairfield/car/used-2018-toyota-camry-for-sale-4t1b61hk1ju013168/#success",
+    "name": "request-info",
+    "embed_type": "popup",
+    "referral_url": "https://www.rightway.com/d/cincinnati-oh-fairfield/used-cars/?yr=2018-2018&pg=3"
+  },
+  "dealer_metadata": {
+    "st": "OH",
+    "map": "https://maps.app.goo.gl/1JbC3Ew4FVD9xpLf9",
+    "zip": "45014",
+    "city": "Fairfield",
+    "name": "Cincinnati, OH (Fairfield)",
+    "phone": "(513) 475-3515",
+    "state": "Ohio",
+    "region": "Southern OH",
+    "address": "5221 Dixie Hwy",
+    "website": "https://www.rightway.com/d/cincinnati-oh-fairfield/",
+    "name_no_st": "Cincinnati (Fairfield)",
+    "name_promax": "Fairfield 5316",
+    "name_internal": "Fairfield"
+  },
+  "vehicle_metadata": {
+    "age": "226",
+    "make": "Toyota",
+    "trim": "XSE",
+    "year": "2018",
+    "model": "Camry",
+    "stock": "XJU013168",
+    "mileage": "106730",
+    "dealer_id": "4294",
+    "body_style": "Car",
+    "location_type": "external"
+  },
+  "email_verification": {
+    "free": true,
+    "role": false,
+    "reason": "accepted_email",
+    "result": "deliverable",
+    "sendex": 1,
+    "accept_all": false,
+    "disposable": false,
+    "verified_at": "2026-02-08 00:44:40+00:00",
+    "did_you_mean": ""
+  },
+  "phone_verification": {
+    "line_type": "mobile",
+    "verified_at": "2026-02-08 00:44:40+00:00",
+    "carrier_name": "AT&T Wireless",
+    "valid_number": true
+  },
+  "submission_user_id": "93a01588-c860-40d5-ab22-8ee49ed0290b"
+}

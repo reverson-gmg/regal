@@ -1,0 +1,246 @@
+{
+    "lead": {
+        "type": "vehicle_get_approved_incomplete",
+        "source": "website",
+        "dealer_id": "7627",
+        "last_name": "Bell",
+        "first_name": "Myesha",
+        "submission": {
+            "ip_address": "98.46.109.171",
+            "preferences": {
+                "trade_in": "No",
+                "body_style": "SUV",
+                "payment_range": "$400 - $499 / month",
+                "shopping_stage": "Ready to buy"
+            },
+            "lead_summary": "Myesha Bell just started a credit app - they're ready to buy and want to get approved for a 2024 Dodge Durango. Has unknown credit, no trade-in, and wants payments around $400-$499/mo.",
+            "credit_profile": {
+                "credit_estimate": "I'm not sure"
+            }
+        },
+        "vehicle_vin": "1C4RDJAG4RC115063",
+        "phone_number": "4192314198",
+        "submitted_at": "2026-02-08 20:12:13+00:00",
+        "email_address": "myeshabell44@gmail.com",
+        "form_metadata": {
+            "id": "e6B5fZ",
+            "url": "https://www.rightway.com/d/highland-in/car/used-2024-dodge-durango-for-sale-1c4rdjag4rc115063/",
+            "name": "get-approved-vehicle",
+            "embed_type": "full-screen",
+            "referral_url": "https://www.rightway.com/d/highland-in/used-cars/?body_style=suv&pg=3"
+        },
+        "dealer_metadata": {
+            "st": "IN",
+            "map": "https://maps.app.goo.gl/dZ1ftvLhteKfrXar7",
+            "zip": "46322",
+            "city": "Highland",
+            "name": "Highland, IN",
+            "phone": "(219) 237-5955",
+            "state": "Indiana",
+            "region": "Shapiro",
+            "address": "9110 Indianapolis Blvd",
+            "website": "https://www.rightway.com/d/highland-in/",
+            "name_no_st": "Highland",
+            "name_promax": "Highland 7627",
+            "name_internal": "Highland"
+        },
+        "vehicle_metadata": {
+            "age": "107",
+            "make": "Dodge",
+            "trim": "SXT",
+            "year": "2024",
+            "model": "Durango",
+            "stock": "RC115063",
+            "mileage": "45589",
+            "dealer_id": "8872",
+            "body_style": "SUV",
+            "location_type": "external"
+        },
+        "email_verification": {
+            "free": true,
+            "role": false,
+            "reason": "accepted_email",
+            "result": "deliverable",
+            "sendex": 0.833,
+            "accept_all": false,
+            "disposable": false,
+            "verified_at": "2026-02-08 20:12:09+00:00"
+        },
+        "phone_verification": {
+            "line_type": "mobile",
+            "verified_at": "2026-02-08 20:12:12+00:00",
+            "carrier_name": "T-Mobile USA",
+            "valid_number": true
+        },
+        "submission_user_id": "6085c383-1370-41e6-8a47-edd472494fde",
+        "event": "lead.website",
+        "event_version": "1.0",
+        "id": "e80b2012-d6df-a794-f5b8-e3561c25accf",
+        "hookdeck_sent_at": "2026-02-08T20:12:15.689Z",
+        "last_name_normalized": "bell",
+        "regal_external_id": "bell_4192314198",
+        "regal_external_uuid": "14e32cca-9d84-a6ae-8910-268089d7f32c"
+    },
+    "dealer": {
+        "id": 7627,
+        "created_at": 1761618631263,
+        "dex_updated_at": 1761618631262,
+        "promax_active": true,
+        "promax_name": "Rightway Automotive Credit - Highland",
+        "xano_updated_at": 1770536251036,
+        "marketing_name": "Highland, IN",
+        "marketing_name_no_st": "Highland",
+        "status": "open",
+        "address": "9110 Indianapolis Blvd",
+        "address_2": "",
+        "city": "Highland",
+        "state": "Indiana",
+        "st": "IN",
+        "region_name": "Shapiro",
+        "zip_code": "46322",
+        "time_zone": "eastern",
+        "phone_number_main": "(219) 237-5955",
+        "gmg_nickname": "Highland",
+        "slug": "highland-in",
+        "crm_email": "rightwayhighland@promaxonline.net",
+        "hours": {
+            "friday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "monday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "sunday": {
+                "display": "Closed",
+                "is_open": false,
+                "open_time": "",
+                "close_time": "",
+                "open_time_display": "",
+                "close_time_display": ""
+            },
+            "tuesday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "saturday": {
+                "display": "10am - 3pm",
+                "is_open": true,
+                "open_time": "10:00",
+                "close_time": "15:00",
+                "open_time_display": "10am",
+                "close_time_display": "3pm"
+            },
+            "thursday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "wednesday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            }
+        }
+    },
+    "vehicle_dealer": {
+        "id": 8872,
+        "created_at": 1761618631118,
+        "dex_updated_at": 1761618631117,
+        "promax_active": true,
+        "promax_name": "Rightway Automotive Credit - Battle Creek",
+        "xano_updated_at": 1770536251037,
+        "marketing_name": "Battle Creek, MI",
+        "marketing_name_no_st": "Battle Creek",
+        "status": "open",
+        "address": "2100 W Dickman Rd",
+        "address_2": "",
+        "city": "Springfield",
+        "state": "Michigan",
+        "st": "MI",
+        "region_name": "West MI",
+        "zip_code": "49037",
+        "time_zone": "eastern",
+        "phone_number_main": "(269) 263-2200",
+        "gmg_nickname": "Battle Creek",
+        "slug": "battle-creek-mi",
+        "crm_email": "rightwaybattlecreek@promaxonline.net",
+        "hours": {
+            "friday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "monday": {
+                "display": "9am - 7pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "19:00",
+                "open_time_display": "9am",
+                "close_time_display": "7pm"
+            },
+            "sunday": {
+                "display": "Closed",
+                "is_open": false,
+                "open_time": "",
+                "close_time": "",
+                "open_time_display": "",
+                "close_time_display": ""
+            },
+            "tuesday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "saturday": {
+                "display": "10am - 3pm",
+                "is_open": true,
+                "open_time": "10:00",
+                "close_time": "15:00",
+                "open_time_display": "10am",
+                "close_time_display": "3pm"
+            },
+            "thursday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            },
+            "wednesday": {
+                "display": "9am - 6pm",
+                "is_open": true,
+                "open_time": "09:00",
+                "close_time": "18:00",
+                "open_time_display": "9am",
+                "close_time_display": "6pm"
+            }
+        }
+    }
+}
