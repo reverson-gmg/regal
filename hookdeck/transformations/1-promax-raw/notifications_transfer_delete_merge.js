@@ -174,6 +174,12 @@ function hasValue(value) {
   return true;
 }
 
+function addIfHasValue(obj, key, value) {
+  if (hasValue(value)) {
+    obj[key] = value;
+  }
+}
+
 // ============= NOTIFICATION PROCESSORS =============
 
 function processDeleteNotification(customerId, dealerId, notification, timestamp, eventId) {
@@ -243,10 +249,7 @@ function processMergeNotification(customerId, dealerId, notification, timestamp,
     dealer_id: dealerId
   };
 
-  // Add new_lead_source_id if present
-  if (hasValue(newLeadSourceId)) {
-    promaxNotificationMerge.new_lead_source_id = newLeadSourceId;
-  }
+  addIfHasValue(promaxNotificationMerge, 'new_lead_source_id', newLeadSourceId);
 
   return {
     event_type: 'merge',
@@ -427,6 +430,7 @@ addHandler('transform', (request, context) => {
     return {
       body: {
         event: EVENT_NAME,
+        event_type: 'unknown',
         event_version: SCHEMA_VERSION,
         hookdeck_sent_at: nowIso(),
         websocket_uuid: `error-${Date.now()}`,

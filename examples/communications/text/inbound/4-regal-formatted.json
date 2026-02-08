@@ -1,0 +1,72 @@
+{
+    "userId": "kirts_7654297844",
+    "name": "crm_sms.inbound",
+    "eventSource": "Promax",
+    "originalTimestamp": "2026-02-08T00:59:00+00:00",
+    "traits": {
+        "activity": {
+            "at": "2026-02-08T00:59:00+00:00",
+            "crm_sms": {
+                "inbound": {
+                    "at": "2026-02-08T00:59:00+00:00",
+                    "dealer_id": 8981
+                },
+                "last": {
+                    "at": "2026-02-08T00:59:00+00:00",
+                    "dealer_id": 8981,
+                    "type": "INBOUND"
+                }
+            }
+        }
+    },
+    "properties": {
+        "event_id": "c28e2318-f1f3-0d70-b65e-63ab09f94be3",
+        "direction": "INBOUND",
+        "body": "I never received the warranty documentation for the new engine installed between December 15th, 2025-January 8th 2026. I also reported a check engine light immediately after installation and did not receive a response. The vehicle now has a significant rear main seal oil leak. Please advise on warranty coverage and next steps for repair.",
+        "received_at": "2026-02-08T00:59:00+00:00",
+        "received_at_display": "Sat, Feb 7, 2026 - 7:59 PM",
+        "received_by": {
+            "id": 9036256,
+            "first_name": "Tyler",
+            "last_name": "McGuire",
+            "name": "Tyler McGuire",
+            "name_at_dealership": "Tyler McGuire | Lafayette, IN"
+        },
+        "customer": {
+            "id": 176473365,
+            "url": "https://promaxonline.com/customer/workscreen?customer=176473365",
+            "first_name": "James",
+            "last_name": "Kirts",
+            "name": "James Kirts",
+            "cell_phone": "(765) 429-7844",
+            "home_phone": "(765) 429-7844",
+            "email": "sketchyink32@gmail.com",
+            "sales_rep_1": {
+                "id": 9036256,
+                "first_name": "Tyler",
+                "last_name": "McGuire",
+                "name": "Tyler McGuire",
+                "name_at_dealership": "Tyler McGuire | Lafayette, IN"
+            }
+        },
+        "dealer": {
+            "id": 8981,
+            "address": "650 Sagamore Pkwy S",
+            "address_2": "",
+            "city": "Lafayette",
+            "state": "Indiana",
+            "st": "IN",
+            "region_name": "Shapiro",
+            "zip_code": "47905",
+            "time_zone": "eastern",
+            "slug": "lafayette-in",
+            "crm_email": "rightwaylafayette@promaxonline.net",
+            "name": "Lafayette, IN",
+            "name_no_st": "Lafayette",
+            "phone": "(765) 340-7225",
+            "internal_name": "Lafayette",
+            "website": "https://www.rightway.com/d/lafayette-in/",
+            "area_code": "765"
+        }
+    }
+}

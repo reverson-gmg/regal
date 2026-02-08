@@ -191,8 +191,6 @@ addHandler('transform', (request, context) => {
       throw new Error('Invalid payload: missing required customer_status object');
     }
 
-    const rawCanonical = stableStringify(body);
-
     // ============= BASE DATA EXTRACTION =============
     const statusObj = body.customer_status;
     const customer_id = getOrNull(body.customer_id);
@@ -236,7 +234,7 @@ addHandler('transform', (request, context) => {
       shouldExcludePrimaryTier(leadStatus) ||
       shouldExcludePrimaryTier(serviceStatus);
 
-    const primaryTier = excludePrimaryTier ? null : (isDelivered ? '1' : '4');
+    const primaryTier = excludePrimaryTier ? null : (isDelivered ? 1 : 4);
 
     // ============= BUILD PROMAX_CUSTOMER OBJECT =============
     const promaxCustomer = {
@@ -391,10 +389,12 @@ addHandler('transform', (request, context) => {
     return {
       body: {
         event: EVENT_NAME,
+        event_type: 'unknown',
         event_version: SCHEMA_VERSION,
         hookdeck_sent_at: nowIso(),
         websocket_uuid: `error-${Date.now()}`,
         promax_websocket_timestamp: Date.now(),
+        payload_hash: getOrNull(headers ? headers['idempotency-key'] : null),
         original_payload: body ?? null,
         error: { message: error.message, timestamp: nowIso() }
       },

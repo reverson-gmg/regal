@@ -289,7 +289,7 @@ function normalizeZip(zip) {
   }
 }
 
-function validatePhoneNumber(phoneNumber) {
+function normalizePhoneNumber(phoneNumber) {
   if (!phoneNumber) return null;
   try {
     const digits = phoneNumber.toString().replace(/\D/g, '');
@@ -399,9 +399,9 @@ addHandler('transform', (request, context) => {
     const primaryEmail = findFirst(communications, 'communication_type', 'PrimaryEmail');
     const secondaryEmail = findFirst(communications, 'communication_type', 'SecondaryEmail');
 
-    const cellPhoneFormatted = validatePhoneNumber(cellPhone?.complete_number);
-    const homePhoneFormatted = validatePhoneNumber(homePhone?.complete_number);
-    const workPhoneFormatted = validatePhoneNumber(workPhone?.complete_number);
+    const cellPhoneFormatted = normalizePhoneNumber(cellPhone?.complete_number);
+    const homePhoneFormatted = normalizePhoneNumber(homePhone?.complete_number);
+    const workPhoneFormatted = normalizePhoneNumber(workPhone?.complete_number);
 
     // Extract address history
     const currentAddress = findFirst(addresses, 'address_type', 'Current');
@@ -818,10 +818,12 @@ addHandler('transform', (request, context) => {
     return {
       body: {
         event: EVENT_NAME,
+        event_type: 'unknown',
         event_version: SCHEMA_VERSION,
         hookdeck_sent_at: nowIso(),
         websocket_uuid: `error-${Date.now()}`,
         promax_websocket_timestamp: Date.now(),
+        payload_hash: getOrNull(headers ? headers['idempotency-key'] : null),
         original_payload: body ?? null,
         error: { message: error.message, timestamp: nowIso() }
       },
