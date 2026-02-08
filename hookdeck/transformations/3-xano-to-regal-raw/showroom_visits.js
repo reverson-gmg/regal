@@ -485,6 +485,21 @@ addHandler('transform', function(request, context) {
       }
     }
 
+    if (appointmentObj) {
+      var apptDetails =
+        '\ud83d\udcc5 Appt: ' + (appointmentObj.scheduled_for || '') +
+        '\n\ud83d\udc68\u200d\ud83d\udcbb Set By: ' + (appointmentObj.scheduled_by || '') +
+        '\n\ud83d\udcf2 Set Via: ' + (appointmentObj.set_via || '') +
+        '\n\u270f\ufe0f Set At: ' + (appointmentObj.set_at || '');
+      if (appointment.comments) {
+        apptDetails += '\n\ud83d\udcac Comments: ' + appointment.comments;
+      }
+      apptDetails +=
+        '\n\u2705 Confirmed: ' + (appointmentObj.confirmed_status || '') +
+        '\n\ud83c\udd94 Appt ID: ' + appointmentObj.id;
+      customFields.custom_object_showroom_visit_appt_details = apptDetails;
+    }
+
     // ============= PROPERTIES =============
     var properties = {
       event_id: String(visit.id),

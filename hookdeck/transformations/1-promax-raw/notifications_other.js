@@ -158,7 +158,6 @@ function md5ToUuid(md5hex) {
  * Creates deterministic event ID from body (EXCLUDES timestamp for deduplication)
  */
 function createDeterministicEventId(body, namespace) {
-  // Create a copy without the timestamp field
   const bodyWithoutTimestamp = { ...body };
   delete bodyWithoutTimestamp.timestamp;
 
@@ -187,9 +186,6 @@ function addIfHasValue(obj, key, value) {
   }
 }
 
-/**
- * Converts ISO 8601 datetime string to epoch milliseconds
- */
 function isoToEpochMs(isoString) {
   if (!isoString || typeof isoString !== 'string') return null;
   try {
@@ -230,7 +226,6 @@ addHandler('transform', (request, context) => {
       throw new Error('Invalid payload: missing required dealer_id');
     }
 
-    // Find supported notification (codes 1000-1015)
     const notification = body.notifications.find(n =>
       n && n.code && NOTIFICATION_CODE_MAP[n.code]
     );
@@ -243,14 +238,12 @@ addHandler('transform', (request, context) => {
     const notificationCode = notification.code;
     const eventType = NOTIFICATION_CODE_MAP[notificationCode];
 
-    // Determine primary tier based on event type
     const NOTIFICATION_PRIMARY_TIER = {
       license: 1, routeone: 1,
       credit_app: 2, transunion: 2, proposal: 2, forms: 2
     };
     const primaryTier = NOTIFICATION_PRIMARY_TIER[eventType] || null;
 
-    // Extract lead_notification data
     const leadNotification = notification.updates?.lead_notification || {};
     const dateTime = getOrNull(leadNotification.date_time);
     const employeeId = getOrNull(leadNotification.employee_id);
@@ -259,13 +252,11 @@ addHandler('transform', (request, context) => {
       throw new Error('Invalid payload: missing required lead_notification.date_time');
     }
 
-    // Convert ISO datetime to epoch milliseconds
     const occurredAtMs = isoToEpochMs(dateTime);
     if (!occurredAtMs) {
       throw new Error(`Invalid payload: unable to parse date_time: ${dateTime}`);
     }
 
-    // Generate deterministic ID (excludes timestamp for deduplication)
     const eventId = createDeterministicEventId(body, NAMESPACE);
 
     // ============= BUILD PROMAX_CUSTOMER OBJECT =============
@@ -274,7 +265,6 @@ addHandler('transform', (request, context) => {
       dealer_id: dealer_id
     };
 
-    // Add primary tier fields if applicable
     if (primaryTier === 1 || primaryTier === 2) {
       promaxCustomer.primary_tier = primaryTier;
       promaxCustomer.last_primary_tier_event = dateTime;
@@ -286,7 +276,6 @@ addHandler('transform', (request, context) => {
       }
     }
 
-    // Build field metadata
     const fieldLastReceivedAt = {
       dealer_id: occurredAtMs
     };
@@ -294,7 +283,6 @@ addHandler('transform', (request, context) => {
       dealer_id: eventId
     };
 
-    // Add metadata for tier fields if they exist
     if (hasValue(promaxCustomer.primary_tier)) {
       fieldLastReceivedAt.primary_tier = occurredAtMs;
       fieldLastReceivedBy.primary_tier = eventId;
@@ -362,12 +350,10 @@ addHandler('transform', (request, context) => {
       promax_notification: promaxNotification
     };
 
-    // Add conditional promax_customer_last_activity
     if (promaxCustomerLastActivity) {
       finalPayload.promax_customer_last_activity = promaxCustomerLastActivity;
     }
 
-    // Always add original payload
     finalPayload.original_payload = body;
 
     // ============= LOGGING & METRICS =============
@@ -434,10 +420,3 @@ addHandler('transform', (request, context) => {
   }
 });
 
-// ============================================
-// END LEAD NOTIFICATION TRANSFORMATION v2.7
-// Namespace: promax_dex
-// Event: promax_websocket.notification
-// Version: 2.7
-// Supported Codes: 1000-1015 (forms, credit apps, etc.)
-// ============================================
