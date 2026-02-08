@@ -26,9 +26,9 @@
         "direction": "OUTBOUND",
         "notes": "Vm",
         "disposition": "voicemail",
-        "answered_at": "2026-02-07T22:07:00+00:00",
-        "answered_at_display": "Sat, Feb 7, 2026 - 4:07 PM",
-        "answered_by": {
+        "called_at": "2026-02-07T22:07:00+00:00",
+        "called_at_display": "Sat, Feb 7, 2026 - 4:07 PM",
+        "called_by": {
             "id": 8998352,
             "first_name": "Rebecca",
             "last_name": "Gomez",
