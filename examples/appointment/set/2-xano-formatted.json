@@ -2,84 +2,86 @@
   "event": "promax_websocket.appointments",
   "event_type": "set",
   "event_version": "1.4",
-  "hookdeck_sent_at": "2026-02-07T20:31:05.071Z",
-  "websocket_uuid": "28badd8e-8bbd-2049-9db2-da99c73338b2",
-  "promax_websocket_timestamp": 1770496261116,
-  "payload_hash": "6648fd42f7cbf865fc081b830c717fc08f46d9024770d303d39e11eefef8fb25",
-  "customer_id": 158198223,
-  "dealer_id": 8848,
-  "appointment_id": 3269203977,
+  "hookdeck_sent_at": "2026-02-07T19:55:03.599Z",
+  "websocket_uuid": "9772373d-4e70-7591-069e-ad5a95d5d099",
+  "promax_websocket_timestamp": 1770494101290,
+  "payload_hash": "6370c68340e81280331550464089d4eb13d7241ee049725c2199a717ef88b95a",
+  "customer_id": 185235309,
+  "dealer_id": 4295,
+  "appointment_id": 3269192982,
   "promax_customer": {
-    "id": 158198223,
-    "dealer_id": 8848,
+    "id": 185235309,
+    "dealer_id": 4295,
     "primary_tier": 1,
-    "last_primary_tier_event": 1770496261116,
-    "last_appt_scheduled_for": "2026-02-09T22:30:00Z",
-    "last_appt_updated_at": 1770496261116,
+    "last_primary_tier_event": 1770494101290,
+    "last_appt_scheduled_for": "2026-03-09T18:15:00Z",
+    "last_appt_updated_at": 1770494101290,
     "field_last_received_at": {
-      "dealer_id": 1770496261116,
-      "primary_tier": 1770496261116,
-      "last_primary_tier_event": 1770496261116,
-      "last_appt_scheduled_for": 1770496261116,
-      "last_appt_updated_at": 1770496261116
+      "dealer_id": 1770494101290,
+      "primary_tier": 1770494101290,
+      "last_primary_tier_event": 1770494101290,
+      "last_appt_scheduled_for": 1770494101290,
+      "last_appt_updated_at": 1770494101290
     },
     "field_last_received_by": {
-      "dealer_id": "28badd8e-8bbd-2049-9db2-da99c73338b2",
-      "primary_tier": "28badd8e-8bbd-2049-9db2-da99c73338b2",
-      "last_primary_tier_event": "28badd8e-8bbd-2049-9db2-da99c73338b2",
-      "last_appt_scheduled_for": "28badd8e-8bbd-2049-9db2-da99c73338b2",
-      "last_appt_updated_at": "28badd8e-8bbd-2049-9db2-da99c73338b2"
+      "dealer_id": "9772373d-4e70-7591-069e-ad5a95d5d099",
+      "primary_tier": "9772373d-4e70-7591-069e-ad5a95d5d099",
+      "last_primary_tier_event": "9772373d-4e70-7591-069e-ad5a95d5d099",
+      "last_appt_scheduled_for": "9772373d-4e70-7591-069e-ad5a95d5d099",
+      "last_appt_updated_at": "9772373d-4e70-7591-069e-ad5a95d5d099"
     }
   },
   "promax_appointment": {
-    "id": 3269203977,
-    "dealer_id": 8848,
-    "customer_id": 158198223,
-    "scheduled_at": 1770496261116,
-    "scheduled_for": "2026-02-09T22:30:00Z",
-    "scheduled_by": 9057085,
+    "id": 3269192982,
+    "dealer_id": 4295,
+    "customer_id": 185235309,
+    "scheduled_at": 1770494101290,
+    "scheduled_for": "2026-03-09T18:15:00Z",
+    "scheduled_by": 9058958,
     "status": "Current",
-    "status_updated_at": 1770496261116,
-    "comments": "between 4:30-5:00pm"
+    "status_updated_at": 1770494101290,
+    "set_via": "Phone",
+    "comments": "job time"
   },
   "promax_appointment_update": {
-    "id": "28badd8e-8bbd-2049-9db2-da99c73338b2",
-    "websocket_timestamp": 1770496261116,
-    "dealer_id": 8848,
-    "customer_id": 158198223,
-    "appointment_id": 3269203977,
+    "id": "9772373d-4e70-7591-069e-ad5a95d5d099",
+    "websocket_timestamp": 1770494101290,
+    "dealer_id": 4295,
+    "customer_id": 185235309,
+    "appointment_id": 3269192982,
     "status": "Current",
-    "date_time": "2026-02-09T22:30:00Z",
-    "employee_id": 9057085,
-    "comments": "between 4:30-5:00pm"
+    "date_time": "2026-03-09T18:15:00Z",
+    "employee_id": 9058958,
+    "comments": "job time"
   },
   "promax_customer_last_activity": {
-    "id": 158198223,
-    "dealer_id": 8848,
-    "last_appt_scheduled_for": "2026-02-09T22:30:00Z",
-    "last_appt_set": 1770496261116
+    "id": 185235309,
+    "dealer_id": 4295,
+    "last_appt_scheduled_for": "2026-03-09T18:15:00Z",
+    "last_appt_set": 1770494101290
   },
   "original_payload": {
-    "customer_id": 158198223,
-    "dealer_id": 8848,
+    "customer_id": 185235309,
+    "dealer_id": 4295,
     "sales_appointment": {
       "appointment": {
-        "appointment_id": 3269203977,
+        "appointment_id": 3269192982,
         "appointment_status": {
           "status": "Current"
         },
-        "comments": "between 4:30-5:00pm",
+        "comments": "job time",
         "confirmed_status": {
           "confirmed": false
         },
-        "date_time": "2026-02-09T22:30:00Z"
+        "date_time": "2026-03-09T18:15:00Z",
+        "set_via": "Phone"
       },
       "dealer_parties": {
-        "employee_id": 9057085,
-        "first_name": "Joanna",
-        "last_name": "Bahena"
+        "employee_id": 9058958,
+        "first_name": "Philip",
+        "last_name": "Pearsall"
       }
     },
-    "timestamp": 1770496261116
+    "timestamp": 1770494101290
   }
 }

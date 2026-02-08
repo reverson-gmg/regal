@@ -2,57 +2,57 @@
   "event": "promax_websocket.appointments",
   "event_type": "missed",
   "event_version": "1.4",
-  "hookdeck_sent_at": "2026-02-07T09:05:34.883Z",
-  "websocket_uuid": "ee573919-7e11-bd46-ae4e-ac88efb86842",
-  "promax_websocket_timestamp": 1770455132931,
-  "payload_hash": "09176c39e80a10608b00b75acfe58f9fd03c6102ece159646d9904d9f847457d",
-  "customer_id": 185209616,
-  "dealer_id": 4297,
-  "appointment_id": 3268658820,
+  "hookdeck_sent_at": "2026-02-07T09:04:39.792Z",
+  "websocket_uuid": "30478d2c-6684-be70-29cc-4e256d18041a",
+  "promax_websocket_timestamp": 1770455078697,
+  "payload_hash": "6422e18f345754c82e0a70f5d1977bdb9ec4c8d6503bc5a1931bfd6ba61b308b",
+  "customer_id": 185217863,
+  "dealer_id": 4141,
+  "appointment_id": 3268729723,
   "promax_customer": {
-    "id": 185209616,
-    "dealer_id": 4297,
+    "id": 185217863,
+    "dealer_id": 4141,
     "field_last_received_at": {
-      "dealer_id": 1770455132931
+      "dealer_id": 1770455078697
     },
     "field_last_received_by": {
-      "dealer_id": "ee573919-7e11-bd46-ae4e-ac88efb86842"
+      "dealer_id": "30478d2c-6684-be70-29cc-4e256d18041a"
     }
   },
   "promax_appointment": {
-    "id": 3268658820,
-    "dealer_id": 4297,
-    "customer_id": 185209616,
+    "id": 3268729723,
+    "dealer_id": 4141,
+    "customer_id": 185217863,
     "status": "Missed",
-    "status_updated_at": 1770455132931
+    "status_updated_at": 1770455078697
   },
   "promax_appointment_update": {
-    "id": "ee573919-7e11-bd46-ae4e-ac88efb86842",
-    "websocket_timestamp": 1770455132931,
-    "dealer_id": 4297,
-    "customer_id": 185209616,
-    "appointment_id": 3268658820,
+    "id": "30478d2c-6684-be70-29cc-4e256d18041a",
+    "websocket_timestamp": 1770455078697,
+    "dealer_id": 4141,
+    "customer_id": 185217863,
+    "appointment_id": 3268729723,
     "status": "Missed",
-    "date_time": "2026-02-07T09:05:32Z"
+    "date_time": "2026-02-07T09:04:38Z"
   },
   "promax_customer_last_activity": {
-    "id": 185209616,
-    "dealer_id": 4297,
-    "last_appt_missed": 1770455132931
+    "id": 185217863,
+    "dealer_id": 4141,
+    "last_appt_missed": 1770455078697
   },
   "original_payload": {
-    "customer_id": 185209616,
-    "dealer_id": 4297,
+    "customer_id": 185217863,
+    "dealer_id": 4141,
     "sales_appointment": {
       "appointment": {
-        "appointment_id": 3268658820,
+        "appointment_id": 3268729723,
         "appointment_status": {
           "status": "Missed"
         },
-        "date_time": "2026-02-07T09:05:32Z",
+        "date_time": "2026-02-07T09:04:38Z",
         "status": "Missed"
       }
     },
-    "timestamp": 1770455132931
+    "timestamp": 1770455078697
   }
 }

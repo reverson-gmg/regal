@@ -1,23 +1,24 @@
 {
-  "customer_id": 158198223,
-  "dealer_id": 8848,
+  "customer_id": 185235309,
+  "dealer_id": 4295,
   "sales_appointment": {
     "appointment": {
-      "appointment_id": 3269203977,
+      "appointment_id": 3269192982,
       "appointment_status": {
         "status": "Current"
       },
-      "comments": "between 4:30-5:00pm",
+      "comments": "job time",
       "confirmed_status": {
         "confirmed": false
       },
-      "date_time": "2026-02-09T22:30:00Z"
+      "date_time": "2026-03-09T18:15:00Z",
+      "set_via": "Phone"
     },
     "dealer_parties": {
-      "employee_id": 9057085,
-      "first_name": "Joanna",
-      "last_name": "Bahena"
+      "employee_id": 9058958,
+      "first_name": "Philip",
+      "last_name": "Pearsall"
     }
   },
-  "timestamp": 1770496261116
+  "timestamp": 1770494101290
 }
