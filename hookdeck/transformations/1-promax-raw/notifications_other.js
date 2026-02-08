@@ -181,6 +181,12 @@ function hasValue(value) {
   return true;
 }
 
+function addIfHasValue(obj, key, value) {
+  if (hasValue(value)) {
+    obj[key] = value;
+  }
+}
+
 /**
  * Converts ISO 8601 datetime string to epoch milliseconds
  */
@@ -238,12 +244,11 @@ addHandler('transform', (request, context) => {
     const eventType = NOTIFICATION_CODE_MAP[notificationCode];
 
     // Determine primary tier based on event type
-    let primaryTier = null;
-    if (eventType === 'license' || eventType === 'routeone') {
-      primaryTier = 1;
-    } else if (eventType === 'credit_app' || eventType === 'transunion' || eventType === 'proposal' || eventType === 'forms') {
-      primaryTier = 2;
-    }
+    const NOTIFICATION_PRIMARY_TIER = {
+      license: 1, routeone: 1,
+      credit_app: 2, transunion: 2, proposal: 2, forms: 2
+    };
+    const primaryTier = NOTIFICATION_PRIMARY_TIER[eventType] || null;
 
     // Extract lead_notification data
     const leadNotification = notification.updates?.lead_notification || {};
@@ -320,36 +325,26 @@ addHandler('transform', (request, context) => {
       dealer_id: dealer_id
     };
 
-    // Add employee_id if present
-    if (hasValue(employeeId)) {
-      promaxNotification.employee_id = employeeId;
-    }
+    addIfHasValue(promaxNotification, 'employee_id', employeeId);
 
     // ============= BUILD PROMAX_CUSTOMER_LAST_ACTIVITY (CONDITIONAL) =============
-    let promaxCustomerLastActivity = null;
+    const NOTIFICATION_ACTIVITY_FIELDS = {
+      license: 'last_license_scanned',
+      credit_app: 'last_credit_app_printed',
+      transunion: 'last_transunion_pulled',
+      routeone: 'last_routeone_sent',
+      proposal: 'last_proposal_printed',
+      forms: 'last_forms_printed'
+    };
 
-    // Only create for specific event types
-    const lastActivityEventTypes = ['license', 'credit_app', 'transunion', 'routeone', 'proposal', 'forms'];
-    if (lastActivityEventTypes.includes(eventType)) {
+    let promaxCustomerLastActivity = null;
+    const activityField = NOTIFICATION_ACTIVITY_FIELDS[eventType];
+    if (activityField) {
       promaxCustomerLastActivity = {
         id: customer_id,
         dealer_id: dealer_id
       };
-
-      // Map event type to specific field
-      if (eventType === 'license') {
-        promaxCustomerLastActivity.last_license_scanned = occurredAtMs;
-      } else if (eventType === 'credit_app') {
-        promaxCustomerLastActivity.last_credit_app_printed = occurredAtMs;
-      } else if (eventType === 'transunion') {
-        promaxCustomerLastActivity.last_transunion_pulled = occurredAtMs;
-      } else if (eventType === 'routeone') {
-        promaxCustomerLastActivity.last_routeone_sent = occurredAtMs;
-      } else if (eventType === 'proposal') {
-        promaxCustomerLastActivity.last_proposal_printed = occurredAtMs;
-      } else if (eventType === 'forms') {
-        promaxCustomerLastActivity.last_forms_printed = occurredAtMs;
-      }
+      promaxCustomerLastActivity[activityField] = occurredAtMs;
     }
 
     // ============= BUILD FINAL PAYLOAD =============
@@ -423,6 +418,7 @@ addHandler('transform', (request, context) => {
     return {
       body: {
         event: EVENT_NAME,
+        event_type: 'unknown',
         event_version: SCHEMA_VERSION,
         hookdeck_sent_at: nowIso(),
         websocket_uuid: `error-${Date.now()}`,

@@ -178,6 +178,20 @@ function addIfHasValue(obj, key, value) {
 }
 
 /**
+ * Converts a timestamp value to epoch milliseconds
+ * Handles: unix ms epoch (number), unix s epoch (number), or ISO string
+ */
+function toEpochMs(value) {
+  if (!value) return null;
+  if (typeof value === 'number') return value < 1e12 ? value * 1000 : value;
+  if (typeof value === 'string') {
+    const d = new Date(value);
+    return isNaN(d.getTime()) ? null : d.getTime();
+  }
+  return null;
+}
+
+/**
  * Converts a timestamp value to ISO 8601 string
  * Handles: unix ms epoch (number), unix s epoch (number), or existing ISO string
  */
@@ -398,8 +412,8 @@ addHandler('transform', (request, context) => {
     };
 
     if (eventType === 'new_visit') {
-      addIfHasValue(promaxShowroomVisit, 'date_time', dateTime);
-      addIfHasValue(promaxShowroomVisit, 'type', visitType);
+      promaxShowroomVisit.date_time = dateTime;
+      promaxShowroomVisit.type = visitType;
       addIfHasValue(promaxShowroomVisit, 'created_by', createdBy);
       addIfHasValue(promaxShowroomVisit, 'appointment_id', appointmentId);
 
@@ -407,31 +421,24 @@ addHandler('transform', (request, context) => {
       // If exit_note.date is at least 10 minutes before the payload timestamp,
       // include it as date_time on the showroom visit (indicates the actual visit time)
       if (exitNoteDate) {
-        // Convert both values to epoch ms for comparison
-        const _toMs = (v) => {
-          if (!v) return null;
-          if (typeof v === 'number') return v < 1e12 ? v * 1000 : v;
-          if (typeof v === 'string') { const d = new Date(v); return isNaN(d.getTime()) ? null : d.getTime(); }
-          return null;
-        };
-        const exitNoteDateMs = _toMs(exitNoteDate);
-        const payloadTimestampMs = _toMs(dexWsTimestamp);
+        const exitNoteDateMs = toEpochMs(exitNoteDate);
+        const payloadTimestampMs = toEpochMs(dexWsTimestamp);
         if (exitNoteDateMs !== null && payloadTimestampMs !== null) {
           const TEN_MINUTES_MS = 10 * 60 * 1000;
           if ((payloadTimestampMs - exitNoteDateMs) >= TEN_MINUTES_MS) {
-            addIfHasValue(promaxShowroomVisit, 'date_time', exitNoteDate);
+            promaxShowroomVisit.date_time = exitNoteDate;
           }
         }
       }
-      addIfHasValue(promaxShowroomVisit, 'exit_note_id', exitNoteId);
-      addIfHasValue(promaxShowroomVisit, 'exit_at', exitAt);
+      promaxShowroomVisit.exit_note_id = exitNoteId;
+      promaxShowroomVisit.exit_at = exitAt;
       addIfHasValue(promaxShowroomVisit, 'exit_by', exitBy);
       addIfHasValue(promaxShowroomVisit, 'is_manager_note', isManagerNote);
       addIfHasValue(promaxShowroomVisit, 'exit_note', exitNote);
       addIfHasValue(promaxShowroomVisit, 'reason_unsold', reasonUnsold);
 
     } else if (eventType === 'delete') {
-      addIfHasValue(promaxShowroomVisit, 'deleted_at', dexWsTimestamp);
+      promaxShowroomVisit.deleted_at = dexWsTimestamp;
       addIfHasValue(promaxShowroomVisit, 'deleted_by', deletedBy);
     }
 
@@ -442,29 +449,23 @@ addHandler('transform', (request, context) => {
     };
 
     if (eventType === 'new_visit') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_showroom_visit', dexWsTimestamp);
+      promaxCustomerLastActivity.last_showroom_visit = dexWsTimestamp;
     } else if (eventType === 'exit_note') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_showroom_visit_exit_note', dexWsTimestamp);
+      promaxCustomerLastActivity.last_showroom_visit_exit_note = dexWsTimestamp;
       // If exit_note.date is at least 10 minutes before payload timestamp,
       // include the earlier date as last_showroom_visit
       if (exitNoteDate) {
-        const _toMs = (v) => {
-          if (!v) return null;
-          if (typeof v === 'number') return v < 1e12 ? v * 1000 : v;
-          if (typeof v === 'string') { const d = new Date(v); return isNaN(d.getTime()) ? null : d.getTime(); }
-          return null;
-        };
-        const exitNoteDateMs = _toMs(exitNoteDate);
-        const payloadTimestampMs = _toMs(dexWsTimestamp);
+        const exitNoteDateMs = toEpochMs(exitNoteDate);
+        const payloadTimestampMs = toEpochMs(dexWsTimestamp);
         if (exitNoteDateMs !== null && payloadTimestampMs !== null) {
           const TEN_MINUTES_MS = 10 * 60 * 1000;
           if ((payloadTimestampMs - exitNoteDateMs) >= TEN_MINUTES_MS) {
-            addIfHasValue(promaxCustomerLastActivity, 'last_showroom_visit', exitNoteDateMs);
+            promaxCustomerLastActivity.last_showroom_visit = exitNoteDateMs;
           }
         }
       }
     } else if (eventType === 'delete') {
-      addIfHasValue(promaxCustomerLastActivity, 'last_showroom_visit_deleted', dexWsTimestamp);
+      promaxCustomerLastActivity.last_showroom_visit_deleted = dexWsTimestamp;
     }
 
     // ============= BUILD FINAL PAYLOAD =============
