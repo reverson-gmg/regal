@@ -1,8 +1,8 @@
 // ============================================
-// HOOKDECK CUSTOMER TRANSFORMATION SCRIPT v2.6
+// HOOKDECK CUSTOMER TRANSFORMATION SCRIPT v2.7
 // ============================================
 // Features:
-//   ✅ MD5-based deterministic event_id with namespace
+//   ✅ MD5-based deterministic event_id with namespace (INCLUDES timestamp)
 //   ✅ Canonical array ordering for collision-proof event_id
 //   ✅ UTF-8 byte-accurate size checking
 //   ✅ Unicode NFKD normalization for names
@@ -21,7 +21,7 @@
 //   ✅ Field-level timestamp tracking (field_last_received_at)
 //   ✅ Field-level event attribution (field_last_received_by)
 //   ✅ Vehicle data pass-through
-//   ✅ Phone number validation and E.164 formatting
+//   ✅ Phone number normalization (10-digit format)
 // ============================================
 
 // ============= CONFIGURATION =============
@@ -392,7 +392,6 @@ addHandler('transform', (request, context) => {
     const lastNameNormalized = normalizeLastName(validLastName);
 
 
-    // Extract communication channels
     const cellPhone = findFirst(communications, 'communication_type', 'CellPhone');
     const homePhone = findFirst(communications, 'communication_type', 'HomePhone');
     const workPhone = findFirst(communications, 'communication_type', 'WorkPhone');
@@ -403,26 +402,22 @@ addHandler('transform', (request, context) => {
     const homePhoneFormatted = normalizePhoneNumber(homePhone?.complete_number);
     const workPhoneFormatted = normalizePhoneNumber(workPhone?.complete_number);
 
-    // Extract address history
     const currentAddress = findFirst(addresses, 'address_type', 'Current');
     const prev1Address = findFirst(addresses, 'address_type', 'Previous1');
     const prev2Address = findFirst(addresses, 'address_type', 'Previous2');
     const prev3Address = findFirst(addresses, 'address_type', 'Previous3');
 
-    // Extract dealer personnel
     const salesRep1 = findFirst(dealerParties, 'party_type', 'SalesRep1');
     const salesRep2 = findFirst(dealerParties, 'party_type', 'SalesRep2');
     const salesBdr = findFirst(dealerParties, 'party_type', 'SalesBDR');
     const serviceBdr = findFirst(dealerParties, 'party_type', 'ServiceBDR');
 
-    // Create Regal CRM identifiers
     const cellPhoneNumber = cellPhone?.complete_number;
     const regalId = (lastNameNormalized && cellPhoneNumber)
       ? `${lastNameNormalized}_${cellPhoneNumber}`
       : null;
     const regalUuid = createUUIDFromString(regalId);
 
-    // Current address processing
     const currAddrDuration = validateDuration(currentAddress?.duration);
     const currAddrStart = currAddrDuration
       ? subtractMonthsSafe(currAddrDuration, dexWsTimestamp)
@@ -430,22 +425,18 @@ addHandler('transform', (request, context) => {
     const currAddrZip = normalizeZip(currentAddress?.zip_code);
     const currAddrState = normalizeState(currentAddress?.state);
 
-    // Previous address 1
     const prev1AddrDuration = validateDuration(prev1Address?.duration);
     const prev1AddrZip = normalizeZip(prev1Address?.zip_code);
     const prev1AddrState = normalizeState(prev1Address?.state);
 
-    // Previous address 2
     const prev2AddrDuration = validateDuration(prev2Address?.duration);
     const prev2AddrZip = normalizeZip(prev2Address?.zip_code);
     const prev2AddrState = normalizeState(prev2Address?.state);
 
-    // Previous address 3
     const prev3AddrDuration = validateDuration(prev3Address?.duration);
     const prev3AddrZip = normalizeZip(prev3Address?.zip_code);
     const prev3AddrState = normalizeState(prev3Address?.state);
 
-    // Vehicle data
     const desiredVehicle = Array.isArray(body.customer?.desired_vehicle)
       ? body.customer.desired_vehicle
       : [];
@@ -453,12 +444,10 @@ addHandler('transform', (request, context) => {
       ? body.customer.trade_vehicle
       : [];
 
-    // Lead source data
     const leadSource = getOrNull(body.customer?.lead_source);
     const leadSourceId = getOrNull(body.customer?.lead_source_id);
     const leadType = getOrNull(body.customer?.lead_type);
 
-    // Sensitive data
     const ssn = getOrNull(person.ssn);
     const birthDate = getOrNull(person.birth_date);
 
@@ -472,7 +461,7 @@ addHandler('transform', (request, context) => {
     promaxCustomer.last_customer_update = dexWsTimestamp;
 
 
-    // Add all customer fields (excluding ssn, birth_date, account_type, prev_addr fields)
+    // Excludes ssn, birth_date (in promax_customer_sensitive) and prev_addr fields (in promax_customer_previous_address)
     addIfHasValue(promaxCustomer, 'regal_external_id', regalId);
     addIfHasValue(promaxCustomer, 'regal_external_uuid', regalUuid);
     const rawFirstName = getOrNull(person.first_name);
@@ -496,7 +485,6 @@ addHandler('transform', (request, context) => {
     addIfHasValue(promaxCustomer, 'sales_bdr', getOrNull(salesBdr?.employee_id));
     addIfHasValue(promaxCustomer, 'service_bdr', getOrNull(serviceBdr?.employee_id));
 
-    // Current address fields only
     addIfHasValue(promaxCustomer, 'curr_addr_street', getOrNull(currentAddress?.line_one));
     addIfHasValue(promaxCustomer, 'curr_addr_street2', getOrNull(currentAddress?.line_two));
     addIfHasValue(promaxCustomer, 'curr_addr_city', getOrNull(currentAddress?.city));
@@ -506,14 +494,11 @@ addHandler('transform', (request, context) => {
     addIfHasValue(promaxCustomer, 'curr_addr_start', currAddrStart);
     addIfHasValue(promaxCustomer, 'curr_addr_monthly_payment', getOrNull(currentAddress?.monthly_payment));
 
-    // Vehicles
     addIfHasValue(promaxCustomer, 'desired_vehicle', desiredVehicle);
     addIfHasValue(promaxCustomer, 'trade_vehicle', tradeVehicle);
 
-    // Financial (cash_down only)
     addIfHasValue(promaxCustomer, 'cash_down', getOrNull(body.customer?.cash_down));
 
-    // Communication preferences
     addIfHasValue(promaxCustomer, 'block_text', getOrNull(body.customer?.block_text));
     addIfHasValue(promaxCustomer, 'block_email', getOrNull(body.customer?.block_email));
     addIfHasValue(promaxCustomer, 'block_letters', getOrNull(body.customer?.block_letters));
@@ -538,26 +523,22 @@ addHandler('transform', (request, context) => {
       }
     }
 
-    // Add metadata to promax_customer
     promaxCustomer.field_last_received_at = fieldLastReceivedAt;
     promaxCustomer.field_last_received_by = fieldLastReceivedBy;
 
     // ============= BUILD PROMAX_CUSTOMER_SENSITIVE (CONDITIONAL) =============
     let promaxCustomerSensitive = null;
 
-    // Build temporary object with sensitive fields
     const sensitiveData = {};
     addIfHasValue(sensitiveData, 'ssn', ssn);
     addIfHasValue(sensitiveData, 'birth_date', birthDate);
 
-    // Only create object if at least one sensitive field exists
     if (Object.keys(sensitiveData).length > 0) {
       promaxCustomerSensitive = {
         id: customer_id,
         ...sensitiveData
       };
 
-      // Generate metadata for sensitive fields
       const sensitiveLastReceivedAt = {};
       const sensitiveLastReceivedBy = {};
 
@@ -575,7 +556,6 @@ addHandler('transform', (request, context) => {
     // ============= BUILD PROMAX_CUSTOMER_PREVIOUS_ADDRESS (CONDITIONAL) =============
     let promaxCustomerPreviousAddress = null;
 
-    // Build temporary object with all prev_addr fields
     const prevAddrData = {};
     addIfHasValue(prevAddrData, 'prev_addr1_street', getOrNull(prev1Address?.line_one));
     addIfHasValue(prevAddrData, 'prev_addr1_street2', getOrNull(prev1Address?.line_two));
@@ -601,14 +581,12 @@ addHandler('transform', (request, context) => {
     addIfHasValue(prevAddrData, 'prev_addr3_duration', prev3AddrDuration);
     addIfHasValue(prevAddrData, 'prev_addr3_monthly_payment', getOrNull(prev3Address?.monthly_payment));
 
-    // Only create object if at least one prev_addr field exists
     if (Object.keys(prevAddrData).length > 0) {
       promaxCustomerPreviousAddress = {
         id: customer_id,
         ...prevAddrData
       };
 
-      // Generate metadata for prev_addr fields
       const prevAddrLastReceivedAt = {};
       const prevAddrLastReceivedBy = {};
 
@@ -626,15 +604,11 @@ addHandler('transform', (request, context) => {
     // ============= BUILD PROMAX_CUSTOMER_TRADE_VEHICLE (CONDITIONAL) =============
     let promaxCustomerTradeVehicle = null;
 
-    // Build temporary object with trade vehicle fields
     const tradeVehicleData = {};
-
-    // Process trade_vehicle array
     tradeVehicle.forEach(vehicle => {
       const tradeNum = getOrNull(vehicle.trade_vehicle);
 
       if (tradeNum === 1) {
-        // Trade 1 fields
         addIfHasValue(tradeVehicleData, 'trade_1_year', getOrNull(vehicle.model_year));
         addIfHasValue(tradeVehicleData, 'trade_1_make', getOrNull(vehicle.make));
         addIfHasValue(tradeVehicleData, 'trade_1_model', getOrNull(vehicle.model_name));
@@ -648,14 +622,12 @@ addHandler('transform', (request, context) => {
         addIfHasValue(tradeVehicleData, 'trade_1_payment', getOrNull(vehicle.payment));
         addIfHasValue(tradeVehicleData, 'trade_1_payoff', getOrNull(vehicle.payoff));
 
-        // Extract lienholder_name from lienholder_info array
         if (Array.isArray(vehicle.lienholder_info) && vehicle.lienholder_info.length > 0) {
           const lienholderName = getOrNull(vehicle.lienholder_info[0]?.lienholder_name);
           addIfHasValue(tradeVehicleData, 'trade_1_lienholder_name', lienholderName);
         }
 
       } else if (tradeNum === 2) {
-        // Trade 2 fields
         addIfHasValue(tradeVehicleData, 'trade_2_year', getOrNull(vehicle.model_year));
         addIfHasValue(tradeVehicleData, 'trade_2_make', getOrNull(vehicle.make));
         addIfHasValue(tradeVehicleData, 'trade_2_model', getOrNull(vehicle.model_name));
@@ -669,7 +641,6 @@ addHandler('transform', (request, context) => {
         addIfHasValue(tradeVehicleData, 'trade_2_payment', getOrNull(vehicle.payment));
         addIfHasValue(tradeVehicleData, 'trade_2_payoff', getOrNull(vehicle.payoff));
 
-        // Extract lienholder_name from lienholder_info array
         if (Array.isArray(vehicle.lienholder_info) && vehicle.lienholder_info.length > 0) {
           const lienholderName = getOrNull(vehicle.lienholder_info[0]?.lienholder_name);
           addIfHasValue(tradeVehicleData, 'trade_2_lienholder_name', lienholderName);
@@ -677,14 +648,12 @@ addHandler('transform', (request, context) => {
       }
     });
 
-    // Only create object if at least one trade vehicle field exists
     if (Object.keys(tradeVehicleData).length > 0) {
       promaxCustomerTradeVehicle = {
         id: customer_id,
         ...tradeVehicleData
       };
 
-      // Generate metadata for trade vehicle fields
       const tradeVehicleLastReceivedAt = {};
       const tradeVehicleLastReceivedBy = {};
 
@@ -718,7 +687,6 @@ addHandler('transform', (request, context) => {
         dealer_id: dealer_id,
         name: leadSource
       };
-      // Add type if it exists
       addIfHasValue(promaxLeadSource, 'type', leadType);
     }
 
@@ -734,35 +702,28 @@ addHandler('transform', (request, context) => {
       dealer_id: dealer_id
     };
 
-    // Add conditional objects in order
     if (regalContact) {
       finalPayload.regal_contact = regalContact;
     }
 
-    // Always add promax_customer
     finalPayload.promax_customer = promaxCustomer;
 
-    // Add conditional sensitive data
     if (promaxCustomerSensitive) {
       finalPayload.promax_customer_sensitive = promaxCustomerSensitive;
     }
 
-    // Add conditional previous address
     if (promaxCustomerPreviousAddress) {
       finalPayload.promax_customer_previous_address = promaxCustomerPreviousAddress;
     }
 
-    // Add conditional trade vehicle
     if (promaxCustomerTradeVehicle) {
       finalPayload.promax_customer_trade_vehicle = promaxCustomerTradeVehicle;
     }
 
-    // Add conditional lead source
     if (promaxLeadSource) {
       finalPayload.promax_lead_source = promaxLeadSource;
     }
 
-    // Always add original payload
     finalPayload.original_payload = body;
 
     // ============= LOGGING & METRICS =============
@@ -785,8 +746,6 @@ addHandler('transform', (request, context) => {
       field_count: Object.keys(fieldLastReceivedAt).length
     };
     console.log(`Customer event processed in ${Date.now() - start}ms`, logMeta);
-
-    // ============= RETURN FINAL PAYLOAD =============
 
     return {
       body: finalPayload,
@@ -834,9 +793,3 @@ addHandler('transform', (request, context) => {
   }
 });
 
-// ============================================
-// END CUSTOMER TRANSFORMATION v2.6
-// Namespace: promax_dex
-// Event: promax_websocket.customer
-// Version: 2.6
-// ============================================

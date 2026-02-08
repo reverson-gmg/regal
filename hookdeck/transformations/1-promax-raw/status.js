@@ -9,7 +9,7 @@
 //   ✅ Field-level event attribution (field_last_received_by)
 //   ✅ Separate promax_customer and promax_status objects
 //   ✅ Conditional dealer_id inclusion (not for Lead status)
-//   ✅ primary_tier: '1' for Delivered, '4' otherwise (excluded for Bad Lead/Unsubscribe/Bad - Invalid Info)
+//   ✅ primary_tier: 1 for Delivered, 4 otherwise (excluded for Bad Lead/Unsubscribe/Bad - Invalid Info)
 //   ✅ last_primary_tier_event tracking (excluded for Bad Lead/Unsubscribe/Bad - Invalid Info)
 //   ✅ promax_customer_last_activity with:
 //      - last_customer_status_update (when Customer status present)
@@ -146,7 +146,6 @@ function md5ToUuid(md5hex) {
  * Creates deterministic event ID from body (EXCLUDES timestamp for deduplication)
  */
 function createDeterministicEventId(body, namespace) {
-  // Create a copy without the timestamp field
   const bodyWithoutTimestamp = { ...body };
   delete bodyWithoutTimestamp.timestamp;
 
@@ -206,7 +205,6 @@ addHandler('transform', (request, context) => {
       throw new Error('Invalid payload: missing required dealer_id');
     }
 
-    // Generate deterministic ID (excludes timestamp for deduplication)
     const eventId = createDeterministicEventId(body, NAMESPACE);
 
     // ============= EXTRACT STATUS FIELDS =============
@@ -218,11 +216,9 @@ addHandler('transform', (request, context) => {
     const serviceStatusId = getOrNull(statusObj.service_status_id);
 
     // ============= DETERMINE PRIMARY TIER =============
-    // '1' for Delivered, '4' for all other statuses
-    // Excluded when status name contains: "Bad Lead", "Unsubscribe", "Bad - Invalid Info"
+    // 1 for Delivered, 4 for all others; excluded entirely for Bad Lead/Unsubscribe/Bad - Invalid Info
     const isDelivered = customerStatus && customerStatus.toLowerCase() === 'delivered';
 
-    // Check if primary tier should be excluded based on status names
     const excludedStatusPatterns = ['bad lead', 'unsubscribe', 'bad - invalid info'];
     const shouldExcludePrimaryTier = (status) => {
       if (!status || typeof status !== 'string') return false;
@@ -242,7 +238,6 @@ addHandler('transform', (request, context) => {
       dealer_id: dealer_id
     };
 
-    // Add status fields if present
     addIfHasValue(promaxCustomer, 'customer_status', customerStatus);
     addIfHasValue(promaxCustomer, 'customer_status_id', customerStatusId);
     addIfHasValue(promaxCustomer, 'lead_status', leadStatus);
@@ -250,13 +245,11 @@ addHandler('transform', (request, context) => {
     addIfHasValue(promaxCustomer, 'service_status', serviceStatus);
     addIfHasValue(promaxCustomer, 'service_status_id', serviceStatusId);
 
-    // Add primary tier fields (only when not excluded)
     if (!excludePrimaryTier) {
       promaxCustomer.primary_tier = primaryTier;
       promaxCustomer.last_primary_tier_event = dexWsTimestamp;
     }
 
-    // Generate metadata
     const fieldLastReceivedAt = {};
     const fieldLastReceivedBy = {};
     const excludedFields = ['id', 'field_last_received_at', 'field_last_received_by'];
@@ -275,7 +268,6 @@ addHandler('transform', (request, context) => {
     // ============= BUILD PROMAX_STATUS ARRAY =============
     const promaxStatus = [];
 
-    // Customer Status
     if (hasValue(customerStatusId) && hasValue(customerStatus)) {
       promaxStatus.push({
         id: customerStatusId,
@@ -285,7 +277,6 @@ addHandler('transform', (request, context) => {
       });
     }
 
-    // Service Status
     if (hasValue(serviceStatusId) && hasValue(serviceStatus)) {
       promaxStatus.push({
         id: serviceStatusId,
@@ -295,7 +286,7 @@ addHandler('transform', (request, context) => {
       });
     }
 
-    // Lead Status (NO dealer_id)
+    // Lead status intentionally omits dealer_id
     if (hasValue(leadStatusId) && hasValue(leadStatus)) {
       promaxStatus.push({
         id: leadStatusId,
@@ -310,17 +301,14 @@ addHandler('transform', (request, context) => {
       dealer_id: dealer_id
     };
 
-    // Add last_customer_status_update when Customer status is present
     if (hasValue(customerStatus)) {
       promaxCustomerLastActivity.last_customer_status_update = dexWsTimestamp;
     }
 
-    // Add last_lead_status_update when Lead status is present
     if (hasValue(leadStatus)) {
       promaxCustomerLastActivity.last_lead_status_update = dexWsTimestamp;
     }
 
-    // Only include last_delivered if customer_status = "Delivered"
     if (isDelivered) {
       promaxCustomerLastActivity.last_delivered = dexWsTimestamp;
     }
@@ -405,9 +393,3 @@ addHandler('transform', (request, context) => {
   }
 });
 
-// ============================================
-// END STATUS TRANSFORMATION v2.7
-// Namespace: promax_dex
-// Event: promax_websocket.status
-// Version: 2.7
-// ============================================
