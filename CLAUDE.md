@@ -2,44 +2,66 @@
 
 ## Project Overview
 
-This repository manages the **Promax DEX -> Hookdeck -> Xano -> Regal** webhook integration pipeline for automotive dealership data. It contains Hookdeck transformation scripts, filter rules, reference documentation, and example payloads that show data at each stage of the pipeline.
+This repository manages webhook integration pipelines for automotive dealership data, with two data sources feeding into **Hookdeck -> Xano -> Regal**:
+
+- **Promax DEX** (WebSocket events) — customer profiles, appointments, communications, showroom visits, status changes, notifications
+- **Feathery** (form submissions) — lead capture events (vehicle inquiries, appointment bookings, finance applications)
+
+It contains Hookdeck transformation scripts, filter rules, reference documentation, and example payloads that show data at each stage of the pipeline.
 
 ## Repository Structure
 
 ```
 .claude/
-  docs/                         # API schema documentation
-    1-promax-raw.md             # Promax DEX WebSocket event schema (source of truth)
-  skills/                       # Claude skill definitions
-    hookdeck/                   # Hookdeck transformation & filter skill
-    xano/                       # XanoScript skill (language, filters, functions)
+  docs/                                    # API schema documentation
+    1-promax-raw.md                        # Promax DEX WebSocket event schema (source of truth)
+  skills/                                  # Claude skill definitions
+    hookdeck/                              # Hookdeck transformation & filter skill
+    xano/                                  # XanoScript skill (language, filters, functions)
 
 hookdeck/
-  transformations/1-promax-raw/ # JavaScript transformation handlers (one per event type)
-  filters/1-promax-raw/         # JSON filter rules (one per event type)
+  transformations/
+    1-promax-raw/                          # Stage 1→2: Promax DEX → Xano (7 handlers)
+    3-xano-to-regal-raw/                   # Stage 3→4: Xano → Regal (2 handlers)
+  filters/
+    1-promax-raw/                          # JSON filter rules (9 filters, one per event type)
 
-examples/                       # Real-world payload examples at each pipeline stage
-  appointment/                  # Sales appointment events (9 states)
-  communications/               # Phone, text, email, note events
-  customer/                     # Customer profile events
-  notifications/                # System events (delete, merge, transfer, other)
-  service_appointment/          # Service appointment events
-  showroom_visit/               # Showroom visit events
-  status/                       # Lead/service status change events
+examples/                                  # Real-world payload examples at each pipeline stage
+  appointment/                             # Sales appointment events (9 states)
+  communications/                          # Phone, text, email, note events
+  customer/                                # Customer profile events
+  lead/                                    # Feathery form submission events (13 types)
+  notifications/                           # System events (delete, merge, transfer, other)
+  service_appointment/                     # Service appointment events
+  showroom_visit/                          # Showroom visit events
+  status/                                  # Lead/service status change events
 ```
 
 ## Data Pipeline
 
+### Promax DEX Pipeline (stage 1 → 2 → 3 → 4)
+
 1. **Promax DEX** sends WebSocket events (see `.claude/docs/1-promax-raw.md` for the wire format)
-2. **Hookdeck** receives events, applies filters to route them, then runs transformations to reshape payloads into Xano's expected format
+2. **Hookdeck** receives events, applies filters to route them, then runs `1-promax-raw` transformations to reshape payloads into Xano's expected format
 3. **Xano** processes the transformed data via backend logic
-4. **Regal** receives the final formatted contact/event data
+4. **Hookdeck** runs `3-xano-to-regal-raw` transformations on Xano's output, then sends to **Regal**
+
+### Feathery Pipeline (stage 1 → 2 → 3 → 4)
+
+1. **Feathery** sends form submission webhooks (lead capture events)
+2. **Xano** receives and processes the form data
+3. **Xano** outputs formatted data
+4. **Regal** receives the final contact/event data
+
+> Note: Feathery events are processed by Xano directly (no Hookdeck transformations in this repo). Examples are provided under `examples/lead/` for reference.
 
 ## Hookdeck Transformations
 
 - **Runtime:** Sandboxed V8 isolate (no Node.js, no network/filesystem access, 1-second timeout)
 - **Language:** JavaScript (ES6)
-- **Location:** `hookdeck/transformations/1-promax-raw/`
+- **Locations:**
+  - `hookdeck/transformations/1-promax-raw/` — Promax DEX → Xano (7 handlers)
+  - `hookdeck/transformations/3-xano-to-regal-raw/` — Xano → Regal (2 handlers)
 - **Handler signature:** `function handler(request, context) { ... }` — must return a `request` object or call `$transform.fail()`
 
 ### Code Conventions
@@ -64,12 +86,16 @@ examples/                       # Real-world payload examples at each pipeline s
 
 Each example subdirectory contains numbered files showing the payload at each pipeline stage:
 
-1. `1-promax-raw.json` — Raw WebSocket event from Promax DEX
+1. `1-promax-raw.json` or `1-feathery-raw.json` — Raw source event (Promax DEX WebSocket or Feathery form)
 2. `2-xano-formatted.json` — Hookdeck transformation output (sent to Xano)
-3. `3-xano-to-regal.json` — Xano processing output (if applicable)
+3. `3-xano-to-regal-raw.json` — Xano processing output (if applicable)
 4. `4-regal-formatted.json` — Final Regal API payload (if applicable)
 
+Not all events have all four stages. Customer, status, and service appointment examples typically only have stages 1–2.
+
 ## Event Types
+
+### Stage 1→2: Promax DEX → Xano (`hookdeck/transformations/1-promax-raw/`)
 
 | Event | Transformation File | Filter File |
 |-------|-------------------|-------------|
@@ -80,6 +106,13 @@ Each example subdirectory contains numbered files showing the payload at each pi
 | Status changes | `status.js` | `status.json` |
 | Notifications (other) | `notifications_other.js` | `notification_other.json` |
 | Notifications (transfer/delete/merge) | `notifications_transfer_delete_merge.js` | `notification_transfer.json`, `notification_delete.json`, `notification_merge.json` |
+
+### Stage 3→4: Xano → Regal (`hookdeck/transformations/3-xano-to-regal-raw/`)
+
+| Event | Transformation File |
+|-------|-------------------|
+| Communications | `communications.js` |
+| Showroom visits | `showroom_visits.js` |
 
 ## Reference Documentation
 
