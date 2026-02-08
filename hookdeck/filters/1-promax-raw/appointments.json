@@ -1,0 +1,15 @@
+{
+	"dealer_id": {
+		"$exist": true
+	},
+	"customer_id": {
+		"$exist": true
+	},
+	"sales_appointment": {
+		"appointment": {
+			"appointment_id": {
+				"$exist": true
+			}
+		}
+	}
+}

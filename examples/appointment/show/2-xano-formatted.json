@@ -1,0 +1,67 @@
+{
+  "event": "promax_websocket.appointments",
+  "event_type": "shown",
+  "event_version": "1.4",
+  "hookdeck_sent_at": "2026-02-07T15:19:27.648Z",
+  "websocket_uuid": "016710b3-2340-205d-499d-1bb04f6aed9a",
+  "promax_websocket_timestamp": 1770477562992,
+  "payload_hash": "91ac161aa27f753c0eaaafc8bd356133fb66ac30ca7a6aaa13bf6f881024d7b3",
+  "customer_id": 178872342,
+  "dealer_id": 4303,
+  "appointment_id": 3268799114,
+  "promax_customer": {
+    "id": 178872342,
+    "dealer_id": 4303,
+    "primary_tier": 1,
+    "last_primary_tier_event": 1770477562992,
+    "last_appt_updated_at": 1770477562992,
+    "field_last_received_at": {
+      "dealer_id": 1770477562992,
+      "primary_tier": 1770477562992,
+      "last_primary_tier_event": 1770477562992,
+      "last_appt_updated_at": 1770477562992
+    },
+    "field_last_received_by": {
+      "dealer_id": "016710b3-2340-205d-499d-1bb04f6aed9a",
+      "primary_tier": "016710b3-2340-205d-499d-1bb04f6aed9a",
+      "last_primary_tier_event": "016710b3-2340-205d-499d-1bb04f6aed9a",
+      "last_appt_updated_at": "016710b3-2340-205d-499d-1bb04f6aed9a"
+    }
+  },
+  "promax_appointment": {
+    "id": 3268799114,
+    "dealer_id": 4303,
+    "customer_id": 178872342,
+    "status": "Shown",
+    "status_updated_at": 1770477562992
+  },
+  "promax_appointment_update": {
+    "id": "016710b3-2340-205d-499d-1bb04f6aed9a",
+    "websocket_timestamp": 1770477562992,
+    "dealer_id": 4303,
+    "customer_id": 178872342,
+    "appointment_id": 3268799114,
+    "status": "Shown",
+    "date_time": "2026-02-07T15:19:22Z"
+  },
+  "promax_customer_last_activity": {
+    "id": 178872342,
+    "dealer_id": 4303,
+    "last_appt_shown": 1770477562992
+  },
+  "original_payload": {
+    "customer_id": 178872342,
+    "dealer_id": 4303,
+    "sales_appointment": {
+      "appointment": {
+        "appointment_id": 3268799114,
+        "appointment_status": {
+          "status": "Shown"
+        },
+        "date_time": "2026-02-07T15:19:22Z",
+        "status": "Shown"
+      }
+    },
+    "timestamp": 1770477562992
+  }
+}

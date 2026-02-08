@@ -1,50 +1,61 @@
 {
   "event": "promax_websocket.communications",
-  "event_type": "user_note",
+  "event_type": "text",
   "event_version": "2.7",
-  "hookdeck_sent_at": "2026-02-07T20:23:24.802Z",
-  "websocket_uuid": "594cdea0-d14c-a1b4-b4e2-3cdb58afd5b0",
-  "promax_websocket_timestamp": 1770495800017,
-  "payload_hash": "a0359767d3bc3cb02af9bc77d929f90abde8b494c08beabddf5fb7bfdeceb52c",
-  "customer_id": 185230286,
-  "dealer_id": 4297,
+  "hookdeck_sent_at": "2026-02-08T01:00:14.411Z",
+  "websocket_uuid": "c28e2318-f1f3-0d70-b65e-63ab09f94be3",
+  "promax_websocket_timestamp": 1770512410716,
+  "payload_hash": "e625de6c3447819d1cd165e9c8ecf0945066142d2c6196bdc8d0e46fa2b1d98b",
+  "customer_id": 176473365,
+  "dealer_id": 8981,
   "promax_customer": {
-    "id": 185230286,
-    "dealer_id": 4297,
+    "id": 176473365,
+    "dealer_id": 8981,
+    "last_ib_sms": "2026-02-08T00:59:00Z",
+    "primary_tier": 2,
+    "last_primary_tier_event": "2026-02-08T00:59:00Z",
     "field_last_received_at": {
-      "dealer_id": 1770495800017
+      "dealer_id": 1770512410716,
+      "last_ib_sms": 1770512410716,
+      "primary_tier": 1770512410716,
+      "last_primary_tier_event": 1770512410716
     },
     "field_last_received_by": {
-      "dealer_id": "594cdea0-d14c-a1b4-b4e2-3cdb58afd5b0"
+      "dealer_id": "c28e2318-f1f3-0d70-b65e-63ab09f94be3",
+      "last_ib_sms": "c28e2318-f1f3-0d70-b65e-63ab09f94be3",
+      "primary_tier": "c28e2318-f1f3-0d70-b65e-63ab09f94be3",
+      "last_primary_tier_event": "c28e2318-f1f3-0d70-b65e-63ab09f94be3"
     }
   },
   "promax_communication": {
-    "id": "594cdea0-d14c-a1b4-b4e2-3cdb58afd5b0",
-    "occurred_at": "2026-02-07T20:23:00Z",
-    "customer_id": 185230286,
-    "dealer_id": 4297,
-    "employee_id": 8911499,
-    "body": "DIDNT PULL \r\nREGISTRATION DENIAL"
+    "id": "c28e2318-f1f3-0d70-b65e-63ab09f94be3",
+    "occurred_at": "2026-02-08T00:59:00Z",
+    "customer_id": 176473365,
+    "dealer_id": 8981,
+    "employee_id": 9036256,
+    "direction": "inbound",
+    "body": "I never received the warranty documentation for the new engine installed between December 15th, 2025-January 8th 2026. I also reported a check engine light immediately after installation and did not receive a response. The vehicle now has a significant rear main seal oil leak. Please advise on warranty coverage and next steps for repair."
   },
   "promax_customer_last_activity": {
-    "id": 185230286,
-    "dealer_id": 4297,
-    "last_user_note": 1770495800017
+    "id": 176473365,
+    "dealer_id": 8981,
+    "last_ib_sms": 1770512410716
   },
   "original_payload": {
     "communications": {
-      "customer_id": 185230286,
-      "employee_id": 8911499,
+      "customer_id": 176473365,
+      "employee_id": 9036256,
       "messages": [
         {
-          "body": "DIDNT PULL \r\nREGISTRATION DENIAL",
-          "date_time": "2026-02-07T20:23:00Z",
-          "type": "Note"
+          "body": "I never received the warranty documentation for the new engine installed between December 15th, 2025-January 8th 2026. I also reported a check engine light immediately after installation and did not receive a response. The vehicle now has a significant rear main seal oil leak. Please advise on warranty coverage and next steps for repair.",
+          "date_time": "2026-02-08T00:59:00Z",
+          "direction": "Incoming",
+          "type": "Text"
         }
       ]
     },
-    "customer_id": 185230286,
-    "dealer_id": 4297,
-    "timestamp": 1770495800017
+    "customer_id": 176473365,
+    "dealer_id": 8981,
+    "timestamp": 1770512410716
   }
 }

@@ -1,16 +1,17 @@
 {
   "communications": {
-    "customer_id": 185230286,
-    "employee_id": 8911499,
+    "customer_id": 176473365,
+    "employee_id": 9036256,
     "messages": [
       {
-        "body": "DIDNT PULL \r\nREGISTRATION DENIAL",
-        "date_time": "2026-02-07T20:23:00Z",
-        "type": "Note"
+        "body": "I never received the warranty documentation for the new engine installed between December 15th, 2025-January 8th 2026. I also reported a check engine light immediately after installation and did not receive a response. The vehicle now has a significant rear main seal oil leak. Please advise on warranty coverage and next steps for repair.",
+        "date_time": "2026-02-08T00:59:00Z",
+        "direction": "Incoming",
+        "type": "Text"
       }
     ]
   },
-  "customer_id": 185230286,
-  "dealer_id": 4297,
-  "timestamp": 1770495800017
+  "customer_id": 176473365,
+  "dealer_id": 8981,
+  "timestamp": 1770512410716
 }

@@ -1,0 +1,11 @@
+{
+	"dealer_id": {
+		"$exist": true
+	},
+	"customer_id": {
+		"$exist": true
+	},
+	"showroom_visit": {
+		"$exist": true
+	}
+}

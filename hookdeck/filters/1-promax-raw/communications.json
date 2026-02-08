@@ -1,0 +1,27 @@
+{
+	"dealer_id": {
+		"$exist": true
+	},
+	"customer_id": {
+		"$exist": true
+	},
+	"communications": {
+		"messages": {
+			"type": {
+				"$or": [
+					"Text",
+					"Phone",
+					"Email",
+					"Lead",
+					"Note"
+				]
+			},
+			"date_time": {
+				"$exist": true
+			}
+		},
+		"customer_id": {
+			"$exist": true
+		}
+	}
+}

@@ -1,17 +1,17 @@
 {
   "communications": {
-    "customer_id": 185204136,
+    "customer_id": 184558810,
     "employee_id": 9062078,
     "messages": [
       {
-        "body": "Sorry to hear that.  Take care of yourself man.  Get well soon..  Vince",
-        "date_time": "2026-02-08T01:31:00Z",
+        "body": "Are you still in the market?  YES / NO..  Just want to be courteous of my customer time.  If you are not interested, I dont want to keep bothering you.. Thank you very much, Vince West (Sent using (844)304-0982)",
+        "date_time": "2026-02-08T01:29:00Z",
         "direction": "Outgoing",
         "type": "Text"
       }
     ]
   },
-  "customer_id": 185204136,
+  "customer_id": 184558810,
   "dealer_id": 6702,
-  "timestamp": 1770514263828
+  "timestamp": 1770514194759
 }

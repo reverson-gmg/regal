@@ -1,0 +1,55 @@
+{
+  "event": "promax_websocket.communications",
+  "event_type": "call_recording_note",
+  "event_version": "2.7",
+  "hookdeck_sent_at": "2026-02-07T22:00:58.626Z",
+  "websocket_uuid": "ea2b1122-c585-ad5d-2b8a-ca26038cecf2",
+  "promax_websocket_timestamp": 1770501656191,
+  "payload_hash": "49fd407ad689f4536f7793eeda31973284e27e14c0d8b0cb906766d0c19940b1",
+  "customer_id": 185227602,
+  "dealer_id": 9099,
+  "promax_customer": {
+    "id": 185227602,
+    "dealer_id": 9099,
+    "field_last_received_at": {
+      "dealer_id": 1770501656191
+    },
+    "field_last_received_by": {
+      "dealer_id": "ea2b1122-c585-ad5d-2b8a-ca26038cecf2"
+    }
+  },
+  "promax_communication": {
+    "id": "ea2b1122-c585-ad5d-2b8a-ca26038cecf2",
+    "occurred_at": "2026-02-07T22:00:09Z",
+    "customer_id": 185227602,
+    "dealer_id": 9099,
+    "direction": "outbound",
+    "talk_time": 33,
+    "disposition": "voicemail",
+    "from_number": "4174349389",
+    "to_number": "4173967195",
+    "recording_link": "https://mchx.io/bXgMgXg.mp3"
+  },
+  "promax_customer_last_activity": {
+    "id": 185227602,
+    "dealer_id": 9099,
+    "last_call_recording_note": 1770501656191
+  },
+  "original_payload": {
+    "communications": {
+      "customer_id": 185227602,
+      "employee_id": 0,
+      "messages": [
+        {
+          "body": "DurationSeconds:33\r\nCallDnaClassification:VoiceMail\r\nClickToCallAgentNumber:+14173967195\r\nClickToCallForwardNumber:+14173967195\r\nDisplayCallerId:+14174349389\r\nCustomerId:185227602\r\nKeyword:\r\n\r\nCallAudioURL:https://mchx.io/bXgMgXg.mp3",
+          "date_time": "2026-02-07T22:00:09Z",
+          "direction": "Outgoing",
+          "type": "Note"
+        }
+      ]
+    },
+    "customer_id": 185227602,
+    "dealer_id": 9099,
+    "timestamp": 1770501656191
+  }
+}

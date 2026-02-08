@@ -1,0 +1,54 @@
+{
+  "event": "promax_websocket.communications",
+  "event_type": "email",
+  "event_version": "2.7",
+  "hookdeck_sent_at": "2026-02-08T01:28:30.233Z",
+  "websocket_uuid": "83c51772-19d6-ff74-270a-440935cf652d",
+  "promax_websocket_timestamp": 1770514107574,
+  "payload_hash": "2fcaa6796b9085be3f2b6719429a061d850b7237c05b685fe584f2b53559432a",
+  "customer_id": 185173370,
+  "dealer_id": 6702,
+  "promax_customer": {
+    "id": 185173370,
+    "dealer_id": 6702,
+    "field_last_received_at": {
+      "dealer_id": 1770514107574
+    },
+    "field_last_received_by": {
+      "dealer_id": "83c51772-19d6-ff74-270a-440935cf652d"
+    }
+  },
+  "promax_communication": {
+    "id": "83c51772-19d6-ff74-270a-440935cf652d",
+    "occurred_at": "2026-02-08T01:28:00Z",
+    "customer_id": 185173370,
+    "dealer_id": 6702,
+    "employee_id": 9062078,
+    "direction": "outbound",
+    "subject": "Great Auto Financing Opportunities",
+    "body": "Rightway Automotive Credit - Vandalia • 410 West National Rd • VanDalia, OH 45377 (937)280-0982 • www.rightway.com 02/07/26 Mackenzie Minnich 464 Heather Street Englewood, OH 45322 Greetings from Rightway Automotive Credit. Today, there are great opportunities for auto financing at Rightway Automotive Credit - Vandalia. We have many different banks to finance you and we are looking to help you get into the vehicle of your choice. We also offer a credit restoration program to help you get on your way to better credit. Here at Rightway we have a diverse stock, from vans and SUV's to small and medium size cars. We inspect all our vehicles with a 70-point inspection to make sure they are free from any safety defects. With every vehicle purchase we offer a 6 month/6,000 mile power-train service contract, and 1 year of 24/7 roadside assistance included. When you sit at my desk I can offer you a no-obligation credit check, and I will work hard to get you into the car of your choice. Please call me for an appointment today. Sincerely, Vince West Salesperson VWest@rightway.com"
+  },
+  "promax_customer_last_activity": {
+    "id": 185173370,
+    "dealer_id": 6702,
+    "last_ob_email": 1770514107574
+  },
+  "original_payload": {
+    "communications": {
+      "customer_id": 185173370,
+      "employee_id": 9062078,
+      "messages": [
+        {
+          "body": "  Rightway Automotive Credit - Vandalia &bull; 410 West National Rd &bull; VanDalia, OH 45377 (937)280-0982 &bull; www.rightway.com   02/07/26   Mackenzie Minnich 464 Heather Street Englewood, OH 45322    Greetings from Rightway Automotive Credit.   Today, there are great opportunities for auto financing at Rightway Automotive Credit - Vandalia. We have many different banks to finance you and we are looking to help you get into the vehicle of your choice. We also offer a credit restoration program to help you get on your way to better credit.    Here at Rightway we have a diverse stock, from vans and SUV&#39;s to small and medium size cars. We inspect all our vehicles with a 70-point inspection to make sure they are free from any safety defects. With every vehicle purchase we offer a 6 month/6,000 mile power-train service contract, and 1 year of 24/7 roadside assistance included.   When you sit at my desk I can offer you a no-obligation credit check, and I will work hard to get you into the car of your choice.   Please call me for an appointment today.  Sincerely,  Vince West Salesperson VWest@rightway.com",
+          "date_time": "2026-02-08T01:28:00Z",
+          "direction": "Outgoing",
+          "subject": "Great Auto Financing Opportunities",
+          "type": "Email"
+        }
+      ]
+    },
+    "customer_id": 185173370,
+    "dealer_id": 6702,
+    "timestamp": 1770514107574
+  }
+}
