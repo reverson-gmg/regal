@@ -1,0 +1,58 @@
+{
+  "event": "promax_websocket.appointments",
+  "event_type": "cancelled",
+  "event_version": "1.4",
+  "hookdeck_sent_at": "2026-02-07T15:12:47.498Z",
+  "websocket_uuid": "eab5382e-6c2b-17d4-00e3-a0924ba695c1",
+  "promax_websocket_timestamp": 1770477163356,
+  "payload_hash": "cf8967773b8ebba8bfe943c94708f37ac0f80a55b4e01ed1dd4f4ede0b4d5c62",
+  "customer_id": 184370773,
+  "dealer_id": 8850,
+  "appointment_id": 3255885473,
+  "promax_customer": {
+    "id": 184370773,
+    "dealer_id": 8850,
+    "field_last_received_at": {
+      "dealer_id": 1770477163356
+    },
+    "field_last_received_by": {
+      "dealer_id": "eab5382e-6c2b-17d4-00e3-a0924ba695c1"
+    }
+  },
+  "promax_appointment": {
+    "id": 3255885473,
+    "dealer_id": 8850,
+    "customer_id": 184370773,
+    "status": "Cancelled",
+    "status_updated_at": 1770477163356
+  },
+  "promax_appointment_update": {
+    "id": "eab5382e-6c2b-17d4-00e3-a0924ba695c1",
+    "websocket_timestamp": 1770477163356,
+    "dealer_id": 8850,
+    "customer_id": 184370773,
+    "appointment_id": 3255885473,
+    "status": "Cancelled",
+    "date_time": "2026-02-07T15:12:43Z"
+  },
+  "promax_customer_last_activity": {
+    "id": 184370773,
+    "dealer_id": 8850,
+    "last_appt_cancelled": 1770477163356
+  },
+  "original_payload": {
+    "customer_id": 184370773,
+    "dealer_id": 8850,
+    "sales_appointment": {
+      "appointment": {
+        "appointment_id": 3255885473,
+        "appointment_status": {
+          "status": "Cancelled"
+        },
+        "date_time": "2026-02-07T15:12:43Z",
+        "status": "Cancelled"
+      }
+    },
+    "timestamp": 1770477163356
+  }
+}

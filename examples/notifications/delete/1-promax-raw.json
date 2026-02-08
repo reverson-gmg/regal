@@ -1,0 +1,11 @@
+{
+  "customer_id": 185242127,
+  "dealer_id": 4867,
+  "notifications": [
+    {
+      "code": 1004,
+      "message": "Customer has been deleted"
+    }
+  ],
+  "timestamp": 1770514229760
+}

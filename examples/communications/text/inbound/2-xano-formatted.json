@@ -1,0 +1,61 @@
+{
+  "event": "promax_websocket.communications",
+  "event_type": "text",
+  "event_version": "2.7",
+  "hookdeck_sent_at": "2026-02-08T01:00:14.411Z",
+  "websocket_uuid": "c28e2318-f1f3-0d70-b65e-63ab09f94be3",
+  "promax_websocket_timestamp": 1770512410716,
+  "payload_hash": "e625de6c3447819d1cd165e9c8ecf0945066142d2c6196bdc8d0e46fa2b1d98b",
+  "customer_id": 176473365,
+  "dealer_id": 8981,
+  "promax_customer": {
+    "id": 176473365,
+    "dealer_id": 8981,
+    "last_ib_sms": "2026-02-08T00:59:00Z",
+    "primary_tier": 2,
+    "last_primary_tier_event": "2026-02-08T00:59:00Z",
+    "field_last_received_at": {
+      "dealer_id": 1770512410716,
+      "last_ib_sms": 1770512410716,
+      "primary_tier": 1770512410716,
+      "last_primary_tier_event": 1770512410716
+    },
+    "field_last_received_by": {
+      "dealer_id": "c28e2318-f1f3-0d70-b65e-63ab09f94be3",
+      "last_ib_sms": "c28e2318-f1f3-0d70-b65e-63ab09f94be3",
+      "primary_tier": "c28e2318-f1f3-0d70-b65e-63ab09f94be3",
+      "last_primary_tier_event": "c28e2318-f1f3-0d70-b65e-63ab09f94be3"
+    }
+  },
+  "promax_communication": {
+    "id": "c28e2318-f1f3-0d70-b65e-63ab09f94be3",
+    "occurred_at": "2026-02-08T00:59:00Z",
+    "customer_id": 176473365,
+    "dealer_id": 8981,
+    "employee_id": 9036256,
+    "direction": "inbound",
+    "body": "I never received the warranty documentation for the new engine installed between December 15th, 2025-January 8th 2026. I also reported a check engine light immediately after installation and did not receive a response. The vehicle now has a significant rear main seal oil leak. Please advise on warranty coverage and next steps for repair."
+  },
+  "promax_customer_last_activity": {
+    "id": 176473365,
+    "dealer_id": 8981,
+    "last_ib_sms": 1770512410716
+  },
+  "original_payload": {
+    "communications": {
+      "customer_id": 176473365,
+      "employee_id": 9036256,
+      "messages": [
+        {
+          "body": "I never received the warranty documentation for the new engine installed between December 15th, 2025-January 8th 2026. I also reported a check engine light immediately after installation and did not receive a response. The vehicle now has a significant rear main seal oil leak. Please advise on warranty coverage and next steps for repair.",
+          "date_time": "2026-02-08T00:59:00Z",
+          "direction": "Incoming",
+          "type": "Text"
+        }
+      ]
+    },
+    "customer_id": 176473365,
+    "dealer_id": 8981,
+    "timestamp": 1770512410716
+  }
+}

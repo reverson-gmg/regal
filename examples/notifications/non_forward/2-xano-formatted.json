@@ -1,0 +1,51 @@
+{
+  "event": "promax_websocket.notification",
+  "event_type": "non_forward",
+  "event_version": "2.7",
+  "hookdeck_sent_at": "2026-02-07T20:26:40.000Z",
+  "websocket_uuid": "b3c4d5e6-f7a8-9b0c-1d2e-3f4a5b6c7d8e",
+  "promax_websocket_timestamp": 1770496000000,
+  "payload_hash": "e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8e0f2a4b6c8d0e2f4a6b8c0d2e4",
+  "customer_id": 185230286,
+  "dealer_id": 4297,
+  "promax_customer": {
+    "id": 185230286,
+    "dealer_id": 4297,
+    "lead_source_id": 115200,
+    "non_forwardable": true,
+    "field_last_received_at": {
+      "dealer_id": 1770496000000,
+      "lead_source_id": 1770496000000,
+      "non_forwardable": 1770496000000
+    },
+    "field_last_received_by": {
+      "dealer_id": "b3c4d5e6-f7a8-9b0c-1d2e-3f4a5b6c7d8e",
+      "lead_source_id": "b3c4d5e6-f7a8-9b0c-1d2e-3f4a5b6c7d8e",
+      "non_forwardable": "b3c4d5e6-f7a8-9b0c-1d2e-3f4a5b6c7d8e"
+    }
+  },
+  "promax_notification_non_forward": {
+    "id": "b3c4d5e6-f7a8-9b0c-1d2e-3f4a5b6c7d8e",
+    "occurred_at": 1770496000000,
+    "code_id": 1001,
+    "customer_id": 185230286,
+    "dealer_id": 4297,
+    "lead_source_id": 115200
+  },
+  "original_payload": {
+    "customer_id": 185230286,
+    "dealer_id": 4297,
+    "notifications": [
+      {
+        "code": 1001,
+        "message": "Customer assigned non-forwardable lead source",
+        "updates": {
+          "non_forward": {
+            "lead_source_id": 115200
+          }
+        }
+      }
+    ],
+    "timestamp": 1770496000000
+  }
+}

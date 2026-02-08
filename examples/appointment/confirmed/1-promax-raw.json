@@ -1,0 +1,29 @@
+{
+  "customer_id": 185066036,
+  "dealer_id": 4599,
+  "sales_appointment": {
+    "appointment": {
+      "appointment_id": 3268794548,
+      "appointment_status": {
+        "status": "Current"
+      },
+      "comments": "Appt for Rebecca Holm",
+      "confirmed_status": {
+        "confirmed": true,
+        "dealer_parties": {
+          "employee_id": 9043933,
+          "first_name": "Marshall",
+          "last_name": "Lotts"
+        }
+      },
+      "date_time": "2026-02-07T18:00:00Z",
+      "set_via": "Phone"
+    },
+    "dealer_parties": {
+      "employee_id": 9043933,
+      "first_name": "Marshall",
+      "last_name": "Lotts"
+    }
+  },
+  "timestamp": 1770478658160
+}

@@ -1,0 +1,17 @@
+{
+  "customer_id": 185242157,
+  "dealer_id": 4867,
+  "notifications": [
+    {
+      "code": 1002,
+      "message": "Customer has been merged",
+      "updates": {
+        "merge": {
+          "new_customer_id": 185242121,
+          "new_lead_source_id": 117800
+        }
+      }
+    }
+  ],
+  "timestamp": 1770514414896
+}

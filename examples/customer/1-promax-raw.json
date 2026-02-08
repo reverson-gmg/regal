@@ -1,0 +1,46 @@
+{
+  "customer": {
+    "account_type": "person",
+    "ad_source": "Battle Creek",
+    "block_email": false,
+    "block_letters": false,
+    "block_text": true,
+    "customer_id": 185241644,
+    "dealer_parties": [
+      {
+        "employee_id": 8741210,
+        "first_name": "Imported",
+        "last_name": "Leads",
+        "party_type": "SalesRep1"
+      }
+    ],
+    "lead_source": "Web - Credit App Complete",
+    "lead_source_id": 117800,
+    "person": {
+      "address": [
+        {
+          "address_type": "Current",
+          "city": "Nashville",
+          "line_one": "6651 South Clark Road",
+          "state": "MI",
+          "zip_code": "49073"
+        }
+      ],
+      "communications": [
+        {
+          "communication_type": "CellPhone",
+          "complete_number": "2694199470"
+        },
+        {
+          "communication_type": "PrimaryEmail",
+          "email_address": "Jenniecook0630@gmail.com"
+        }
+      ],
+      "first_name": "Jennie",
+      "last_name": "Cook"
+    }
+  },
+  "customer_id": 185241644,
+  "dealer_id": 4867,
+  "timestamp": 1770511794724
+}

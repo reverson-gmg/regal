@@ -1,0 +1,65 @@
+{
+  "event": "promax_websocket.service_appointment",
+  "event_version": "2.7",
+  "hookdeck_sent_at": "2026-02-08T00:18:20.000Z",
+  "websocket_uuid": "a7c3e912-4d8f-6b2a-e341-8f2d5c7a9e10",
+  "promax_websocket_timestamp": 1770509900000,
+  "payload_hash": "b2d4f6a8c0e2d4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8e0f2a4b6c8d0e2",
+  "customer_id": 185145957,
+  "dealer_id": 4141,
+  "service_appointment_id": 88401295,
+  "promax_customer": {
+    "id": 185145957,
+    "dealer_id": 4141,
+    "primary_tier": 2,
+    "last_primary_tier_event": 1770509900000,
+    "last_service_appt_scheduled_for": "2026-02-12T14:00:00Z",
+    "last_service_appt_updated_at": 1770509900000,
+    "field_last_received_at": {
+      "dealer_id": 1770509900000,
+      "primary_tier": 1770509900000,
+      "last_primary_tier_event": 1770509900000,
+      "last_service_appt_scheduled_for": 1770509900000,
+      "last_service_appt_updated_at": 1770509900000
+    },
+    "field_last_received_by": {
+      "dealer_id": "a7c3e912-4d8f-6b2a-e341-8f2d5c7a9e10",
+      "primary_tier": "a7c3e912-4d8f-6b2a-e341-8f2d5c7a9e10",
+      "last_primary_tier_event": "a7c3e912-4d8f-6b2a-e341-8f2d5c7a9e10",
+      "last_service_appt_scheduled_for": "a7c3e912-4d8f-6b2a-e341-8f2d5c7a9e10",
+      "last_service_appt_updated_at": "a7c3e912-4d8f-6b2a-e341-8f2d5c7a9e10"
+    }
+  },
+  "promax_service_appointment": {
+    "id": 88401295,
+    "dealer_id": 4141,
+    "customer_id": 185145957,
+    "scheduled_for": "2026-02-12T14:00:00Z",
+    "scheduled_at": 1770509900000,
+    "scheduled_by": 9037373,
+    "comments": "30k mile service - oil change, tire rotation, brake inspection"
+  },
+  "promax_customer_last_activity": {
+    "id": 185145957,
+    "dealer_id": 4141,
+    "last_service_appt_scheduled_for": "2026-02-12T14:00:00Z",
+    "last_service_appt_set": 1770509900000
+  },
+  "original_payload": {
+    "customer_id": 185145957,
+    "dealer_id": 4141,
+    "service_appointment": {
+      "appointment": {
+        "comments": "30k mile service - oil change, tire rotation, brake inspection",
+        "date_time": "2026-02-12T14:00:00Z",
+        "id": 88401295
+      },
+      "dealer_parties": {
+        "employee_id": 9037373,
+        "first_name": "David",
+        "last_name": "Martinez"
+      }
+    },
+    "timestamp": 1770509900000
+  }
+}

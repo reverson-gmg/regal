@@ -1,0 +1,140 @@
+{
+  "event": "promax_websocket.customer",
+  "event_version": "2.7",
+  "hookdeck_sent_at": "2026-02-08T00:49:58.847Z",
+  "websocket_uuid": "2694f4da-5de3-820c-6813-9633619d4cab",
+  "promax_websocket_timestamp": 1770511794724,
+  "payload_hash": "f003d5579dd6e6ff520b198565e6f0870cbd4081ce90d23e441aed1adb315804",
+  "customer_id": 185241644,
+  "dealer_id": 4867,
+  "regal_contact": {
+    "id": "0e4bfe59-083c-ea1e-f5f3-7b154b066659",
+    "external_id": "cook_2694199470",
+    "last_name_normalized": "cook",
+    "phone": "2694199470"
+  },
+  "promax_customer": {
+    "id": 185241644,
+    "dealer_id": 4867,
+    "primary_tier": 4,
+    "last_primary_tier_event": 1770511794724,
+    "last_customer_update": 1770511794724,
+    "regal_external_id": "cook_2694199470",
+    "regal_external_uuid": "0e4bfe59-083c-ea1e-f5f3-7b154b066659",
+    "first_name": "Jennie",
+    "last_name": "Cook",
+    "last_name_normalized": "cook",
+    "cell_phone": "2694199470",
+    "primary_email": "Jenniecook0630@gmail.com",
+    "lead_source": "Web - Credit App Complete",
+    "lead_source_id": 117800,
+    "ad_source": "Battle Creek",
+    "sales_rep_1": 8741210,
+    "curr_addr_street": "6651 South Clark Road",
+    "curr_addr_city": "Nashville",
+    "curr_addr_state": "MI",
+    "curr_addr_zip_code": "49073",
+    "block_text": true,
+    "block_email": false,
+    "block_letters": false,
+    "field_last_received_at": {
+      "dealer_id": 1770511794724,
+      "primary_tier": 1770511794724,
+      "last_primary_tier_event": 1770511794724,
+      "last_customer_update": 1770511794724,
+      "regal_external_id": 1770511794724,
+      "regal_external_uuid": 1770511794724,
+      "first_name": 1770511794724,
+      "last_name": 1770511794724,
+      "last_name_normalized": 1770511794724,
+      "cell_phone": 1770511794724,
+      "primary_email": 1770511794724,
+      "lead_source": 1770511794724,
+      "lead_source_id": 1770511794724,
+      "ad_source": 1770511794724,
+      "sales_rep_1": 1770511794724,
+      "curr_addr_street": 1770511794724,
+      "curr_addr_city": 1770511794724,
+      "curr_addr_state": 1770511794724,
+      "curr_addr_zip_code": 1770511794724,
+      "block_text": 1770511794724,
+      "block_email": 1770511794724,
+      "block_letters": 1770511794724
+    },
+    "field_last_received_by": {
+      "dealer_id": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "primary_tier": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "last_primary_tier_event": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "last_customer_update": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "regal_external_id": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "regal_external_uuid": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "first_name": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "last_name": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "last_name_normalized": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "cell_phone": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "primary_email": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "lead_source": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "lead_source_id": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "ad_source": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "sales_rep_1": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "curr_addr_street": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "curr_addr_city": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "curr_addr_state": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "curr_addr_zip_code": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "block_text": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "block_email": "2694f4da-5de3-820c-6813-9633619d4cab",
+      "block_letters": "2694f4da-5de3-820c-6813-9633619d4cab"
+    }
+  },
+  "promax_lead_source": {
+    "id": 117800,
+    "dealer_id": 4867,
+    "name": "Web - Credit App Complete"
+  },
+  "original_payload": {
+    "customer": {
+      "account_type": "person",
+      "ad_source": "Battle Creek",
+      "block_email": false,
+      "block_letters": false,
+      "block_text": true,
+      "customer_id": 185241644,
+      "dealer_parties": [
+        {
+          "employee_id": 8741210,
+          "first_name": "Imported",
+          "last_name": "Leads",
+          "party_type": "SalesRep1"
+        }
+      ],
+      "lead_source": "Web - Credit App Complete",
+      "lead_source_id": 117800,
+      "person": {
+        "address": [
+          {
+            "address_type": "Current",
+            "city": "Nashville",
+            "line_one": "6651 South Clark Road",
+            "state": "MI",
+            "zip_code": "49073"
+          }
+        ],
+        "communications": [
+          {
+            "communication_type": "CellPhone",
+            "complete_number": "2694199470"
+          },
+          {
+            "communication_type": "PrimaryEmail",
+            "email_address": "Jenniecook0630@gmail.com"
+          }
+        ],
+        "first_name": "Jennie",
+        "last_name": "Cook"
+      }
+    },
+    "customer_id": 185241644,
+    "dealer_id": 4867,
+    "timestamp": 1770511794724
+  }
+}

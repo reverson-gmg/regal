@@ -1,0 +1,69 @@
+{
+  "event": "promax_websocket.status",
+  "event_version": "2.7",
+  "hookdeck_sent_at": "2026-02-08T00:13:27.757Z",
+  "websocket_uuid": "f10e9159-8b1e-6659-a362-a39150493352",
+  "promax_websocket_timestamp": 1770509607196,
+  "payload_hash": "a46cdeb0fe0be80ad9bcad7caacf2bedc22911b4178be389bca76e32a11e9cf9",
+  "customer_id": 185223564,
+  "dealer_id": 4141,
+  "promax_customer": {
+    "id": 185223564,
+    "dealer_id": 4141,
+    "customer_status": "Rw-Need $ / Co-X",
+    "customer_status_id": 62127,
+    "lead_status": "Contacted",
+    "lead_status_id": 3,
+    "primary_tier": "4",
+    "last_primary_tier_event": 1770509607196,
+    "field_last_received_at": {
+      "dealer_id": 1770509607196,
+      "customer_status": 1770509607196,
+      "customer_status_id": 1770509607196,
+      "lead_status": 1770509607196,
+      "lead_status_id": 1770509607196,
+      "primary_tier": 1770509607196,
+      "last_primary_tier_event": 1770509607196
+    },
+    "field_last_received_by": {
+      "dealer_id": "f10e9159-8b1e-6659-a362-a39150493352",
+      "customer_status": "f10e9159-8b1e-6659-a362-a39150493352",
+      "customer_status_id": "f10e9159-8b1e-6659-a362-a39150493352",
+      "lead_status": "f10e9159-8b1e-6659-a362-a39150493352",
+      "lead_status_id": "f10e9159-8b1e-6659-a362-a39150493352",
+      "primary_tier": "f10e9159-8b1e-6659-a362-a39150493352",
+      "last_primary_tier_event": "f10e9159-8b1e-6659-a362-a39150493352"
+    }
+  },
+  "promax_status": [
+    {
+      "id": 62127,
+      "type": "Customer",
+      "name": "Rw-Need $ / Co-X",
+      "dealer_id": 4141
+    },
+    {
+      "id": 3,
+      "type": "Lead",
+      "name": "Contacted"
+    }
+  ],
+  "promax_customer_last_activity": {
+    "id": 185223564,
+    "dealer_id": 4141,
+    "last_customer_status_update": 1770509607196,
+    "last_lead_status_update": 1770509607196
+  },
+  "original_payload": {
+    "customer_id": 185223564,
+    "customer_status": {
+      "customer_id": 185223564,
+      "customer_status": "Rw-Need $ / Co-X",
+      "customer_status_id": 62127,
+      "lead_status": "Contacted",
+      "lead_status_id": 3
+    },
+    "dealer_id": 4141,
+    "timestamp": 1770509607196
+  }
+}

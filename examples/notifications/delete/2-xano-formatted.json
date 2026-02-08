@@ -1,0 +1,45 @@
+{
+  "event": "promax_websocket.notification",
+  "event_type": "delete",
+  "event_version": "2.7",
+  "hookdeck_sent_at": "2026-02-08T01:30:30.000Z",
+  "websocket_uuid": "d5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0",
+  "promax_websocket_timestamp": 1770514229760,
+  "payload_hash": "f5a7b9c1d3e5f7a9b1c3d5e7f9a1b3c5d7e9f1a3b5c7d9e1f3a5b7c9d1e3f5",
+  "customer_id": 185242127,
+  "dealer_id": 4867,
+  "promax_customer": {
+    "id": 185242127,
+    "dealer_id": 4867,
+    "deleted": true,
+    "deleted_at": 1770514229760,
+    "field_last_received_at": {
+      "dealer_id": 1770514229760,
+      "deleted": 1770514229760,
+      "deleted_at": 1770514229760
+    },
+    "field_last_received_by": {
+      "dealer_id": "d5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0",
+      "deleted": "d5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0",
+      "deleted_at": "d5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0"
+    }
+  },
+  "promax_notification_delete": {
+    "id": "d5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0",
+    "occurred_at": 1770514229760,
+    "code_id": 1004,
+    "customer_id": 185242127,
+    "dealer_id": 4867
+  },
+  "original_payload": {
+    "customer_id": 185242127,
+    "dealer_id": 4867,
+    "notifications": [
+      {
+        "code": 1004,
+        "message": "Customer has been deleted"
+      }
+    ],
+    "timestamp": 1770514229760
+  }
+}

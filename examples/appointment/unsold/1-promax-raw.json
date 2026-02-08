@@ -1,0 +1,14 @@
+{
+  "customer_id": 185014616,
+  "dealer_id": 8871,
+  "sales_appointment": {
+    "appointment": {
+      "appointment_id": 3263490010,
+      "appointment_status": {
+        "status": "Unsold"
+      },
+      "date_time": "2026-01-24T17:33:48Z"
+    }
+  },
+  "timestamp": 1769276028865
+}

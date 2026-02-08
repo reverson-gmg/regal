@@ -1,0 +1,17 @@
+{
+  "communications": {
+    "customer_id": 183903211,
+    "employee_id": 9057085,
+    "messages": [
+      {
+        "body": "spoke with amy and informed me that she will try to come in sometime next week",
+        "date_time": "2026-02-07T20:53:00Z",
+        "direction": "Incoming",
+        "type": "Phone"
+      }
+    ]
+  },
+  "customer_id": 183903211,
+  "dealer_id": 8848,
+  "timestamp": 1770497614798
+}

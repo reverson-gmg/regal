@@ -1,0 +1,23 @@
+{
+  "customer_id": 158198223,
+  "dealer_id": 8848,
+  "sales_appointment": {
+    "appointment": {
+      "appointment_id": 3269203977,
+      "appointment_status": {
+        "status": "Current"
+      },
+      "comments": "between 4:30-5:00pm",
+      "confirmed_status": {
+        "confirmed": false
+      },
+      "date_time": "2026-02-09T22:30:00Z"
+    },
+    "dealer_parties": {
+      "employee_id": 9057085,
+      "first_name": "Joanna",
+      "last_name": "Bahena"
+    }
+  },
+  "timestamp": 1770496261116
+}

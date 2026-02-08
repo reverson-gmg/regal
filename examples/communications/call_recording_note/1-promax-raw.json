@@ -1,0 +1,17 @@
+{
+  "communications": {
+    "customer_id": 185227602,
+    "employee_id": 0,
+    "messages": [
+      {
+        "body": "DurationSeconds:33\r\nCallDnaClassification:VoiceMail\r\nClickToCallAgentNumber:+14173967195\r\nClickToCallForwardNumber:+14173967195\r\nDisplayCallerId:+14174349389\r\nCustomerId:185227602\r\nKeyword:\r\n\r\nCallAudioURL:https://mchx.io/bXgMgXg.mp3",
+        "date_time": "2026-02-07T22:00:09Z",
+        "direction": "Outgoing",
+        "type": "Note"
+      }
+    ]
+  },
+  "customer_id": 185227602,
+  "dealer_id": 9099,
+  "timestamp": 1770501656191
+}

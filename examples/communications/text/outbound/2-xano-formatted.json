@@ -1,0 +1,62 @@
+{
+  "event": "promax_websocket.communications",
+  "event_type": "text",
+  "event_version": "2.7",
+  "hookdeck_sent_at": "2026-02-08T01:29:55.380Z",
+  "websocket_uuid": "4d5b0978-29f6-082c-0ccf-180a13a17e5c",
+  "promax_websocket_timestamp": 1770514194759,
+  "payload_hash": "7afa62222e2f7432894eef6b6fa222a0df06c1c97b5097a5333f88e70ac9dc46",
+  "customer_id": 184558810,
+  "dealer_id": 6702,
+  "promax_customer": {
+    "id": 184558810,
+    "dealer_id": 6702,
+    "last_ob_sms": "2026-02-08T01:29:00Z",
+    "primary_tier": 3,
+    "last_primary_tier_event": "2026-02-08T01:29:00Z",
+    "field_last_received_at": {
+      "dealer_id": 1770514194759,
+      "last_ob_sms": 1770514194759,
+      "primary_tier": 1770514194759,
+      "last_primary_tier_event": 1770514194759
+    },
+    "field_last_received_by": {
+      "dealer_id": "4d5b0978-29f6-082c-0ccf-180a13a17e5c",
+      "last_ob_sms": "4d5b0978-29f6-082c-0ccf-180a13a17e5c",
+      "primary_tier": "4d5b0978-29f6-082c-0ccf-180a13a17e5c",
+      "last_primary_tier_event": "4d5b0978-29f6-082c-0ccf-180a13a17e5c"
+    }
+  },
+  "promax_communication": {
+    "id": "4d5b0978-29f6-082c-0ccf-180a13a17e5c",
+    "occurred_at": "2026-02-08T01:29:00Z",
+    "customer_id": 184558810,
+    "dealer_id": 6702,
+    "employee_id": 9062078,
+    "direction": "outbound",
+    "body": "Are you still in the market?  YES / NO..  Just want to be courteous of my customer time.  If you are not interested, I dont want to keep bothering you.. Thank you very much, Vince West",
+    "from_number": "8443040982"
+  },
+  "promax_customer_last_activity": {
+    "id": 184558810,
+    "dealer_id": 6702,
+    "last_ob_sms": 1770514194759
+  },
+  "original_payload": {
+    "communications": {
+      "customer_id": 184558810,
+      "employee_id": 9062078,
+      "messages": [
+        {
+          "body": "Are you still in the market?  YES / NO..  Just want to be courteous of my customer time.  If you are not interested, I dont want to keep bothering you.. Thank you very much, Vince West (Sent using (844)304-0982)",
+          "date_time": "2026-02-08T01:29:00Z",
+          "direction": "Outgoing",
+          "type": "Text"
+        }
+      ]
+    },
+    "customer_id": 184558810,
+    "dealer_id": 6702,
+    "timestamp": 1770514194759
+  }
+}

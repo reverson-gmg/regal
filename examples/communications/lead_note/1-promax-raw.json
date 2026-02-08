@@ -1,0 +1,16 @@
+{
+  "communications": {
+    "customer_id": 185242244,
+    "employee_id": 0,
+    "messages": [
+      {
+        "body": "Original Message: \r\nStephanie Cooper just started a credit app at RightWay Madison Heights, MI - they're getting serious and want to get approved for a vehicle. Has poor credit (below 600), no trade-in, and wants payments under $300/mo.\r\n---\r\nLead Source: Web - Credit App Incomplete\r\nAd Source: Madison Heights\r\nLead Score: 20\r\n----\r\n[CONTACT INFO]\r\nFirst Name: Stephanie\r\nLast Name: Cooper\r\nEmail Address: sncooper8797@gmail.com\r\nPhone Number: (586) 571-4551\r\nVerified: Yes - AT&T Wireless\r\n----\r\n[CUSTOMER DETAILS]\r\nStatus: Getting serious\r\nCredit Estimate: Poor (Below 600)\r\nDistance to Store:\r\n----\r\n[DEAL INFO]\r\nVehicle Preference: No Preference\r\nTrade-in: No\r\n----\r\n[WEBSITE INFO]\r\nPricing Enabled: \r\nVehicles Viewed: 2\r\nVehicles Saved:\r\nVehicle Searches:\r\nLeads Submitted:\r\nCredit App Lead: Yes\r\nAppt Lead: no\r\nTrade Lead: no\r\n----\r\n[LEAD INFO]\r\nUser Source / Medium:\r\nUser Campaign:\r\nSession Source / Medium:\r\nSession Campaign:\r\nHierarchy: global\r\nForm ID: 3D2OT8\r\nForm Name: get-approved\r\nForm Embed: landing\r\nForm Source URL:\r\nForm Referral URL:\r\nGoogle Click ID:\r\nMeta Click ID:\r\nIP Address: 76.112.58.156\r\nFirst User ID:\r\nSubmission User ID: 04c2e8a0-e4c1-4598-99b1-a30eec598312\r\nDate Submitted:\r\nLead Event: get_approved_incomplete \r\n",
+        "date_time": "2026-02-08T01:42:00Z",
+        "type": "Lead"
+      }
+    ]
+  },
+  "customer_id": 185242244,
+  "dealer_id": 4867,
+  "timestamp": 1770514986124
+}

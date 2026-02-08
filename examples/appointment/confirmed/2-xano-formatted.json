@@ -1,0 +1,84 @@
+{
+  "event": "promax_websocket.appointments",
+  "event_type": "confirmed",
+  "event_version": "1.4",
+  "hookdeck_sent_at": "2026-02-07T15:37:38.631Z",
+  "websocket_uuid": "204ac843-7369-d57d-7d50-4a13a133957f",
+  "promax_websocket_timestamp": 1770478658160,
+  "payload_hash": "943359452d5785e33bfe8ceaf483a4e1300daba9d8b0e7c28a35d513cde7e095",
+  "customer_id": 185066036,
+  "dealer_id": 4599,
+  "appointment_id": 3268794548,
+  "promax_customer": {
+    "id": 185066036,
+    "dealer_id": 4599,
+    "primary_tier": 1,
+    "last_primary_tier_event": 1770478658160,
+    "last_appt_updated_at": 1770478658160,
+    "field_last_received_at": {
+      "dealer_id": 1770478658160,
+      "primary_tier": 1770478658160,
+      "last_primary_tier_event": 1770478658160,
+      "last_appt_updated_at": 1770478658160
+    },
+    "field_last_received_by": {
+      "dealer_id": "204ac843-7369-d57d-7d50-4a13a133957f",
+      "primary_tier": "204ac843-7369-d57d-7d50-4a13a133957f",
+      "last_primary_tier_event": "204ac843-7369-d57d-7d50-4a13a133957f",
+      "last_appt_updated_at": "204ac843-7369-d57d-7d50-4a13a133957f"
+    }
+  },
+  "promax_appointment": {
+    "id": 3268794548,
+    "dealer_id": 4599,
+    "customer_id": 185066036,
+    "status": "Confirmed",
+    "status_updated_at": 1770478658160,
+    "confirmed_at": 1770478658160,
+    "confirmed_by": 9043933
+  },
+  "promax_appointment_update": {
+    "id": "204ac843-7369-d57d-7d50-4a13a133957f",
+    "websocket_timestamp": 1770478658160,
+    "dealer_id": 4599,
+    "customer_id": 185066036,
+    "appointment_id": 3268794548,
+    "status": "Confirmed",
+    "date_time": 1770478658160,
+    "employee_id": 9043933
+  },
+  "promax_customer_last_activity": {
+    "id": 185066036,
+    "dealer_id": 4599,
+    "last_appt_confirmed": 1770478658160
+  },
+  "original_payload": {
+    "customer_id": 185066036,
+    "dealer_id": 4599,
+    "sales_appointment": {
+      "appointment": {
+        "appointment_id": 3268794548,
+        "appointment_status": {
+          "status": "Current"
+        },
+        "comments": "Appt for Rebecca Holm",
+        "confirmed_status": {
+          "confirmed": true,
+          "dealer_parties": {
+            "employee_id": 9043933,
+            "first_name": "Marshall",
+            "last_name": "Lotts"
+          }
+        },
+        "date_time": "2026-02-07T18:00:00Z",
+        "set_via": "Phone"
+      },
+      "dealer_parties": {
+        "employee_id": 9043933,
+        "first_name": "Marshall",
+        "last_name": "Lotts"
+      }
+    },
+    "timestamp": 1770478658160
+  }
+}

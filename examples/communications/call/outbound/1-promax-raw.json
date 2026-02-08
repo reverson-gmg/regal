@@ -1,0 +1,17 @@
+{
+  "communications": {
+    "customer_id": 184994519,
+    "employee_id": 8998352,
+    "messages": [
+      {
+        "body": "vm",
+        "date_time": "2026-02-07T22:07:00Z",
+        "direction": "Outgoing",
+        "type": "Phone"
+      }
+    ]
+  },
+  "customer_id": 184994519,
+  "dealer_id": 7816,
+  "timestamp": 1770502037911
+}

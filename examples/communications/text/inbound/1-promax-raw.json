@@ -1,0 +1,17 @@
+{
+  "communications": {
+    "customer_id": 176473365,
+    "employee_id": 9036256,
+    "messages": [
+      {
+        "body": "I never received the warranty documentation for the new engine installed between December 15th, 2025-January 8th 2026. I also reported a check engine light immediately after installation and did not receive a response. The vehicle now has a significant rear main seal oil leak. Please advise on warranty coverage and next steps for repair.",
+        "date_time": "2026-02-08T00:59:00Z",
+        "direction": "Incoming",
+        "type": "Text"
+      }
+    ]
+  },
+  "customer_id": 176473365,
+  "dealer_id": 8981,
+  "timestamp": 1770512410716
+}
