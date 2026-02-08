@@ -1,0 +1,17 @@
+{
+  "customer_id": 179651405,
+  "dealer_id": 8848,
+  "notifications": [
+    {
+      "code": 1003,
+      "message": "Customer has been transferred",
+      "updates": {
+        "transfer": {
+          "new_dealer_id": 8848,
+          "new_lead_source_id": 177647
+        }
+      }
+    }
+  ],
+  "timestamp": 1770493929788
+}

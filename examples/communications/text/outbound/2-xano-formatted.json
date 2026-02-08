@@ -1,0 +1,61 @@
+{
+  "event": "promax_websocket.communications",
+  "event_type": "text",
+  "event_version": "2.7",
+  "hookdeck_sent_at": "2026-02-08T01:31:05.453Z",
+  "websocket_uuid": "65af3dc6-2122-0ae2-948c-119c355a98cb",
+  "promax_websocket_timestamp": 1770514263828,
+  "payload_hash": "f39162eb221b94ad3967fbcc5b99a0f507a9912ee14f68f63f39cf8571018d30",
+  "customer_id": 185204136,
+  "dealer_id": 6702,
+  "promax_customer": {
+    "id": 185204136,
+    "dealer_id": 6702,
+    "last_ob_sms": "2026-02-08T01:31:00Z",
+    "primary_tier": 3,
+    "last_primary_tier_event": "2026-02-08T01:31:00Z",
+    "field_last_received_at": {
+      "dealer_id": 1770514263828,
+      "last_ob_sms": 1770514263828,
+      "primary_tier": 1770514263828,
+      "last_primary_tier_event": 1770514263828
+    },
+    "field_last_received_by": {
+      "dealer_id": "65af3dc6-2122-0ae2-948c-119c355a98cb",
+      "last_ob_sms": "65af3dc6-2122-0ae2-948c-119c355a98cb",
+      "primary_tier": "65af3dc6-2122-0ae2-948c-119c355a98cb",
+      "last_primary_tier_event": "65af3dc6-2122-0ae2-948c-119c355a98cb"
+    }
+  },
+  "promax_communication": {
+    "id": "65af3dc6-2122-0ae2-948c-119c355a98cb",
+    "occurred_at": "2026-02-08T01:31:00Z",
+    "customer_id": 185204136,
+    "dealer_id": 6702,
+    "employee_id": 9062078,
+    "direction": "outbound",
+    "body": "Sorry to hear that.  Take care of yourself man.  Get well soon..  Vince"
+  },
+  "promax_customer_last_activity": {
+    "id": 185204136,
+    "dealer_id": 6702,
+    "last_ob_sms": 1770514263828
+  },
+  "original_payload": {
+    "communications": {
+      "customer_id": 185204136,
+      "employee_id": 9062078,
+      "messages": [
+        {
+          "body": "Sorry to hear that.  Take care of yourself man.  Get well soon..  Vince",
+          "date_time": "2026-02-08T01:31:00Z",
+          "direction": "Outgoing",
+          "type": "Text"
+        }
+      ]
+    },
+    "customer_id": 185204136,
+    "dealer_id": 6702,
+    "timestamp": 1770514263828
+  }
+}

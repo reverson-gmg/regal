@@ -1,0 +1,17 @@
+{
+  "communications": {
+    "customer_id": 185204136,
+    "employee_id": 9062078,
+    "messages": [
+      {
+        "body": "Sorry to hear that.  Take care of yourself man.  Get well soon..  Vince",
+        "date_time": "2026-02-08T01:31:00Z",
+        "direction": "Outgoing",
+        "type": "Text"
+      }
+    ]
+  },
+  "customer_id": 185204136,
+  "dealer_id": 6702,
+  "timestamp": 1770514263828
+}
