@@ -42,9 +42,6 @@ const VALID_CONSENT_ACTIONS = new Set([
 
 const VALID_DIRECTIONS = new Set(['inbound', 'outbound']);
 
-/**
- * Validates and normalizes enum values
- */
 function assertEnum(value, enumSet, defaultValue = null) {
   if (!value) return defaultValue;
   const normalized = value.toString().toLowerCase();
@@ -180,7 +177,6 @@ function md5ToUuid(md5hex) {
  * Creates deterministic event ID from body (EXCLUDES timestamp for deduplication)
  */
 function createDeterministicEventId(body, namespace) {
-  // Create a copy without the timestamp field
   const bodyWithoutTimestamp = { ...body };
   delete bodyWithoutTimestamp.timestamp;
 
@@ -209,35 +205,16 @@ function addIfHasValue(obj, key, value) {
   }
 }
 
-/**
- * Enhanced phone number normalization
- * Strips all non-digits, handles 10 and 11 digit formats
- */
 function normalizePhoneNumber(phone) {
   if (!phone) return null;
-
-  // Strip all non-digit characters
   const digits = phone.toString().replace(/\D/g, '');
-
-  // If 11 digits starting with 1, drop the leading 1
-  if (digits.length === 11 && digits[0] === '1') {
-    return digits.substring(1);
-  }
-
-  // If 10 digits, return as-is
-  if (digits.length === 10) {
-    return digits;
-  }
-
-  // Otherwise, invalid
+  if (digits.length === 11 && digits[0] === '1') return digits.substring(1);
+  if (digits.length === 10) return digits;
   return null;
 }
 
 // ============= EMAIL-SPECIFIC UTILS =============
 
-/**
- * Decodes HTML entities including numeric and named entities
- */
 function decodeHtmlEntities(text) {
   if (!text) return text;
 
@@ -263,12 +240,10 @@ function decodeHtmlEntities(text) {
 
   let decoded = text;
 
-  // Replace named entities
   for (const [entity, char] of Object.entries(entities)) {
     decoded = decoded.replace(new RegExp(entity, 'g'), char);
   }
 
-  // Decode numeric entities like &#39; &#8217; etc
   decoded = decoded.replace(/&#(\d+);/g, (match, dec) => {
     try {
       return String.fromCodePoint(parseInt(dec, 10));
@@ -277,7 +252,6 @@ function decodeHtmlEntities(text) {
     }
   });
 
-  // Decode hex entities like &#x27;
   decoded = decoded.replace(/&#x([0-9a-f]+);/gi, (match, hex) => {
     try {
       return String.fromCodePoint(parseInt(hex, 16));
@@ -289,54 +263,39 @@ function decodeHtmlEntities(text) {
   return decoded;
 }
 
-/**
- * Strips HTML/CSS/tracking pixels from email body and returns clean plain text
- */
 function cleanEmailBody(body) {
   if (!body) return null;
 
   let cleaned = body;
 
-  // Remove <style> blocks and their content
   cleaned = cleaned.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '');
-
-  // Remove <script> blocks and their content
   cleaned = cleaned.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '');
-
-  // Remove HTML comments
   cleaned = cleaned.replace(/<!--[\s\S]*?-->/g, '');
 
-  // Remove tracking pixels (1x1 images)
+  // Tracking pixels: 1x1 images with either width/height ordering
   cleaned = cleaned.replace(/<img[^>]*\bwidth=["']?1["']?[^>]*\bheight=["']?1["']?[^>]*>/gi, '');
   cleaned = cleaned.replace(/<img[^>]*\bheight=["']?1["']?[^>]*\bwidth=["']?1["']?[^>]*>/gi, '');
 
-  // IMPROVED: Remove bare CSS more aggressively
-  // Remove @media queries (with nested braces) - iterate to handle nesting
+  // CSS that appears outside <style> tags (e.g., inline in email source)
+  // Iterate because @media queries can have nested braces
   for (let i = 0; i < 10; i++) {
     const before = cleaned;
-    // Match @media...{ anything including nested braces }
     cleaned = cleaned.replace(/@media[^{]*\{(?:[^{}]*\{[^{}]*\})*[^{}]*\}/gi, ' ');
     if (before === cleaned) break;
   }
 
-  // Remove all CSS rules: anything {stuff}
-  // This matches: "any text that isn't < or > followed by {anything} followed by }"
-  // Uses non-greedy match to avoid over-matching
+  // Remaining CSS rules: selector { ... } — avoids matching HTML tags via [^<>{}]
   cleaned = cleaned.replace(/[^<>{}]+?\{[^{}]*\}/g, ' ');
 
-  // Remove all HTML tags but keep content
   cleaned = cleaned.replace(/<[^>]+>/g, ' ');
-
-  // Decode HTML entities
   cleaned = decodeHtmlEntities(cleaned);
 
-  // Clean up whitespace
-  cleaned = cleaned.replace(/\r\n/g, '\n'); // Normalize line endings
-  cleaned = cleaned.replace(/\r/g, '\n');   // Normalize line endings
-  cleaned = cleaned.replace(/\n{3,}/g, '\n\n'); // Max 2 consecutive newlines
-  cleaned = cleaned.replace(/[ \t]+/g, ' '); // Collapse spaces/tabs
-  cleaned = cleaned.replace(/\n /g, '\n');   // Remove leading spaces on lines
-  cleaned = cleaned.replace(/ \n/g, '\n');   // Remove trailing spaces on lines
+  cleaned = cleaned.replace(/\r\n/g, '\n');
+  cleaned = cleaned.replace(/\r/g, '\n');
+  cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
+  cleaned = cleaned.replace(/[ \t]+/g, ' ');
+  cleaned = cleaned.replace(/\n /g, '\n');
+  cleaned = cleaned.replace(/ \n/g, '\n');
 
   return cleaned.trim() || null;
 }
@@ -347,8 +306,7 @@ function cleanEmailBody(body) {
 function extractPhoneNumber(body) {
   if (!body) return null;
 
-  // Match pattern: (Sent using (###)###-####)
-  // Note: Only ONE closing paren at the end
+  // Only ONE closing paren at the end — the opening paren of "Sent" doubles as the group delimiter
   const match = body.match(/\(Sent using \((\d{3})\)(\d{3})-(\d{4})\)/);
   if (match) {
     return `${match[1]}${match[2]}${match[3]}`;
@@ -361,9 +319,6 @@ function cleanSmsBody(body) {
   return body.replace(/\s*\(Sent using \(\d{3}\)\d{3}-\d{4}\)\s*$/g, '').trim();
 }
 
-/**
- * Detects consent action from SMS body with enhanced patterns
- */
 function detectConsentAction(body, direction) {
   if (!body) return null;
 
@@ -549,10 +504,6 @@ function extractLeadNoteBody(body) {
   return body.trim() || null;
 }
 
-/**
- * Extracts the lead event name from body if "Lead Event:" is present (exact case)
- * Returns null if not found or empty
- */
 function extractLeadEventName(body) {
   if (!body) return null;
 
@@ -561,10 +512,7 @@ function extractLeadEventName(body) {
 
   if (index === -1) return null;
 
-  // Get the text after "Lead Event:"
   const afterMarker = body.substring(index + marker.length);
-
-  // Extract until end of line or end of string
   const endOfLine = afterMarker.search(/[\r\n]/);
   const eventName = endOfLine === -1
     ? afterMarker.trim()
@@ -647,7 +595,6 @@ addHandler('transform', (request, context) => {
       throw new Error(`Invalid payload: unsupported message type "${messageType}" with direction "${messageDirection}"`);
     }
 
-    // Validate event type
     if (!assertEnum(eventType, VALID_EVENT_TYPES)) {
       throw new Error(`Invalid event_type: "${eventType}"`);
     }
@@ -658,7 +605,6 @@ addHandler('transform', (request, context) => {
     const rawSubject = getOrNull(message.subject);
     const occurredAt = getOrNull(message.date_time);
 
-    // Generate deterministic ID (excludes timestamp for deduplication)
     const eventId = createDeterministicEventId(body, NAMESPACE);
 
     // ============= EVENT-TYPE-SPECIFIC PROCESSING =============
@@ -677,14 +623,12 @@ addHandler('transform', (request, context) => {
       cleanedBody = cleanSmsBody(rawBody);
       consentAction = detectConsentAction(rawBody, direction);
 
-      // Validate consent_action
       if (consentAction) {
         consentAction = assertEnum(consentAction, VALID_CONSENT_ACTIONS);
       }
     } else if (eventType === 'call') {
       disposition = detectCallDisposition(rawBody);
 
-      // Validate disposition
       disposition = assertEnum(disposition, VALID_DISPOSITIONS, 'unknown');
     } else if (eventType === 'email') {
       cleanedBody = cleanEmailBody(rawBody);
@@ -697,13 +641,11 @@ addHandler('transform', (request, context) => {
       toNumber = parsed.to_number;
       recordingLink = parsed.recording_link;
 
-      // Validate disposition
       if (disposition) {
         disposition = assertEnum(disposition, VALID_DISPOSITIONS);
       }
     } else if (eventType === 'lead_note') {
       cleanedBody = extractLeadNoteBody(rawBody);
-      // Extract lead event name for dynamic field in promax_customer_last_activity
       leadEventName = extractLeadEventName(rawBody);
     }
     // user_note: no special processing needed
@@ -747,7 +689,6 @@ addHandler('transform', (request, context) => {
 
     // email, user_note, and call_recording_note: no last_* timestamps or tier
 
-    // lead_note: set primary_tier = 1, last_primary_tier_event, and last_lead
     if (eventType === 'lead_note') {
       primaryTier = 1;
       lastPrimaryTierEvent = occurredAt;
@@ -759,7 +700,6 @@ addHandler('transform', (request, context) => {
       dealer_id: dealer_id
     };
 
-    // Add event-type-specific fields
     if (eventType === 'text' || eventType === 'call') {
       addIfHasValue(promaxCustomer, 'last_ib_sms', lastIbSms);
       addIfHasValue(promaxCustomer, 'last_ob_sms', lastObSms);
@@ -773,7 +713,6 @@ addHandler('transform', (request, context) => {
       addIfHasValue(promaxCustomer, 'last_lead', occurredAt);
     }
 
-    // Generate metadata
     const fieldLastReceivedAt = {};
     const fieldLastReceivedBy = {};
     const excludedFields = ['id', 'field_last_received_at', 'field_last_received_by'];
@@ -797,29 +736,26 @@ addHandler('transform', (request, context) => {
       dealer_id: dealer_id
     };
 
-    // Add employee_id for text, call, email, and user_note (NOT for call_recording_note or lead_note)
+    // call_recording_note and lead_note don't originate from an employee action
     if (eventType !== 'call_recording_note' && eventType !== 'lead_note') {
       addIfHasValue(promaxCommunication, 'employee_id', employee_id);
     }
 
-    // Add direction for text, call, email, and call_recording_note (NOT for user_note or lead_note)
+    // user_note and lead_note have no direction
     if (eventType !== 'user_note' && eventType !== 'lead_note') {
-      // Validate direction
       const validatedDirection = assertEnum(direction, VALID_DIRECTIONS);
       addIfHasValue(promaxCommunication, 'direction', validatedDirection);
     }
 
-    // Add subject only for email
     if (eventType === 'email') {
       addIfHasValue(promaxCommunication, 'subject', subject);
     }
 
-    // Add body for text, call, email, user_note, and lead_note (NOT for call_recording_note)
+    // call_recording_note body is parsed into structured fields, not passed through
     if (eventType !== 'call_recording_note') {
       addIfHasValue(promaxCommunication, 'body', cleanedBody);
     }
 
-    // Add event-type-specific fields
     if (eventType === 'text') {
       addIfHasValue(promaxCommunication, 'consent_action', consentAction);
       addIfHasValue(promaxCommunication, 'from_number', fromNumber);
@@ -832,7 +768,6 @@ addHandler('transform', (request, context) => {
       addIfHasValue(promaxCommunication, 'to_number', toNumber);
       addIfHasValue(promaxCommunication, 'recording_link', recordingLink);
     }
-    // email, user_note, and lead_note: no additional fields
 
     // ============= BUILD PROMAX_CUSTOMER_LAST_ACTIVITY OBJECT =============
     const promaxCustomerLastActivity = {
@@ -850,7 +785,7 @@ addHandler('transform', (request, context) => {
       }
     } else if (eventType === 'lead_note') {
       promaxCustomerLastActivity.last_lead_note = dexWsTimestamp;
-      // Add dynamic lead event field if "Lead Event:" was found in body
+      // Produces dynamic field like last_lead_ADF_Lead from "Lead Event: ADF_Lead" in body
       if (leadEventName) {
         promaxCustomerLastActivity[`last_lead_${leadEventName}`] = dexWsTimestamp;
       }
@@ -956,9 +891,3 @@ addHandler('transform', (request, context) => {
   }
 });
 
-// ============================================
-// END COMMUNICATIONS TRANSFORMATION v2.7
-// Namespace: promax_dex
-// Event: promax_websocket.communications
-// Version: 2.7
-// ============================================

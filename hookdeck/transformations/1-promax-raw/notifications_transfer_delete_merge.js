@@ -151,7 +151,6 @@ function md5ToUuid(md5hex) {
  * Creates deterministic event ID from body (EXCLUDES timestamp for deduplication)
  */
 function createDeterministicEventId(body, namespace) {
-  // Create a copy without the timestamp field
   const bodyWithoutTimestamp = { ...body };
   delete bodyWithoutTimestamp.timestamp;
 
@@ -263,8 +262,7 @@ function processTransferNotification(customerId, dealerId, notification, timesta
   const newDealerId = getOrNull(updates.new_dealer_id);
   const newLeadSourceId = getOrNull(updates.new_lead_source_id);
 
-  // For transfer, dealer_id in promax_customer is the NEW dealer
-  // previous_dealer_id is the ORIGINAL dealer from the payload
+  // dealer_id is swapped to the NEW dealer; previous_dealer_id preserves the original
   const promaxCustomer = {
     id: customerId,
     dealer_id: newDealerId,
@@ -332,7 +330,6 @@ addHandler('transform', (request, context) => {
       throw new Error('Invalid payload: missing required dealer_id');
     }
 
-    // Find supported notification
     const notification = body.notifications.find(n =>
       n && n.code && Object.values(NOTIFICATION_CODES).includes(n.code)
     );
@@ -344,7 +341,6 @@ addHandler('transform', (request, context) => {
 
     const notificationCode = notification.code;
 
-    // Generate deterministic ID (excludes timestamp for deduplication)
     const eventId = createDeterministicEventId(body, NAMESPACE);
 
     // ============= PROCESS NOTIFICATION BY TYPE =============
@@ -377,7 +373,6 @@ addHandler('transform', (request, context) => {
       promax_customer: result.promax_customer,
       original_payload: body
     };
-    // Add the notification-specific object
     if (result.promax_notification_delete) {
       finalPayload.promax_notification_delete = result.promax_notification_delete;
     } else if (result.promax_notification_merge) {
@@ -446,10 +441,3 @@ addHandler('transform', (request, context) => {
   }
 });
 
-// ============================================
-// END NOTIFICATION TRANSFORMATION v2.7
-// Namespace: promax_dex
-// Event: promax_websocket.notification
-// Version: 2.7
-// Supported: DELETE (1004), MERGE (1002), TRANSFER (1003)
-// ============================================

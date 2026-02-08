@@ -31,17 +31,11 @@ const VALID_STATUSES = new Set([
   'Missed', 'Shown', 'Unsold', 'Sold', 'Deleted'
 ]);
 
-/**
- * Validates status values (case-sensitive)
- */
 function assertStatus(value, defaultValue = null) {
   if (!value) return defaultValue;
   return VALID_STATUSES.has(value) ? value : defaultValue;
 }
 
-/**
- * Validates event type (lowercase)
- */
 function assertEventType(value, defaultValue = null) {
   if (!value) return defaultValue;
   const normalized = value.toString().toLowerCase();
@@ -254,21 +248,10 @@ function detectEventType(appointment, salesAppointment) {
   return eventType;
 }
 
-/**
- * Determines the status value for the appointment based on event type
- */
+// Confirmed/rescheduled use hardcoded status names since they're derived from payload structure, not status field
 function determineStatus(eventType, appointmentStatus) {
-  // For confirmed events, always return "Confirmed"
-  if (eventType === 'confirmed') {
-    return 'Confirmed';
-  }
-
-  // For rescheduled events, always return "Rescheduled"
-  if (eventType === 'rescheduled') {
-    return 'Rescheduled';
-  }
-
-  // For all other events, use the appointment_status.status
+  if (eventType === 'confirmed') return 'Confirmed';
+  if (eventType === 'rescheduled') return 'Rescheduled';
   const status = appointmentStatus.status;
   return assertStatus(status, status);
 }
@@ -318,12 +301,10 @@ addHandler('transform', (request, context) => {
     // ============= EVENT TYPE DETECTION =============
     const eventType = detectEventType(appointment, salesAppointment);
 
-    // Validate event type
     if (!assertEventType(eventType)) {
       throw new Error(`Invalid event_type: "${eventType}"`);
     }
 
-    // Generate deterministic ID (includes timestamp)
     const eventId = createDeterministicEventId(body, NAMESPACE);
 
     // ============= COMMON FIELDS =============
@@ -345,12 +326,10 @@ addHandler('transform', (request, context) => {
       promaxCustomer.last_appt_updated_at = dexWsTimestamp;
     }
 
-    // last_appt_scheduled_for: only for 'set' event, use dateTime
     if (eventType === 'set') {
       promaxCustomer.last_appt_scheduled_for = dateTime;
     }
 
-    // Generate metadata for promax_customer
     const customerFieldLastReceivedAt = {
       dealer_id: dexWsTimestamp
     };
@@ -359,7 +338,6 @@ addHandler('transform', (request, context) => {
       dealer_id: eventId
     };
 
-    // Track all fields that have values
     const excludedFields = ['id', 'field_last_received_at', 'field_last_received_by'];
     for (const [key, value] of Object.entries(promaxCustomer)) {
       if (excludedFields.includes(key)) continue;
@@ -380,12 +358,10 @@ addHandler('transform', (request, context) => {
     };
 
     // ============= EVENT-TYPE-SPECIFIC PROCESSING =============
-    // All event types get status + status_updated_at
     promaxAppointment.status = status;
     promaxAppointment.status_updated_at = dexWsTimestamp;
 
     if (eventType === 'set') {
-      // Set event: scheduled_at, scheduled_for, scheduled_by, set_via, comments
       const rootDealerParties = salesAppointment.dealer_parties;
       const scheduledBy = rootDealerParties ? getOrNull(rootDealerParties.employee_id) : null;
       const setVia = getOrNull(appointment.set_via);
@@ -398,7 +374,6 @@ addHandler('transform', (request, context) => {
       addIfHasValue(promaxAppointment, 'comments', comments);
 
     } else if (eventType === 'confirmed') {
-      // Confirmed event: confirmed_at, confirmed_by
       const confirmedStatus = appointment.confirmed_status;
       const confirmedDealerParties = confirmedStatus ? confirmedStatus.dealer_parties : null;
       const confirmedBy = confirmedDealerParties ? getOrNull(confirmedDealerParties.employee_id) : null;
@@ -407,7 +382,6 @@ addHandler('transform', (request, context) => {
       addIfHasValue(promaxAppointment, 'confirmed_by', confirmedBy);
 
     } else if (eventType === 'rescheduled') {
-      // Rescheduled event: new_appointment_id
       const details = appointmentStatus.details;
       const newAppointmentId = details ? getOrNull(details.new_appointment_id) : null;
 
@@ -424,14 +398,13 @@ addHandler('transform', (request, context) => {
       status: status
     };
 
-    // For confirmed events, use websocket timestamp; otherwise use the appointment date_time
+    // Confirmed events lack a separate date_time; use the websocket arrival timestamp instead
     if (eventType === 'confirmed') {
       promaxAppointmentUpdate.date_time = dexWsTimestamp;
     } else {
       addIfHasValue(promaxAppointmentUpdate, 'date_time', dateTime);
     }
 
-    // Add event-type-specific fields
     if (eventType === 'set') {
       const rootDealerParties = salesAppointment.dealer_parties;
       const employeeId = rootDealerParties ? getOrNull(rootDealerParties.employee_id) : null;
@@ -460,7 +433,6 @@ addHandler('transform', (request, context) => {
       dealer_id: dealer_id
     };
 
-    // Map event types to last activity fields
     // 'set' has two fields; 'current' maps to last_appt_set; all others map to last_appt_{eventType}
     if (eventType === 'set') {
       promaxCustomerLastActivity.last_appt_scheduled_for = dateTime;
@@ -490,7 +462,7 @@ addHandler('transform', (request, context) => {
       original_payload: body
     };
 
-    // Add new_appointment_id to root level for rescheduled events
+    // Duplicated at root level for easier downstream routing
     if (eventType === 'rescheduled') {
       const details = appointmentStatus.details;
       const newAppointmentId = details ? getOrNull(details.new_appointment_id) : null;
@@ -568,13 +540,3 @@ addHandler('transform', (request, context) => {
   }
 });
 
-// ============================================
-// END APPOINTMENTS TRANSFORMATION v1.4
-// Namespace: promax_dex
-// Event: promax_websocket.appointments
-// Version: 1.4
-// Changes from v1.3:
-//   - Added isOn15MinuteBoundary() helper function
-//   - Modified detectEventType() to classify as 'set' when date_time
-//     is on a 15-minute boundary, even without dealer_parties
-// ============================================

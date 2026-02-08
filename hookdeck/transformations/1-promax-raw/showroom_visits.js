@@ -28,17 +28,11 @@ const VALID_VISIT_TYPES = new Set([
   'FreshWalkIn', 'OutsideProspect', 'Referral', 'ServiceCustomer'
 ]);
 
-/**
- * Validates visit type values (case-sensitive)
- */
 function assertVisitType(value, defaultValue = null) {
   if (!value) return defaultValue;
   return VALID_VISIT_TYPES.has(value) ? value : defaultValue;
 }
 
-/**
- * Validates event type (lowercase)
- */
 function assertEventType(value, defaultValue = null) {
   if (!value) return defaultValue;
   const normalized = value.toString().toLowerCase();
@@ -148,7 +142,6 @@ function md5ToUuid(md5hex) {
  * Creates deterministic event ID from body (EXCLUDES timestamp for deduplication)
  */
 function createDeterministicEventId(body, namespace) {
-  // Create a copy without the timestamp field
   const bodyWithoutTimestamp = { ...body };
   delete bodyWithoutTimestamp.timestamp;
 
@@ -191,19 +184,14 @@ function toEpochMs(value) {
   return null;
 }
 
-/**
- * Converts a timestamp value to ISO 8601 string
- * Handles: unix ms epoch (number), unix s epoch (number), or existing ISO string
- */
 function toIsoString(value) {
   if (!value) return null;
   if (typeof value === 'string') {
-    // Already a string, attempt to parse and re-format to ensure valid ISO
     const d = new Date(value);
     return isNaN(d.getTime()) ? null : d.toISOString();
   }
   if (typeof value === 'number') {
-    // If value looks like seconds (< 1e12), convert to ms
+    // < 1e12 heuristic: seconds vs milliseconds epoch
     const ms = value < 1e12 ? value * 1000 : value;
     const d = new Date(ms);
     return isNaN(d.getTime()) ? null : d.toISOString();
@@ -213,9 +201,6 @@ function toIsoString(value) {
 
 // ============= EVENT TYPE DETECTION =============
 
-/**
- * Detects event type from showroom_visit payload structure
- */
 function detectEventType(showroomVisit) {
   if (!showroomVisit || typeof showroomVisit !== 'object') {
     throw new Error('Invalid payload: missing or invalid showroom_visit object');
@@ -269,12 +254,10 @@ addHandler('transform', (request, context) => {
     // ============= EVENT TYPE DETECTION =============
     const eventType = detectEventType(showroomVisit);
 
-    // Validate event type
     if (!assertEventType(eventType)) {
       throw new Error(`Invalid event_type: "${eventType}"`);
     }
 
-    // Generate deterministic ID (excludes timestamp for deduplication)
     const eventId = createDeterministicEventId(body, NAMESPACE);
 
     // ============= EVENT-TYPE-SPECIFIC DATA EXTRACTION =============
@@ -314,12 +297,10 @@ addHandler('transform', (request, context) => {
         throw new Error('Invalid payload: missing new_visit.type');
       }
 
-      // Validate visit type
       if (!assertVisitType(visitType)) {
         throw new Error(`Invalid visit type: "${visitType}"`);
       }
 
-      // Check for appointment
       if (newVisit.appointment && newVisit.appointment.id) {
         appointmentId = getOrNull(newVisit.appointment.id);
       }
@@ -334,7 +315,7 @@ addHandler('transform', (request, context) => {
       showroom_visit_id = getOrNull(exitNoteObj.showroom_visit_id);
       exitNoteId = getOrNull(exitNoteObj.id);
       exitNoteDate = getOrNull(exitNoteObj.date);
-      // Use the original payload timestamp (body.timestamp) converted to ISO for exit_at
+      // exit_at uses the websocket arrival time, not the exit_note.date
       exitAt = toIsoString(dexWsTimestamp);
       exitBy = getOrNull(exitNoteObj.employee_id);
       isManagerNote = getOrNull(exitNoteObj.is_manager_note);
@@ -369,7 +350,6 @@ addHandler('transform', (request, context) => {
       dealer_id: dealer_id
     };
 
-    // Generate metadata for promax_customer
     const customerFieldLastReceivedAt = {
       dealer_id: dexWsTimestamp
     };
@@ -378,7 +358,6 @@ addHandler('transform', (request, context) => {
       dealer_id: eventId
     };
 
-    // For new_visit events, add tier and activity fields
     if (eventType === 'new_visit') {
       promaxCustomer.primary_tier = 1;
       promaxCustomer.last_primary_tier_event = dateTime;
@@ -393,7 +372,6 @@ addHandler('transform', (request, context) => {
       customerFieldLastReceivedBy.last_showroom_visit = eventId;
     }
 
-    // For exit_note events, include last_showroom_visit using the original payload timestamp
     if (eventType === 'exit_note') {
       promaxCustomer.last_showroom_visit = dexWsTimestamp;
 
@@ -418,8 +396,7 @@ addHandler('transform', (request, context) => {
       addIfHasValue(promaxShowroomVisit, 'appointment_id', appointmentId);
 
     } else if (eventType === 'exit_note') {
-      // If exit_note.date is at least 10 minutes before the payload timestamp,
-      // include it as date_time on the showroom visit (indicates the actual visit time)
+      // If exit_note.date is >10 min before payload timestamp, it's the actual visit time
       if (exitNoteDate) {
         const exitNoteDateMs = toEpochMs(exitNoteDate);
         const payloadTimestampMs = toEpochMs(dexWsTimestamp);
@@ -452,8 +429,7 @@ addHandler('transform', (request, context) => {
       promaxCustomerLastActivity.last_showroom_visit = dexWsTimestamp;
     } else if (eventType === 'exit_note') {
       promaxCustomerLastActivity.last_showroom_visit_exit_note = dexWsTimestamp;
-      // If exit_note.date is at least 10 minutes before payload timestamp,
-      // include the earlier date as last_showroom_visit
+      // Backfill last_showroom_visit with the earlier visit time if >10 min gap
       if (exitNoteDate) {
         const exitNoteDateMs = toEpochMs(exitNoteDate);
         const payloadTimestampMs = toEpochMs(dexWsTimestamp);
@@ -553,10 +529,3 @@ addHandler('transform', (request, context) => {
     };
   }
 });
-
-// ============================================
-// END SHOWROOM VISIT TRANSFORMATION v1.2
-// Namespace: promax_dex
-// Event: promax_websocket.showroom_visit
-// Version: 1.2
-// ============================================
