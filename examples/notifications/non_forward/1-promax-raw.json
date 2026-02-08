@@ -1,0 +1,16 @@
+{
+  "customer_id": 185230286,
+  "dealer_id": 4297,
+  "notifications": [
+    {
+      "code": 1001,
+      "message": "Customer assigned non-forwardable lead source",
+      "updates": {
+        "non_forward": {
+          "lead_source_id": 115200
+        }
+      }
+    }
+  ],
+  "timestamp": 1770496000000
+}

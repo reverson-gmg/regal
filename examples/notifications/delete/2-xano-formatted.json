@@ -1,56 +1,45 @@
 {
   "event": "promax_websocket.notification",
-  "event_type": "merge",
+  "event_type": "delete",
   "event_version": "2.7",
-  "hookdeck_sent_at": "2026-02-08T01:33:35.583Z",
-  "websocket_uuid": "e238303d-7a8b-5e49-cb95-5d4c979bb7fc",
-  "promax_websocket_timestamp": 1770514414896,
-  "payload_hash": "056d3dc12bcec5825db23e8b6e8c4d1365474d467dc9c5eb79f71d30a41f71a5",
-  "customer_id": 185242157,
+  "hookdeck_sent_at": "2026-02-08T01:30:30.000Z",
+  "websocket_uuid": "d5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0",
+  "promax_websocket_timestamp": 1770514229760,
+  "payload_hash": "f5a7b9c1d3e5f7a9b1c3d5e7f9a1b3c5d7e9f1a3b5c7d9e1f3a5b7c9d1e3f5",
+  "customer_id": 185242127,
   "dealer_id": 4867,
   "promax_customer": {
-    "id": 185242157,
+    "id": 185242127,
     "dealer_id": 4867,
-    "merged": true,
-    "merged_at": 1770514414896,
-    "merged_into": 185242121,
+    "deleted": true,
+    "deleted_at": 1770514229760,
     "field_last_received_at": {
-      "dealer_id": 1770514414896,
-      "merged": 1770514414896,
-      "merged_at": 1770514414896,
-      "merged_into": 1770514414896
+      "dealer_id": 1770514229760,
+      "deleted": 1770514229760,
+      "deleted_at": 1770514229760
     },
     "field_last_received_by": {
-      "dealer_id": "e238303d-7a8b-5e49-cb95-5d4c979bb7fc",
-      "merged": "e238303d-7a8b-5e49-cb95-5d4c979bb7fc",
-      "merged_at": "e238303d-7a8b-5e49-cb95-5d4c979bb7fc",
-      "merged_into": "e238303d-7a8b-5e49-cb95-5d4c979bb7fc"
+      "dealer_id": "d5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0",
+      "deleted": "d5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0",
+      "deleted_at": "d5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0"
     }
   },
+  "promax_notification_delete": {
+    "id": "d5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9a0",
+    "occurred_at": 1770514229760,
+    "code_id": 1004,
+    "customer_id": 185242127,
+    "dealer_id": 4867
+  },
   "original_payload": {
-    "customer_id": 185242157,
+    "customer_id": 185242127,
     "dealer_id": 4867,
     "notifications": [
       {
-        "code": 1002,
-        "message": "Customer has been merged",
-        "updates": {
-          "merge": {
-            "new_customer_id": 185242121,
-            "new_lead_source_id": 117800
-          }
-        }
+        "code": 1004,
+        "message": "Customer has been deleted"
       }
     ],
-    "timestamp": 1770514414896
-  },
-  "promax_notification_merge": {
-    "id": "e238303d-7a8b-5e49-cb95-5d4c979bb7fc",
-    "occurred_at": 1770514414896,
-    "code_id": 1002,
-    "original_customer_id": 185242157,
-    "new_customer_id": 185242121,
-    "dealer_id": 4867,
-    "new_lead_source_id": 117800
+    "timestamp": 1770514229760
   }
 }
