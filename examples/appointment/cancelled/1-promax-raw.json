@@ -1,0 +1,15 @@
+{
+  "customer_id": 184370773,
+  "dealer_id": 8850,
+  "sales_appointment": {
+    "appointment": {
+      "appointment_id": 3255885473,
+      "appointment_status": {
+        "status": "Cancelled"
+      },
+      "date_time": "2026-02-07T15:12:43Z",
+      "status": "Cancelled"
+    }
+  },
+  "timestamp": 1770477163356
+}

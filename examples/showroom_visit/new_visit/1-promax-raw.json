@@ -1,0 +1,17 @@
+{
+  "customer_id": 174556873,
+  "dealer_id": 7627,
+  "showroom_visit": {
+    "new_visit": {
+      "appointment": {
+        "id": 3268724512,
+        "type": "Sales"
+      },
+      "date": "2026-02-07T18:26:28Z",
+      "employee_id": 8920527,
+      "id": 38588505,
+      "type": "PhoneApptShow"
+    }
+  },
+  "timestamp": 1770488788111
+}

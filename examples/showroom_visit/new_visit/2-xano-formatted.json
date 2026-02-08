@@ -1,0 +1,62 @@
+{
+  "event": "promax_websocket.showroom_visit",
+  "event_type": "new_visit",
+  "event_version": "1.2",
+  "hookdeck_sent_at": "2026-02-07T18:26:56.299Z",
+  "websocket_uuid": "57aa8e83-c1f8-8f64-ce25-1ee147e29577",
+  "promax_websocket_timestamp": 1770488788111,
+  "payload_hash": "a60728212362fcc23349c8f8d96c90841f87b2fd9c7cc359ff2188e57adc46c7",
+  "customer_id": 174556873,
+  "dealer_id": 7627,
+  "showroom_visit_id": 38588505,
+  "promax_customer": {
+    "id": 174556873,
+    "dealer_id": 7627,
+    "primary_tier": 1,
+    "last_primary_tier_event": "2026-02-07T18:26:28Z",
+    "last_showroom_visit": "2026-02-07T18:26:28Z",
+    "field_last_received_at": {
+      "dealer_id": 1770488788111,
+      "primary_tier": 1770488788111,
+      "last_primary_tier_event": 1770488788111,
+      "last_showroom_visit": 1770488788111
+    },
+    "field_last_received_by": {
+      "dealer_id": "57aa8e83-c1f8-8f64-ce25-1ee147e29577",
+      "primary_tier": "57aa8e83-c1f8-8f64-ce25-1ee147e29577",
+      "last_primary_tier_event": "57aa8e83-c1f8-8f64-ce25-1ee147e29577",
+      "last_showroom_visit": "57aa8e83-c1f8-8f64-ce25-1ee147e29577"
+    }
+  },
+  "promax_showroom_visit": {
+    "id": 38588505,
+    "dealer_id": 7627,
+    "customer_id": 174556873,
+    "date_time": "2026-02-07T18:26:28Z",
+    "type": "PhoneApptShow",
+    "created_by": 8920527,
+    "appointment_id": 3268724512
+  },
+  "promax_customer_last_activity": {
+    "id": 174556873,
+    "dealer_id": 7627,
+    "last_showroom_visit": 1770488788111
+  },
+  "original_payload": {
+    "customer_id": 174556873,
+    "dealer_id": 7627,
+    "showroom_visit": {
+      "new_visit": {
+        "appointment": {
+          "id": 3268724512,
+          "type": "Sales"
+        },
+        "date": "2026-02-07T18:26:28Z",
+        "employee_id": 8920527,
+        "id": 38588505,
+        "type": "PhoneApptShow"
+      }
+    },
+    "timestamp": 1770488788111
+  }
+}
